@@ -1,0 +1,11 @@
+{
+  "uuid": "835504d6-aaf4-4bfe-9630-2c850c67d667",
+  "shortName": "Sp22",
+  "longName": "Spring 2022",
+  "allowAccess": [
+    {
+      "startDate": "2022-01-19T00:00:01",
+      "endDate": "2022-05-13T23:59:59"
+    }
+  ]
+}

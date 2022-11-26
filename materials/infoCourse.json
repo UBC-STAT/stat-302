@@ -1,0 +1,57 @@
+{
+  "uuid": "2c1fcd6f-5156-45fc-934e-1fe3fad9c254",
+  "name": "STAT 302",
+  "title": "Introduction to Probability",
+  "comment": "The assessment set order used here will be the one shown within PrairieLearn",
+  "options": {
+    "useNewQuestionRenderer": true
+  },
+  "assessmentSets": [
+    {
+      "abbreviation": "HW",
+      "name": "Homework",
+      "heading": "Homeworks",
+      "color": "green1"
+    },
+    {
+      "abbreviation": "E",
+      "name": "Exam",
+      "heading": "Exams",
+      "color": "red1"
+    }
+  ],
+  "assessmentModules": [
+    {
+      "name": "vectors-coords",
+      "heading": "Vectors and coordinates"
+    },
+    {
+      "name": "moments",
+      "heading": "Moments of inertia"
+    }
+  ],
+  "topics": [
+    {
+      "name": "Vectors",
+      "color": "blue3",
+      "description": "Vector algebra in 3D"
+    },
+    {
+      "name": "Center of mass",
+      "color": "green3",
+      "description": "Finding and using the center of mass of irregular bodies."
+    }
+  ],
+  "tags": [
+    {
+      "name": "drawing",
+      "color": "gray2",
+      "description": "The answer requires drawing."
+    },
+    {
+      "name": "estimation",
+      "color": "orange2",
+      "description": "Answering requires estimating a quantity."
+    }
+  ]
+}

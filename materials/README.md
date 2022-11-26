@@ -1,0 +1,1 @@
+The PrairieLearn demo course has been merged into the [`exampleCourse`](https://github.com/PrairieLearn/PrairieLearn/tree/master/exampleCourse) in the [main PrairieLearn repository](https://github.com/PrairieLearn/PrairieLearn).
