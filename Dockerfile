@@ -17,3 +17,4 @@ RUN conda install --quiet --yes \
 # run
 # docker build -t pl:v1 .
 # docker run -it --rm -p 3000:3000 -v /home/alireza/Desktop/STAT302:/course pl:v1
+
