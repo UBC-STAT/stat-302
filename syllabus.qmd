@@ -4,7 +4,7 @@ title: "{{< fa user-shield >}} Syllabus"
 
 
 ::: {.callout-note appearance="minimal"}
-## Term 2023 Winter 1: 05 Sep - 07 Dec 2023
+## Term 2025 Winter 1: 05 Sep - 07 Dec 2023
 :::
 
  
@@ -12,29 +12,23 @@ title: "{{< fa user-shield >}} Syllabus"
 __Instructor__:  
 Daniel McDonald  
 Office: Earth Sciences Building 3106  
-Website: <https://dajmcdon.github.io/>  
 Email: <daniel@stat.ubc.ca>  
-Slack: [@prof-daniel](https://stat-406-2023.slack.com/)
 
 __Office hours__:    
-Monday (TA), 2-3pm ESB 1045  
-Thursday/Tuesday (DJM), 10-11am ESB 4182 (the first Tuesday of each month will be moved to Thursday)   
-Thursday (TA), 3-4pm ESB 3174  
-Friday (TA/DJM), 10-11am Zoom (link on Canvas)
+TBD
 
 __Course webpage__:    
-WWW: <https://ubc-stat.github.io/stat-406/>  
-Github: <https://github.com/stat-406-2023>  
+WWW: <https://ubc-stat.github.io/stat-302/>  
 See also Canvas
 
 __Lectures__:  
 Tue/Thu 0800h - 0930h  
-(In person) Earth Sciences Building (ESB) 1012
+See Canvas for location
 
 
 __Textbooks__:  
-[\[ISLR\]](https://www.statlearning.com)  
-[\[ESL\]](https://web.stanford.edu/~hastie/ElemStatLearn/)
+
+
 
 __Prerequisite__:  
 STAT 306 or CPSC 340   

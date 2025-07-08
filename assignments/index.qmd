@@ -1,0 +1,8 @@
+---
+title: "{{< fa person-digging >}} Assignments"
+format:
+  html:
+    toc: true
+---
+
+* Potentially post assignments here.

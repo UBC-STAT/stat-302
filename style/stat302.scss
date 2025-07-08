@@ -5,6 +5,8 @@ $primary: #4a5a9a;
 $secondary: #e98a15;
 $light: rgb(255,255,255,.9);
 $footer-fg: $light;
+$footer-bg: $primary;
+$font-size-root: 24px;
 
 
 /*-- scss:rules --*/
@@ -66,4 +68,8 @@ h4,
 h5,
 h6 {
   color: $primary;
+}
+
+.nav-footer {
+  font-size: 12pt;
 }

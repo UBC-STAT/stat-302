@@ -13,12 +13,10 @@ website:
   description: "Homepage for Stat302 Introduction to Probability at UBC, Spring 2025."
   open-graph: true
   page-footer:
-    background: primary
-    center: |
-      This work by Matías Salibián-Barrera, Trevor Campbell, and Daniel J. 
-      McDonald is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0)<img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1'><img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1' /><img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1' />"
+    center: Copyright 2025, Matías Salibián-Barrera, Trevor Campbell, and Daniel J. McDonald
   sidebar:
     pinned: true
+    logo: "style/stat302.png"
     background: primary
     foreground: white
     align: center
@@ -32,14 +30,12 @@ website:
         url: syllabus.qmd
       - text: Schedule
         url: schedule/index.qmd
-      - text: Labs
-        url: labs/index.qmd
       - text: Assignments
-        url: assignments.qmd
+        url: assignments/index.qmd
 
 format:
   html:
     theme: [cosmo, style/stat302.scss]
     toc: true
     grid:
-      sidebar-width: 350px
+      sidebar-width: 400px
