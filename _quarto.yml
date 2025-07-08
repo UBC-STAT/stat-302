@@ -1,0 +1,45 @@
+project:
+  type: website
+
+
+editor: source
+
+website:
+  # title: UBC Stat302
+  # repo-url: https://github.com/ubc-stat/stat-302/
+  # issue-url: https://github.com/ubc-stat/stat-302/issues/new/
+  # repo-actions: [source, issue, edit]
+  # page-navigation: true
+  description: "Homepage for Stat302 Introduction to Probability at UBC, Spring 2025."
+  open-graph: true
+  page-footer:
+    background: primary
+    center: |
+      This work by Matías Salibián-Barrera, Trevor Campbell, and Daniel J. 
+      McDonald is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0)<img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1'><img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1' /><img style='height:22px!important;margin-left:3px;vertical-align:text-bottom;' src='https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1' />"
+  sidebar:
+    pinned: true
+    background: primary
+    foreground: white
+    align: center
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - text: Home
+        url: index.qmd
+      - text: Syllabus
+        url: syllabus.qmd
+      - text: Schedule
+        url: schedule/index.qmd
+      - text: Labs
+        url: labs/index.qmd
+      - text: Assignments
+        url: assignments.qmd
+
+format:
+  html:
+    theme: [cosmo, style/stat302.scss]
+    toc: true
+    grid:
+      sidebar-width: 350px
