@@ -4,7 +4,7 @@ title: "{{< fa user-shield >}} Syllabus"
 
 
 ::: {.callout-note appearance="minimal"}
-## Term 2025 Winter 1: 05 Sep - 07 Dec 2023
+## Term 2025 Winter 1: 05 Sep - 07 Dec 2025
 :::
 
  

@@ -1,0 +1,1186 @@
+---
+title: Module 1
+author: Daniel J. McDonald
+format: revealjs
+---
+
+::: {.content-hidden}
+{{< include _latexmacros.qmd >}}
+:::
+
+## Experiments
+
+**Definition:** A scientific procedure undertaken to make a discovery,
+test a hypothesis, or demonstrate a known fact.
+
+**Example of an experiment:** Release your pen from 4.9 meters
+above the ground.
+
+**Outcomes of the experiment:**
+
+- The pen will fall to the ground. 
+
+- It takes about 1 second before it touches the ground.
+
+
+
+## Our observation:
+
+- We are certain that the pen will touch the ground; 
+
+- we are less sure if it will take exactly 1 second.
+
+
+
+## Uncertainty
+
+**Common sense:** The outcome of some experiments cannot be determined
+with sufficient certainty beforehand. 
+
+**Examples:** 
+
+- Roll a die: which side will face up? 
+
+- Draw a card from a well-shuffled deck: which one you will get? 
+
+- How many students show up for class today?
+
+
+
+## Probability theory
+
+- Even though there seem to be no rules on the outcome of rolling a
+    die, if we repeat the experiment many times, some pattern emerges.
+
+- Probability theory aims to describe the pattern with a mathematical
+    model.
+
+- In ideal situations, the probability theory can be very successful:
+    Casino always wins.
+
+
+
+## Probability theory
+
+- **Axioms in mathematics:** Statements or propositions regarded as
+    being established, accepted, or self-evidently true.
+
+- **Mathematical Theorem:** A general proposition not self-evident but
+    proved by a chain of reasoning; a truth established by means of
+    accepted truths.
+
+- If the accepted truths are falsified, the Theorem is also falsified.
+
+
+
+## Probability theory
+
+- The probability theory in Stat 302 is a branch of mathematics. It is
+    a system based on a set of Axioms.
+
+- Its conclusions cannot be falsified unless the Axioms are falsified.
+
+- Stat 302 mostly lectures on mathematical aspects of the probability
+    theory.
+
+- We use real world examples to demonstrate the relevance of the
+    theory.
+
+
+
+## Probability theory
+
+We now motivate two subjects of probability theory based on experiment
+whose outcome is uncertain.
+
+
+
+## Sample Space
+
+::: {.Definition}
+Sample space is the set of all possible outcomes of a
+random experiment.
+:::
+
+We denote it by $\Omega$, and a generic outcome, also called sample
+point, by $\omega$ (i.e. $\omega \in \Omega$).
+
+- There is no rule that we have to use $\Omega$ as the notation for
+    the sample space. 
+
+- Always read the context.
+
+
+
+## Sample Space: examples
+
+- Roll a die: $\Omega = \{ 1,2,3,4,5, 6 \}$.
+
+- Draw a card:
+    $\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}$.
+
+- \% yield of chemical process: $\Omega =\left[ 0,100\right]$.
+
+- Maximum wind speed in YVR in 2023: $\Omega =[0, \infty)$
+
+**Remark:** We may not need to provide full description of $\Omega$
+in many cases.
+
+
+
+## Events
+
+**Definition:** An event is a subset of sample space $\Omega$.
+
+**Notation:** We commonly use upper case letters ($A$, $B$, $C$,
+...) for events.
+
+Because events are sets, all notions regarding sets are applicable:
+
+- $\omega \in A$ means "$\omega$ is an element of $A$".
+
+- $C \subset D$ means "$C$ is a subset of $D$".
+
+- Remember operations $A \cup B$, $A \cap B$ and so on.
+
+
+
+## Examples
+
+Events of interests are often formed by outcomes sharing some
+properties.
+
+- Roll a dice:\
+    $A= \{ 2, 4, 6 \}$ ("roll an even number");\
+    $B= \{1, 2, 3\}$ ("roll a 3 or less").
+
+- Chemical process:
+    $C= [ 9, 14 ] = \{ \text{yield is between 9 and 14\%} \}$
+
+- Max-wind-speed: $A=(80, \infty )= \{ \text{over 80 km/hour}\}$
+
+It is a useful skill to precisely list the sample points in a verbally
+described event.
+
+
+
+## Set Operations
+
+Suppose $A$, $B$ are events (subsets of $\Omega$).
+
+- **Union:** $A \union B$ 
+    $$\omega \in A \cup B \Leftrightarrow \omega \in A 
+    \mbox{ or } \omega \in B$$ 
+
+- **Intersection:** $A \cap B$ 
+    $$\omega \in A \cap B \Leftrightarrow \omega \in A 
+    \mbox{ and } \omega \in B$$ 
+
+- **Complement:** $A^c$ 
+    $$\omega \in A^c\Leftrightarrow \omega \notin A$$ 
+
+- **Symmetric difference:** $A \, \triangle \, B$ 
+    $$A \, \triangle \, B \, = \, \left( A \cap B^c \right) \, \cup \, \left( A^c \cap B \right)$$
+
+
+
+## Properties of set operations
+
+
+
+- Commutative: 
+
+    - $A \cup B \ = \ B \cup A$
+
+    - $A \cap B \ = \ B \cap A$
+
+    
+
+- Associative: 
+
+    - $A\cup B\cup C \, = \, \left( A\cup B\right) \cup C=A\cup \left( B\cup C\right)$
+
+    - $A\cap B\cap C \, = \, \left( A\cap B\right) \cap C=A\cap \left( B\cap C\right)$
+
+    
+
+- Distributive: 
+
+    - $\left( A\cup B\right) \cap C \, = \, \left( A\cap C\right) \cup \left( B\cap
+        C\right)$
+
+    - $\left( A\cap B\right) \cup C \, = \, \left( A\cup C\right) \cap \left( B\cup
+        C\right)$
+
+    
+
+- $A = B$ $\Leftrightarrow$ $A \subseteq B$ and $B \subseteq A$
+
+
+
+## De Morgan's Laws (use diagram)
+
+Theorem: for any two events (sets) $A$ and $B$, we have
+$$( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}.$$
+
+**Proof**: To prove two events are equal as above, the general
+approach is to show both $$( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}$$
+and $$A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}.$$
+
+We give part of a proof on the next slide.
+
+
+
+## Proof of De Morgan's Laws
+
+Let us show $( A\cup B ) ^{c}  \subseteq  A^{c}\cap B^{c}$:
+
+- take any $\omega \in  ( A\cup B )^c$, we must have
+    $\omega \notin A \cup B$;
+
+- This implies $\omega \notin A$ and $\omega \notin B$ (because if
+    either $\omega \in A$ or $\omega \in B$ then we'd have
+    $\omega \in A \cup B$).
+
+- Hence $\omega \in A^c$ and $\omega \in B^c$,
+
+- This is the same as $\omega \in A^c \cap B^c$.
+
+- That is, $\omega \in  ( A\cup B )^c$ implies
+    $\omega \in A^c \cap B^c$ which is
+    $$( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c}.$$
+
+Try it yourself to prove $A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}$.
+
+
+
+## Useful Identities
+
+
+
+- $A \ =  ( A\cap B ) \, \cup \,  ( A\cap B^{c} )$ 
+
+    - First:
+        $A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$:
+        Take $\omega \in A$, then either $\omega \in B$ or
+        $\omega \notin B$. In the first case: $\omega \in A \cap B$, in
+        the second case: $\omega \in A \cap B^c$. Thus
+        $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
+
+        
+
+    - Also:
+        $\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A$:
+        Take
+        $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
+        If $\omega \in \left( A\cap B\right)$ then $\omega \in A$. If
+        $\omega \in \left( A\cap B^{c}\right)$ then $\omega \in A$.
+        Thus, we always have $\omega \in A$.
+
+    
+
+- $A \, \cup\,  B \ = \ A \, \cup \left( B\cap A^{c}\right)$
+
+    - Prove it!
+
+
+
+## Power set
+
+The power set of $\Omega$ (denoted $2^\Omega$) is the set of all
+possible subsets of $\Omega$. **Example:** Suppose
+$\Omega \ = \ \{ 1,2,3 \}$. Then $$2^{\Omega }  \, 
+=  \Bigl\{ 
+\varnothing ,
+\{ 1\} , \{ 2 \} , \{ 3 \} , \{ 1,2 \} , \{ 1,3 \} , \{ 2,3 \}, \{ 1, 2, 3 \} \Bigr\}$$
+
+- The symbol $\varnothing$ denotes the empty set. 
+
+- If $\Omega$ has $n$ elements, then $2^{\Omega }$ has $2^{n}$
+    elements. In symbols: $$\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }.$$
+
+
+
+## Reasoning for the size of power set
+
+List the $n$ elements of $\Omega$ as
+$$\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}$$
+
+Any event $A \subseteq \Omega$ is uniquely obtained by including or
+excluding each of $\omega _{1},\omega _{2},\ldots,\omega _{n}$.
+
+Hence, we have 2 options for each of the $n$ sample points, leading
+to $2^n$ distinct outcomes.
+
+
+
+## Probability of an event, an possible outcome
+
+Even though we cannot predict the outcome of an experiment well enough
+in many cases, we have an idea about the chance of various outcomes:
+
+- If you toss a coin, the chance of observing a head is formidable.
+
+- If you buy a lottery ticket, the chance of winning the grand price
+    is negligible.
+
+In probability theory, we quantify the chance for "every subset" of
+the sample space in a self-consistent way.
+
+Such a system was first proposed by Kolmogorov.
+
+
+
+## Probability Axioms
+
+Let $\Omega$ be a sample space and ${\cal B}$ be the collection of "all
+subsets" of $\Omega$.
+
+
+
+**Probability function** is a function defined on ${\cal B}$ so that
+
+1.  **Axiom 1:** $P ( \Omega ) =1$. 
+
+2.  **Axiom 2:** For all $A \in {\cal B}$, we have $P ( A ) \geq 0$.
+    
+
+3.  **Axiom 3:** If $\{ A_{n}\}_{n \ge 1}$ are a sequence of
+    **disjoint** events, then
+    $$P\left( \bigcup_{n=1}^{\infty }A_{n}\right) \, 
+    = \sum_{n=1}^{\infty }P ( A_{n})$$
+
+
+
+## Probability
+
+- The value of $P(A)$ is called the probability of event $A$.
+
+    
+
+- Apparently, $0 \leq P(A) \leq 1$: trivial but useful. If your
+    calculation gives an event negative probability value, re-do the
+    calculation.
+
+    
+
+- The key phrase **a sequence of** is important: this rule does not go
+    beyond.
+
+    
+
+- Being **disjoint** means for all $i \neq j$,
+    $$A_i \cap A_j = \varnothing.$$
+
+    
+
+- As a mathematical theory, probability definition does not rely on an
+    "uncertainty experiment".
+
+
+
+## Properties of the probability function
+
+Unless otherwise specified, $A$, $B$ and so on are events, and
+$\Omega$ is the sample space.
+
+
+
+- Probability of the complement: $$P ( A^{c} ) =1-P ( A )$$
+
+- Monotonicity: $$A\subset B\Rightarrow P ( A ) \leq P (B )$$
+
+- Probability of the union:
+    $$P ( A\cup B ) =P ( A ) +P ( B ) - P ( A\cap B )$$
+
+- Boole's inequality:
+    $$P ( \bigcup _{i=1}^{m}A_{i} ) \leq \sum_{i=1}^{m}P ( A_{i} )$$
+
+
+
+## Proof of formula for complement
+
+Recall **Mathematical Theorem:** A general proposition not
+self-evident but proved by a chain of reasoning; a truth established by
+means of accepted truths.
+
+By "proof" regarding probability formulas, we use a chain of
+reasoning to show they are implied by means of the accepted three
+Axioms.
+
+
+
+## Proof of formula for complement
+
+Proof of "$P ( A^{c} ) \ = \ 1-P ( A )$:" 
+
+- Note that (1) $\Omega = A \cup A^{c}$ and (2) $A$ and $A^c$ are
+    disjoint.
+
+    
+
+- By Axioms 1 and 3, we have
+    $$1 =  P ( \Omega )  =  P (A  ) +P ( A^c)$$ which implies
+    $P ( A^{c} ) =1-P ( A )$.
+
+    
+
+- This completes the proof.
+
+
+
+## Monotonicity
+
+Proof of "$A \subset B \, \Rightarrow \, P ( A) \leq P ( B)$:"
+
+
+
+- We note that $B =  ( B\cap A ) \cup  ( B\cap A^{c})$; 
+
+- Since $A \subset B$ is given, we have $B \cap A = A$. Hence,
+    $B =  A \cup ( B \cap A^{c})$ 
+
+- In addition, $A$ and $B \cap A^{c}$ are disjoint. By Axiom 3 , we
+    get $P ( B )  =  P ( A ) + P ( B\cap A^{c})$.
+
+    
+
+- By Axiom 2, $P ( B\cap A^{c}) \ge 0$. Thus,
+    $$P ( B ) = P ( A ) + P  ( B\cap A^{c}) \ge  P ( A ).$$ This
+    completes the proof.
+
+
+
+## Probability of a union
+
+Proof of "$P ( A\cup B ) =P ( A ) +P( B ) -P ( A\cap B )$:" 
+
+- First recall that $A\cup B = A\cup  ( B\cap A^{c} )$.
+
+- Note that $A$ and $B\cap A^{c}$ are disjoint events. Hence by Axiom
+    3: $$P ( A\cup B ) =P ( A ) +P ( B \cap A^{c} )$$
+
+- Splitting $B$ into union of two disjoint events:
+    $B  =  ( B\cap A ) \cup  ( B\cap A^c )$ and applying Axiom 3, we get
+    $$P ( B) = P ( B\cap A ) +P ( B\cap A^c )$$
+
+- The formula is obtained by combining the above two conclusions.
+
+
+
+## Proof of Boole's inequality
+
+$$P\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}P\left( A_{i}\right)$$
+
+- We will prove it by induction.
+
+- For $n=2$: $$\begin{aligned}
+    P\left( A_{1}\cup A_{2}\right) & = P\left( A_{1}\right) +P\left( A_{2}\right)
+    -P\left( A_{1}\cap A_{2}\right) \\
+    \\
+    & \leq P\left( A_{1}\right) +P\left(
+    A_{2}\right)\end{aligned}$$ because
+    $P\left( A_{1}\cap A_{2}\right) \geq 0$
+
+
+
+## Boole's inequality
+
+
+
+- Assume now that it holds for $n$. We then have 
+$$
+\begin{aligned}
+P \Big ( \bigcup _{i=1}^{n+1}A_{i} \Big ) 
+& = 
+P\Big [ \Big ( \bigcup_{i=1}^{n}A_{i}\Big ) \bigcup A_{n+1}\Big ] &\mbox{ associative prop.} \\
+& \leq 
+P\Big[ \bigcup_{i=1}^{n}A_{i}\Big ] +P \left( A_{n+1} \right) &\mbox{ case n=2} \\
+& \leq
+\sum_{i=1}^{n} P\left( A_{i}\right) +P\left( A_{n+1} \right) &\mbox{ induction} \\
+& = 
+\sum_{i=1}^{n+1} P\left( A_{i}\right).
+\end{aligned}
+$$
+
+    
+
+- The mathematics induction is completed now and the formula is
+    proved.
+
+
+
+## Example of applying these formulas
+
+John borrows 2 books.
+
+Suppose there is a 0.5 probability he likes the first book, 0.4
+that he likes the second book, and 0.3 that he likes both.
+
+What is the probability that he will **NOT** like either of the 2
+books?
+
+**Solution**: Introduce two notations for events:
+$$A  = \{ \mbox{ John likes book 1 }\}, 
+  B = \{ \mbox{ John likes book 2 }\}.$$
+
+We are told that
+$P ( A )  =  0.5 \, , P ( B ) = 0.4 \, ,  P ( A\cap B ) =0.3$.
+
+We are asked to calculate $P\left( A^{c}\cap B^{c}\right)$.
+
+
+
+## Example of applying these formulas
+
+Note that $A^{c}\cap B^{c} =  ( A\cup B ) ^{c}$. Hence,
+$$P\left( A^{c}\cap B^{c}\right)  
+  = P\left[ \left( A\cup B\right) ^{c}\right]
+  =1 - P\left( A\cup B\right).$$
+
+Making use of another formula:
+$$P\left( A\cup B\right) = P\left( A\right) +P\left( B\right) -P\left( A\cap B\right) = 0.6.$$
+
+We get $P( A^{c}\cap B^{c})  = 1 - 0.6 = 0.4.$
+
+**General line of approach**:
+
+Connect $A^{c}\cap B^{c}$ with events $A$, $B$ and $A\cap B$, because
+the probabilities of latter are provided.
+
+
+
+## Example of applying formulas
+
+Jane must take two tests, call them $T_1$ and $T_2$.
+
+Suppose the probability she passes test $T_1$ is **0.8**, test
+$T_2$ is **0.7** and both tests is **0.6**.
+
+Calculate the probability that:
+
+(a) She passes at least one test. 
+
+(b) She passes at most one test. 
+
+(c) She fails both tests. 
+
+(d) She passes only one test.
+
+
+
+## Solutions
+
+Notation: $$\begin{aligned}
+A &= \{ \text{Jane passes test $T_1$} \} \\
+B &= \{ \text{Jane passes test $T_2$} \}\end{aligned}$$
+
+We are told that $$P\left( A\right) =0.80, 
+P\left( B\right) =0.70, \text{  \ and
+\ }P\left( A\cap B\right) =0.6.$$
+
+Our task is to use these information to figure out the probabilities of
+various events.
+
+
+
+## Solution to (a)
+
+**(a) Jane passes at least one test**
+
+We note that
+$$\left\{ \mbox{Passes at least one test}\right\} = A \cup B.$$
+
+Hence, $$\begin{aligned}
+P\left( A\cup B\right) 
+& = 
+P\left( A\right) +P\left( B\right) -P\left( A\cap B\right) \\
+&=
+0.80+0.70-0.60 \\ 
+& =  0.90\end{aligned}$$ which is the answer to (a).
+
+
+
+## Solution to (b)
+
+**(b) Jane passes at most one test**
+
+We notice that $$\begin{aligned}
+\{ \text{Passes at most one test}\} 
+&=
+\left\{ \text{Fails at least one test}\right\} \\
+&=
+A^{c}\cup B^{c}.\end{aligned}$$
+
+And we notice
+$$A^{c}\cup B^{c} = (A\cap B) ^{c}\text{ \ \ De Morgan rule\ \ }$$ which
+gives one way of computing its probability.
+
+
+
+## Solution to (b)
+
+Continue from the last slide, we have
+
+$$\begin{aligned}
+P ( \{ \text{Passes at most one test} \}  )
+&= P\left(\left( A\cap B\right) ^{c}\right) \text{ \ \ \ } \\
+&=1-P\left( A\cap B\right) \\
+&=1-0.60=0.40\end{aligned}$$ which is the required answer.
+
+
+
+## Solution to (c)
+
+**(c) She fails both tests**
+
+Similarly, we observe by De Morgan rule, $$\begin{aligned}
+\{ \text{Fails both tests}\} 
+&=
+A^{c}\cap B^{c} \\
+&=
+( A\cup B) ^{c} \end{aligned}$$ which gives one way of computing its
+probability.
+
+
+
+## Solution to (c)
+
+Continue from the last slide, we have $$\begin{aligned}
+P (  \{ \text{Fails both tests} \}  )
+ &=
+ P\left( \left( A\cup B\right) ^{c}\right) \\
+&=1-P\left( A\cup B\right) \\
+&=1-0.90 \\
+&=
+ 0.10 \text{  from Part (a)}\end{aligned}$$ which is the required
+answer.
+
+
+
+## Solution to (d) 
+
+**(d) She passes only one test**
+
+We first decompose the event into the union of two disjoint events:
+$$\left\{ \text{Passes only one test}\right\} =%
+\left( A\cap B^{c}\right) 
+\cup 
+\left( A^{c}\cap B\right)$$
+
+We hence have 
+$$
+\begin{aligned}
+P(\left\{ \text{Passes only one test}\right\})
+&=
+P\left( A\cap B^{c}\right) 
++
+P\left( A^{c}\cap B\right)  \\
+&= 
+\left[ P\left( A\right) -P\left( A\cap B\right) \right]
++ \left[ P\left( B\right) -P\left( A\cap B\right) \right] \\
+&=
+P\left( A\right) +P\left( B\right) -2 \times P\left( A\cap B\right) \\
+&=
+0.80+0.70-2\times 0.60  = 
+0.30
+\end{aligned}
+$$ 
+
+which is the answer.
+
+
+
+## Remarks
+
+- It is typical in introductory probability theory course to give a
+    story first, followed by specifying events verbally.
+
+- It is most effective to first introduce some simple events, and
+    express other events of interest by these events.
+    
+- Rather than relying on algebra as in our examples, it can be easier
+    to use Venn diagram to have these events connected.
+
+- There can be many ways to connect them, all lead to a viable
+    probability calculation.
+
+## Example without being given a story
+
+(a) Suppose that $P\left( A\right) =0.85$ and $P\left( B\right) =0.75.$
+    Show that $$P\left( A\cap B\right) \geq 0.60.$$ 
+
+(b) More generally, prove the Bonferroni inequality:
+    $$P\left( \cap _{i=1}^{n}A_{i}\right) \geq \sum_{i=1}^{n}P\left( A_{i}\right)
+    -\left( n-1\right) .$$
+
+
+
+## Solution to Example 2 (a)
+
+We know that $P\left( A\right) =0.85$ and $P\left(
+B\right) =0.75$ and wish to show that
+$$P\left( A\cap B\right) \geq 0.60.$$
+
+Note that $A\cap B=\left( A^{c}\cup B^{c}\right) ^{c}$ (De Morgan
+rule)
+
+Hence:
+$$P\left( A\cap B\right) = 1-P\left( A^{c}\cup B^{c}\right)$$
+
+Also
+$$P\left( A^{c}\cup B^{c}\right)  \leq P\left( A^{c}\right) +P\left( B^{c}\right)$$
+
+
+
+## Solution to Example 2 (a)
+
+Therefore $$\begin{aligned}
+P\left( A\cap B\right) 
+&=
+P\left( \left( A^{c}\cup B^{c}\right) ^{c}\right) \\
+&=
+1-P\left( A^{c}\cup B^{c}\right)  \\
+&\geq 
+1-\left[ P\left( A^{c}\right) +P\left( B^{c}\right) \right]  \\
+&=
+1-\left[ 1-P\left( A\right) \right] -\left[ 1-P\left( B\right) \right]  \\
+&=
+P\left( A\right) +P\left( B\right) -1 \\
+& =
+0.85+0.75-1=0.60.\end{aligned}$$
+
+This completes the proof.
+
+
+
+## Solution to Example 2 (b)
+
+**(b) Prove the Bonferroni inequality:**
+
+$$\begin{aligned}
+P\left( \bigcap _{i=1}^{n}A_{i}\right) &\geq\sum_{i=1}^{n}P\left(
+A_{i}\right) -\left( n-1\right) . \\
+&&\end{aligned}$$
+
+**Proof**: First note that $$\bigcap _{i=1}^{n}A_{i} \, = \,  
+\left( \bigcup _{i=1}^{n}A_{i}^{c}\right) ^{c}.$$
+
+
+
+## Solution to Example 2 (b)
+
+Therefore 
+$$
+\begin{aligned}
+P\left( \bigcap _{i=1}^{n}A_{i}\right) & =P\left( \left( \bigcup
+_{i=1}^{n}A_{i}^{c}\right) ^{c}\right) \\
+& =1-P\left( \bigcup _{i=1}^{n}A_{i}^{c}\right)  \\
+& \geq 1-\sum_{i=1}^{n}P\left( A_{i}^{c}\right)
+\end{aligned}
+$$
+
+
+
+## Solution to Example 2 (b)
+
+$$\begin{aligned}
+& =1-\sum_{i=1}^{n}\left( 1-P\left( A_{i}\right) \right) &\text{ \ complement
+rule} \\
+& =1-\sum_{i=1}^{n}1+\sum_{i=1}^{n}P\left( A_{i}\right)
+=1-n+\sum_{i=1}^{n}P\left( A_{i}\right) \\
+& =\sum_{i=1}^{n}P\left( A_{i}\right) -\left( n-1\right) .
+\end{aligned}$$
+
+This completes the proof.
+
+
+
+## Refresh the memory of probability axioms
+
+Kolmogorov's axioms tell us that if we have (a) sample space, (b)
+collection of events, and wish to create a probability function
+$P(\cdot)$; what properties this function should have.
+
+The last a few examples show that if such a function $P(\cdot)$ has
+been given, how one may derive the value of $P(A)$ from the
+probabilities of other events.
+
+We next suggest a way to set up (a) sample space, (b) collection of
+events, and (c) probability function $P(\cdot)$ for a special type of
+experiments.
+
+
+
+## Equally likely outcomes
+
+Suppose the sample space $\Omega$ is finite.
+$$\Omega \, = \, \Bigl\{ \omega _{1},\omega _{2}, \ldots,\omega _{n}\Bigr\}$$
+
+In many applications, we trust that these distinct outcomes are equally
+likely so that we wish to make
+$$P (   \{ \omega _{i} \} )  = a \, , \quad a \in (0, 1].$$
+
+For such an experiment, we get a natural probability function.
+
+
+
+## Equally likely outcomes
+
+Notice that $\Omega = \bigcup _{i=1}^{n} \left\{ \omega _{i}\right\}$,
+and $\{\omega _{i}\}_{i=1}^n$ are disjoint events.
+
+The probability theory Axioms require 
+$$\begin{aligned}
+1 &= P\left( \Omega \right)= P \Big ( \bigcup _{i=1}^{n}\left\{ \omega_{i}\right\} \Big ) 
+= \sum_{i=1}^{n}P\left( \left\{ \omega _{i}\right\} \right) 
+=\sum_{i=1}^{n} a \, = \, n a.
+\end{aligned}$$
+
+Our only option is to let $a = 1 / n$.
+
+
+
+## Equally likely outcomes
+
+The axioms further require that for any event $A \subseteq \Omega$:
+$$\begin{aligned}
+P(A)
+&= \sum_{\omega _{i}\in A} P( \{ \omega_{i} \})
+= \sum_{\omega _{i}\in A}\frac{1}{n} =
+\frac{\#A}{\#\Omega}\\
+&=
+\frac{\#\{\mbox{favorable outcomes} \}}{\#\{\mbox{possible outcomes}\}}
+\end{aligned}$$
+
+Being "favourable" means those in the event of interest: $A$ in
+this example.
+
+
+
+## Probability calculation examples
+
+
+
+- To calculate probabilities, we count the number of sample points in
+    the event of interest.
+
+    
+
+- Counting the number of sample points in a set can be mathematically
+    surprisingly complicated.
+
+    
+
+- **Combinatorial theory** deals with this problem.
+
+    
+
+- We will learn some basic combinatorial rules and techniques for this
+    purpose.
+
+
+
+## Counting Example I
+
+A die is rolled repeatedly until we see an outcome being 6.
+
+
+
+(a) Specify/describe the sample space.
+
+    
+
+(b) Let $E_{n}$ denote the event that the number of rolls is exactly $n$
+    ($n=1,2, \ldots$).
+
+    Describe the event $E_{n}$.
+
+    
+
+(c) Describe the event $E_{1}\cup E_{2}$ and
+    $( \bigcup _{n=1}^{\infty} E_{n}) ^{c}$.
+
+
+
+## Solution to (a)
+
+**(a)** The sample space consists of all sequences
+$$\left( x_{1},x_{2}, \ldots, x_{n-1}, x_{n}\right)$$ with
+$$1 \leq x_{i}\leq 5 \text{\ \ for \ \ } 1 \le i \le n-1 \text{, \ \ and \ } x_{n} = 6 .$$
+
+For example: $$\begin{aligned}
+\left( 4,1,5,1,6\right) \ \ \ \text{with }n &=&5 \\
+\left( 5,2,6\right) \ \ \ \text{with }n &=&3 \\
+\left( 6\right) \ \ \ \text{with }n &=&1 \\
+\left( 2,4,5,1,3,4,6\right) \ \ \ \text{with }n &=&7\end{aligned}$$
+
+
+
+## Solution to (b)
+
+**(b)  When the number of rolls is** $n$, we have algebraic
+descriptions:
+
+$$\begin{aligned}
+E_{1} &=\left\{ (6)\right\} \\
+E_{2} &=\left\{ \left( x_{1},6\right) :1\leq x_{1}\leq 5\right\} \\
+E_{3} &=\left\{ \left( x_{1},x_{2},6\right) :1\leq x_{1},x_{2}\leq 5\right\}\\
+&\;\; \vdots \\
+E_{n} &=\left\{ \left( x_{1},x_{2},...,x_{n-1},6\right) :1\leq
+x_{1},x_{2},...,x_{n-1}\leq 5\right\}\end{aligned}$$
+
+
+
+## Solution (c)
+
+**(c) Verbally interpreting** $E_{1}\cup E_{2}$,
+$\bigcup_{n=1}^{\infty} E_{n}$, and
+$( \bigcup_{n=1}^{\infty } E_n) ^{c}$:
+
+Suggestive answers: 
+$$\begin{aligned}
+E_{1}\cup E_{2} &= \Bigl\{ \text{6 appears before the 3}^{rd}\text{ roll} \Bigr\} \\
+\bigcup _{n=1}^{\infty }E_{n} & =  \Bigl\{ \mbox{6 \ eventually appears}\Bigr\}\\
+\ \left( \bigcup _{n=1}^{\infty }E_{n}\right) ^{c} &=\Bigl\{ \mbox{6 never
+appears}\Bigr\}
+\end{aligned}$$
+
+
+
+## Counting example II
+
+A system has **5 components**, which can either be **working** or
+have **failed**.
+
+The experiment consists of observing the current status (W/F) of
+the 5 components.
+
+Consider the tasks on the next slide
+
+
+
+## Counting example II
+
+(a) Describe the sample space for this experiment.
+
+(b) How much is $\# \Omega$?
+
+(c) Suppose that the system will work if either components (1 and 2), or
+    (3 and 4), or (1, 3 and 5) are working.
+
+    List the outcomes in the event
+    $D =\left\{ \mbox{The system works}\right\}$?
+
+(d) Let $A= \{ \text{components 4 and 5 have failed} \}$. How much is
+    $\# A$?
+
+(e) List the outcomes in $A \cap D$.
+
+
+
+## Answer to (a)
+
+**(a) Describe the sample space**
+
+The outcomes of the experiment are sequences
+$$( x_{1},x_{2}.x_{3},x_{4},x_{5} )$$ where we could have $x_i = W$ or
+$x_i = F$ depending on when component $i$ is working or has failed.
+
+One typical outcome is (W, W, F, W, F) which indicates that components
+**1**, **2** and **4** are working and **3** and **5** have failed,
+
+
+
+## Answer to (b)
+
+**(b) How many outcomes are there in $\Omega$ ?** 
+
+NOTE: the
+number of elements of a set $A$ (aka its cardinal number) is denoted by
+ $\#A.$
+
+We have $\# \Omega = 2^{5} = 32$.
+
+
+
+## Answer to (c)
+
+**(c) The system works if (1 and 2), or (3 and 4) or (1, 3 and 5)
+work.**
+
+Let $D = \{ \mbox{The system works}\}$. Let us count it.
+
+Here is an exhaustive list of $D$:
+
+    1 and 2 work      3 and 4 work     1, 3 and 5 work
+  ----------------- ----------------- -----------------
+   (W, W, W, W, W)   (F, F, W, W, W)   (W, F, W, F, W)
+   (W, W, F, W, W)   (F, W, W, W, W)  
+   (W, W, W, F, W)   (W, F, W, W, W)  
+   (W, W, W, W, F)                    
+   (W, W, W, F, F)   (F, F, W, W, F)  
+   (W, W, F, W, F)   (F, W, W, W, F)  
+   (W, W, F, F, W)   (W, F, W, W, F)  
+   (W, W, F, F, F)                    
+
+Apparently, $\# D = 15$.
+
+
+
+## Answer to (d)
+
+**(d) A**$=\left\{ \text{\textbf{4 and 5 have failed}}\right\}$. **How
+many outcomes are there in A?**
+
+The outcomes in $A$ are of the form $(x_{1},x_{2},x_{3}, F, F)$ with
+$x_{i}=W$ or $x_i = F$ for $i = 1, 2, 3$.
+
+
+
+Hence, we have $2^{3}=8$ different outcomes: $$\# A = 2^{3} = 8 \, .$$
+
+
+
+## Answer to (e)
+
+**(e) Describe all the outcomes in $A \cap D$**
+
+Recall the list of $D$: 
+
+      1 and 2 work        3 and 4 work     1, 3 and 5 work
+  --------------------- ----------------- -----------------
+     (W, W, W, W, W)     (F, F, W, W, W)   (W, F, W, F, W)
+     (W, W, F, W, W)     (F, W, W, W, W)  
+     (W, W, W, F, W)     (W, F, W, W, W)  
+     (W, W, W, W, F)                      
+   **(W, W, W, F, F)**   (F, F, W, W, F)  
+     (W, W, F, W, F)     (F, W, W, W, F)  
+     (W, W, F, F, W)     (W, F, W, W, F)  
+   **(W, W, F, F, F)**                    
+
+Clearly, we have
+$$W\cap A= \{ ( W, W, W, F, F ) , ( W, W, F, F, F )  \}$$ and
+$\#(W\cap A) = 2$.
+
+
+
+## Example III
+
+Two dice have two sides painted red, two painted black, one painted
+yellow, and the other painted white.
+
+When this pair of dice is rolled, what is the probability that both
+dice show the same color facing up?
+
+**Remark**: If not explicitly declared, this type of problem
+assumes \"equal likely outcomes\".
+
+
+
+## Answer to Example III
+
+We answer this question with brute-force counting.
+
+An exhaustive list of sample space is presented as follows:
+
+  ---- ---- ---- ---- ---- ---- ----
+        R1   R2   B3   B4   Y5   W6
+   R1   X    X                  
+   R2   X    X                  
+   B3             X    X        
+   B4             X    X        
+   Y5                       X   
+   W6                            X
+                                
+  ---- ---- ---- ---- ---- ---- ----
+
+
+The size of sample space is $\# \Omega = 36$.
+
+The number of favourable outcomes is $10$.
+
+Hence, under the equal probability model:
+$$P \{ \text{Same color} \} = {10}/{36} = {5}/{18}.$$
+
+
+
+## Example IV
+
+A small community consists of 20 families.
+
+Four of them have 1 child, 8 have 2 children, 5 have 3 children, 2
+have 4 children, and 1 has 5 children.
+
+
+
+(a) What is the probability that a randomly chosen family has $i$
+    children, for each $1 \le i \le 5$? 
+
+(b) What is the probability that a randomly chosen child comes from a
+    family with $i$ children, for each $1 \le i \le 5$?
+
+**Jargon**: By "randomly chosen", it says that the **specific
+unit** is equally likely selected.
+
+Applying the equal probability experiment/model for (a): family; (b):
+child.
+
+
+
+## Answer to Example IV
+
+We organize the information as follows:
+
+| i | Families with i children | Children from families w/ i children |
+|---|---------------------------|--------------------------------------|
+| 1 | 4                         | 4                                    |
+| 2 | 8                         | 16                                   |
+| 3 | 5                         | 15                                   |
+| 4 | 2                         | 8                                    |
+| 5 | 1                         | 5                                    |
+| **Total** | **20**           | **48**                               |
+
+
+**Catch**: There are 20 families, 48 children in this community.
+
+
+
+## Answer to (a)
+
+**(a)** If one family is chosen at random, what is the probability
+it has $i$ children, $i=1, 2, 3, 4, 5$?
+
+| i | Families with i children | P(family has i children) |
+|---|---------------------------|---------------------------|
+| 1 | 4                         | 4/20                      |
+| 2 | 8                         | 8/20                      |
+| 3 | 5                         | 5/20                      |
+| 4 | 2                         | 2/20                      |
+| 5 | 1                         | 1/20                      |
+| **Total** | **20**           | **1.00**                  |
+
+
+
+## Answer to (b)
+
+**(b)** If one child is randomly chosen, what is the probability that it
+comes from a family having $i$ children, $i=1,2,3,4,5$?
+
+
+| i | Children from families with i children | P(child comes from family with i children) |
+|---|----------------------------------------|--------------------------------------------|
+| 1 | 4                                      | 4/48                                       |
+| 2 | 16                                     | 16/48                                      |
+| 3 | 15                                     | 15/48                                      |
+| 4 | 8                                      | 8/48                                       |
+| 5 | 5                                      | 5/48                                       |
+| **Total** | **48**                         | **1.00**                                   |
+
+
+
+## Remark
+
+Part (a) and Part (b) are probability calculations under **Two
+Different** experiments.
+

@@ -1,0 +1,173 @@
+\newcommand{\lt}{\mathopen{}\mathclose\bgroup\left}
+\newcommand{\rt}{\aftergroup\egroup\right}
+\newcommand{\m}{\middle}
+\newcommand{\lb}{\bigl}
+\newcommand{\lB}{\Bigl}
+\newcommand{\lbg}{\biggl}
+\newcommand{\lBg}{\Biggl}
+\newcommand{\rb}{\bigr}
+\newcommand{\rB}{\Bigr}
+\newcommand{\rbg}{\biggr}
+\newcommand{\rBg}{\Biggr}
+
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\inner{\langle}{\rangle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\rbra{(}{)}
+\DeclarePairedDelimiter\cbra{\{}{\}}
+\DeclarePairedDelimiter\sbra{[}{]}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\lam}{\lambda}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\ups}{\upsilon}
+\newcommand{\Ups}{\Upsilon}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\vtheta}{\vartheta}
+\newcommand{\vpi}{\varpi}
+\newcommand{\vrho}{\varrho}
+\newcommand{\vsigma}{\varsigma}
+\newcommand{\vphi}{\varphi}
+\newcommand{\vkappa}{\varkappa}
+
+\newcommand{\eg}{e.g.,\ }
+\newcommand{\etal}{et al.\xspace}
+\newcommand{\ie}{i.e.,\ }
+\newcommand{\aka}{a.k.a.\ }
+
+\newcommand{\reals}{\ensuremath{\mathbb{R}}}
+\newcommand{\xreals}{\overline{\reals}}
+\newcommand{\ints}{\ensuremath{\mathbb{Z}}}
+\newcommand{\rats}{\ensuremath{\mathbb{Q}}}
+\newcommand{\nats}{\ensuremath{\mathbb{N}}}
+\newcommand{\comps}{\ensuremath{\mathbb{C}}}
+\newcommand{\msrs}{\mathcal{M}}
+\newcommand{\pmsrs}{\mathcal{M}_1}
+\DeclareMathOperator*{\union}{\mathchoice{\bigcup}{\cup}{\cup}{\cup}}
+\DeclareMathOperator*{\inter}{\mathchoice{\bigcap}{\cap}{\cap}{\cap}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\spann}{\operatorname{span}}
+\newcommand{\bdry}{\partial}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\conv}{\operatorname{conv}}
+
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\kron}{\operatorname{\otimes}}
+\newcommand{\adjsym}{\dag} % adjoint symbol
+\newcommand{\adj}{^{\adjsym}} % adjoint
+\newcommand{\spec}{\operatorname{\sigma}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\transposesym}{\top}
+\newcommand{\T}{^{\transposesym}}
+\newcommand{\nT}{^{-\transposesym}}
+
+\let\oldd\d
+\renewcommand\d{\relax\ifmmode\mathsf{d}\else\oldd\fi}
+\newcommand{\pd}{\partial}
+\newcommand{\grad}{\nabla}
+\newcommand{\der}[3][]{\ensuremath{\frac{{\d}^{#1} #2}{\d {#3}^{#1}}}}
+\newcommand{\pder}[3][]{\ensuremath{\frac{{\pd}^{#1} #2}{\pd {#3}^{#1}}}}
+\newcommand{\hes}[3]{\ensuremath{\frac{\pd^2 #1}{\pd #2 \pd #3}}}
+
+
+\newcommand{\iid}{\textrm{i.i.d.}\@\xspace}
+\newcommand{\as}{\textrm{a.s.}\@\xspace}
+\newcommand{\aev}{\textrm{a.e.}\@\xspace}
+
+\newcommand{\convas}{\overset{a.s.}{\to}}
+\newcommand{\convp}{\overset{p}{\to}}
+\newcommand{\convd}{\overset{d}{\to}}
+\newcommand{\eqd}{\overset{d}{=}}
+\newcommand{\eqas}{\overset{a.s.}{=}}
+
+\let\oldP\P
+\renewcommand\P{\relax\ifmmode\mathbb{P}\else\oldP\fi}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Corr}{\operatorname{Corr}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\newcommand{\dist}{\sim}
+\newcommand{\distiid}{\overset{\text{iid}}{\dist}}
+\newcommand{\distind}{\overset{\text{ind}}{\dist}}
+
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern4mu{#1#2}}}
+\newcommand\indep{\protect\mathpalette{\protect\independenT}{\perp}} % independent
+
+\newcommand{\KL}{\operatorname{KL}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\Wass}{\operatorname{W}}
+\newcommand{\Hell}{\operatorname{H}}
+
+
+\newcommand{\distNamed}[1]{{\mathrm{#1}}}
+\newcommand{\Norm}{\mathcal{N}}
+\newcommand{\StudentT}{\mathcal{T}}
+\newcommand{\Wish}{\mathcal{W}}
+\newcommand{\InvWish}{\mathcal{IW}}
+\newcommand{\Lap}{\distNamed{Lap}}
+\newcommand{\ChiSq}{\chi^2}
+\newcommand{\Unif}{\distNamed{Unif}}
+\newcommand{\Gam}{\distNamed{Gam}}
+\newcommand{\Gum}{\distNamed{Gumbel}}
+\newcommand{\GEV}{\distNamed{GEV}}
+\newcommand{\Cat}{\distNamed{Categorical}}
+\newcommand{\InvGam}{\distNamed{InvGam}}
+\newcommand{\Poiss}{\distNamed{Poiss}}
+\newcommand{\Exp}{\distNamed{Exp}}
+\newcommand{\Beta}{\distNamed{Beta}}
+\newcommand{\Dir}{\distNamed{Dir}}
+\newcommand{\Binom}{\distNamed{Binom}}
+\newcommand{\Multi}{\distNamed{Multi}}
+\newcommand{\Bern}{\distNamed{Bern}}
+\newcommand{\Geom}{\distNamed{Geom}}
+\newcommand{\Cauchy}{\distNamed{Cauchy}}
+\newcommand{\VMF}{\distNamed{vMF}}
+
+\newcommand{\BeP}{\distNamed{BeP}}
+\newcommand{\DP}{\distNamed{DP}}
+\newcommand{\CRP}{\distNamed{CRP}}
+\newcommand{\PYP}{\distNamed{PY}}
+\newcommand{\GP}{{\distNamed{GP}}} 
+\newcommand{\PP}{\distNamed{PP}}
+\newcommand{\BP}{\distNamed{BP}}
+\newcommand{\BPP}{\distNamed{BPP}}
+\newcommand{\GamP}{\distNamed{\Gamma P}}
+\newcommand{\NGamP}{\distNamed{N\Gamma P}}
+\newcommand{\LP}{\distNamed{LP}}
+\newcommand{\Obs}{\distNamed{Obs}}
+\newcommand{\CRM}{\distNamed{CRM}}
+\newcommand{\NCRM}{\distNamed{NCRM}}
+
+
+\newcommand{\1}{\mathbf{1}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\newcommand{\st}{\ \text{s.t.}\ }
+\newcommand{\subjto}{\ \text{subject to}\ }
+\newcommand{\andd}{\ \text{and}\ }
+\newcommand{\orr}{\ \text{or}\ }
+\newcommand{\where}{\ \text{where}\ }
+\newcommand{\with}{\ \text{with}\ }
+
+
+\def\argmax{\operatornamewithlimits{argmax}}
+\def\argmin{\operatornamewithlimits{argmin}}
+\def\esssup{\operatornamewithlimits{ess\,sup}}
+\def\essinf{\operatornamewithlimits{ess\,inf}}
+\DeclareMathOperator*{\minimize}{minimize}
+\DeclareMathOperator*{\maximize}{maximize}
+
+
+\mathtoolsset{centercolon}
+\newcommand{\defas}{:=}
+\newcommand{\defs}{=:}
+
+\renewcommand{\top}{\mathsf{T}}
+
