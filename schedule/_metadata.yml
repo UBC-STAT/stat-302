@@ -47,6 +47,7 @@ custom-numbered-blocks:
       colors: [e54655, a41623]
       boxstyle: foldbox.simple
       collapse: false
+      numbered: false
   classes:
     Theorem:
       group: thmlike
@@ -60,6 +61,8 @@ custom-numbered-blocks:
       colors: [25ba70, 177245]
     Example:
       colors: [a393bf, 9c76e0]
+      boxstyle: foldbox.simple
       collapse: false
+      numbered: false
     Proof: 
       numbered: false

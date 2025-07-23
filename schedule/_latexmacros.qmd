@@ -86,7 +86,7 @@
 \newcommand{\eqas}{\overset{a.s.}{=}}
 
 \let\oldP\P
-\renewcommand\P{\relax\ifmmode\mathbb{P}\else\oldP\fi}
+\renewcommand\P{\mathbb{P}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Var}{\operatorname{Var}}
 \newcommand{\Cov}{\operatorname{Cov}}

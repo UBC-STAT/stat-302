@@ -1,12 +1,18 @@
 ---
 title: Module 1
 author: Daniel J. McDonald
-format: revealjs
+format: 
+  revealjs: default
+  pdf: default
 ---
 
 ::: {.content-hidden}
 {{< include _latexmacros.qmd >}}
 :::
+
+# Intro to class
+
+# Basics
 
 ## Experiments
 
@@ -90,11 +96,12 @@ with sufficient certainty beforehand.
 
 
 
-## Probability theory
+## Probability 
 
-We now motivate two subjects of probability theory based on experiment
+We now motivate two subjects of probability based on experiment
 whose outcome is uncertain.
 
+# Set theory
 
 
 ## Sample Space
@@ -230,7 +237,7 @@ Suppose $A$, $B$ are events (subsets of $\Omega$).
 
 
 
-## De Morgan's Laws (use diagram)
+## De Morgan's Laws
 
 ::: Theorem
 For any two events (sets) $A$ and $B$, we have
@@ -330,7 +337,7 @@ excluding each of $\omega _{1},\omega _{2},\ldots,\omega _{n}$.
 Hence, we have 2 options for each of the $n$ sample points, leading
 to $2^n$ distinct outcomes.
 
-
+# Probability 
 
 ## Probability of an event, an possible outcome
 
@@ -358,28 +365,28 @@ subsets" of $\Omega$.
 
 ::: Definition
 
-A probability function is a function $P$ with domain ${\cal B}$ so that
+A probability function is a function $\P$ with domain ${\cal B}$ so that
 
-1.  **Axiom 1:** $P ( \Omega ) =1$. 
+1.  **Axiom 1:** $\P ( \Omega ) =1$. 
 
-2.  **Axiom 2:** For all $A \in {\cal B}$, we have $P ( A ) \geq 0$.
+2.  **Axiom 2:** For all $A \in {\cal B}$, we have $\P ( A ) \geq 0$.
     
 
 3.  **Axiom 3:** If $\{ A_{n}\}_{n \ge 1}$ are a sequence of
     **disjoint** events, then
-    $$P\left( \bigcup_{n=1}^{\infty }A_{n}\right) \, 
-    = \sum_{n=1}^{\infty }P ( A_{n})$$
+    $$\P\left( \bigcup_{n=1}^{\infty }A_{n}\right) \, 
+    = \sum_{n=1}^{\infty }\P ( A_{n})$$
 
 :::
 
 
 ## Probability
 
-- The value of $P(A)$ is called the probability of event $A$.
+- The value of $\P(A)$ is called the probability of event $A$.
 
     
 
-- Apparently, $0 \leq P(A) \leq 1$: trivial but useful. If your
+- Apparently, $0 \leq \P(A) \leq 1$: trivial but useful. If your
     calculation gives an event negative probability value, re-do the
     calculation.
 
@@ -407,15 +414,15 @@ $\Omega$ is the sample space.
 
 
 
-- Probability of the complement: $$P ( A^{c} ) =1-P ( A )$$
+- Probability of the complement: $$\P ( A^{c} ) =1-\P ( A )$$
 
-- Monotonicity: $$A\subset B\Rightarrow P ( A ) \leq P (B )$$
+- Monotonicity: $$A\subset B\Rightarrow \P ( A ) \leq \P (B )$$
 
 - Probability of the union:
-    $$P ( A\cup B ) =P ( A ) +P ( B ) - P ( A\cap B )$$
+    $$\P ( A\cup B ) =\P ( A ) +\P ( B ) - \P ( A\cap B )$$
 
 - Boole's inequality:
-    $$P ( \bigcup _{i=1}^{m}A_{i} ) \leq \sum_{i=1}^{m}P ( A_{i} )$$
+    $$\P ( \bigcup _{i=1}^{m}A_{i} ) \leq \sum_{i=1}^{m}\P ( A_{i} )$$
 
 
 
@@ -435,7 +442,7 @@ Axioms.
 ## Proof of formula for complement
 
 ::: Proof
-### $P ( A^{c} ) \ = \ 1-P ( A )$
+### $\P ( A^{c} ) \ = \ 1-\P ( A )$
 
 - Note that (1) $\Omega = A \cup A^{c}$ and (2) $A$ and $A^c$ are
     disjoint.
@@ -443,8 +450,8 @@ Axioms.
     
 
 - By Axioms 1 and 3, we have
-    $$1 =  P ( \Omega )  =  P (A  ) +P ( A^c)$$ which implies
-    $P ( A^{c} ) =1-P ( A )$.
+    $$1 =  \P ( \Omega )  =  \P (A  ) +\P ( A^c)$$ which implies
+    $\P ( A^{c} ) =1-\P ( A )$.
 :::
 
 
@@ -452,7 +459,7 @@ Axioms.
 ## Monotonicity
 
 ::: Proof
-### $A \subset B \, \Rightarrow \, P ( A) \leq P ( B)$
+### $A \subset B \, \Rightarrow \, \P ( A) \leq \P ( B)$
 
 
 
@@ -462,12 +469,12 @@ Axioms.
     $B =  A \cup ( B \cap A^{c})$ 
 
 - In addition, $A$ and $B \cap A^{c}$ are disjoint. By Axiom 3 , we
-    get $P ( B )  =  P ( A ) + P ( B\cap A^{c})$.
+    get $\P ( B )  =  \P ( A ) + \P ( B\cap A^{c})$.
 
     
 
-- By Axiom 2, $P ( B\cap A^{c}) \ge 0$. Thus,
-    $$P ( B ) = P ( A ) + P  ( B\cap A^{c}) \ge  P ( A ).$$ 
+- By Axiom 2, $\P ( B\cap A^{c}) \ge 0$. Thus,
+    $$\P ( B ) = \P ( A ) + P  ( B\cap A^{c}) \ge  \P ( A ).$$ 
     
 :::
 
@@ -476,16 +483,16 @@ Axioms.
 ## Probability of a union
 
 ::: Proof
-### $P ( A\cup B ) =P ( A ) +P( B ) -P ( A\cap B )$
+### $\P ( A\cup B ) =\P ( A ) +\P( B ) -\P ( A\cap B )$
 
 - First recall that $A\cup B = A\cup  ( B\cap A^{c} )$.
 
 - Note that $A$ and $B\cap A^{c}$ are disjoint events. Hence by Axiom
-    3: $$P ( A\cup B ) =P ( A ) +P ( B \cap A^{c} )$$
+    3: $$\P ( A\cup B ) =\P ( A ) +\P ( B \cap A^{c} )$$
 
 - Splitting $B$ into union of two disjoint events:
     $B  =  ( B\cap A ) \cup  ( B\cap A^c )$ and applying Axiom 3, we get
-    $$P ( B) = P ( B\cap A ) +P ( B\cap A^c )$$
+    $$\P ( B) = \P ( B\cap A ) +\P ( B\cap A^c )$$
 
 - The formula is obtained by combining the above two conclusions.
 :::
@@ -493,19 +500,19 @@ Axioms.
 
 ## Proof of Boole's inequality
 
-$$P\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}P\left( A_{i}\right)$$
+$$\P\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}\P\left( A_{i}\right)$$
 
 ::: Proof
 
 - We will prove it by induction.
 
 - For $n=2$: $$\begin{aligned}
-    P\left( A_{1}\cup A_{2}\right) & = P\left( A_{1}\right) +P\left( A_{2}\right)
-    -P\left( A_{1}\cap A_{2}\right) \\
+    \P\left( A_{1}\cup A_{2}\right) & = \P\left( A_{1}\right) +\P\left( A_{2}\right)
+    -\P\left( A_{1}\cap A_{2}\right) \\
     \\
-    & \leq P\left( A_{1}\right) +P\left(
+    & \leq \P\left( A_{1}\right) +\P\left(
     A_{2}\right)\end{aligned}$$ because
-    $P\left( A_{1}\cap A_{2}\right) \geq 0$
+    $\P\left( A_{1}\cap A_{2}\right) \geq 0$
 
 :::
 
@@ -516,15 +523,15 @@ $$P\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}P\left( A_{i}\right
 - Assume now that it holds for $n$. We then have 
 $$
 \begin{aligned}
-P \Big ( \bigcup _{i=1}^{n+1}A_{i} \Big ) 
+\P \Big ( \bigcup _{i=1}^{n+1}A_{i} \Big ) 
 & = 
-P\Big [ \Big ( \bigcup_{i=1}^{n}A_{i}\Big ) \bigcup A_{n+1}\Big ] &\mbox{ associative prop.} \\
+\P\Big [ \Big ( \bigcup_{i=1}^{n}A_{i}\Big ) \bigcup A_{n+1}\Big ] &\mbox{ associative prop.} \\
 & \leq 
-P\Big[ \bigcup_{i=1}^{n}A_{i}\Big ] +P \left( A_{n+1} \right) &\mbox{ case n=2} \\
+\P\Big[ \bigcup_{i=1}^{n}A_{i}\Big ] +\P \left( A_{n+1} \right) &\mbox{ case n=2} \\
 & \leq
-\sum_{i=1}^{n} P\left( A_{i}\right) +P\left( A_{n+1} \right) &\mbox{ induction} \\
+\sum_{i=1}^{n} \P\left( A_{i}\right) +\P\left( A_{n+1} \right) &\mbox{ induction} \\
 & = 
-\sum_{i=1}^{n+1} P\left( A_{i}\right).
+\sum_{i=1}^{n+1} \P\left( A_{i}\right).
 \end{aligned}
 $$
 
@@ -552,20 +559,20 @@ $$A  = \{ \mbox{ John likes book 1 }\},
   B = \{ \mbox{ John likes book 2 }\}.$$
 
 We are told that
-$P ( A )  =  0.5 \, , P ( B ) = 0.4 \, ,  P ( A\cap B ) =0.3$.
+$\P ( A )  =  0.5 \, , \P ( B ) = 0.4 \, ,  \P ( A\cap B ) =0.3$.
 
-We are asked to calculate $P\left( A^{c}\cap B^{c}\right)$.
+We are asked to calculate $\P\left( A^{c}\cap B^{c}\right)$.
 
 
 Note that $A^{c}\cap B^{c} =  ( A\cup B ) ^{c}$. Hence,
-$$P\left( A^{c}\cap B^{c}\right)  
-  = P\left[ \left( A\cup B\right) ^{c}\right]
-  =1 - P\left( A\cup B\right).$$
+$$\P\left( A^{c}\cap B^{c}\right)  
+  = \P\left[ \left( A\cup B\right) ^{c}\right]
+  =1 - \P\left( A\cup B\right).$$
 
 Making use of another formula:
-$$P\left( A\cup B\right) = P\left( A\right) +P\left( B\right) -P\left( A\cap B\right) = 0.6.$$
+$$\P\left( A\cup B\right) = \P\left( A\right) +\P\left( B\right) -\P\left( A\cap B\right) = 0.6.$$
 
-We get $P( A^{c}\cap B^{c})  = 1 - 0.6 = 0.4.$
+We get $\P( A^{c}\cap B^{c})  = 1 - 0.6 = 0.4.$
 
 **General line of approach**:
 
@@ -602,9 +609,9 @@ Notation: $$\begin{aligned}
 A &= \{ \text{Jane passes test $T_1$} \} \\
 B &= \{ \text{Jane passes test $T_2$} \}\end{aligned}$$
 
-We are told that $$P\left( A\right) =0.80, 
-P\left( B\right) =0.70, \text{  \ and
-\ }P\left( A\cap B\right) =0.6.$$
+We are told that $$\P\left( A\right) =0.80, 
+\P\left( B\right) =0.70, \text{  \ and
+\ }\P\left( A\cap B\right) =0.6.$$
 
 Our task is to use these information to figure out the probabilities of
 various events.
@@ -619,9 +626,9 @@ We note that
 $$\left\{ \mbox{Passes at least one test}\right\} = A \cup B.$$
 
 Hence, $$\begin{aligned}
-P\left( A\cup B\right) 
+\P\left( A\cup B\right) 
 & = 
-P\left( A\right) +P\left( B\right) -P\left( A\cap B\right) \\
+\P\left( A\right) +\P\left( B\right) -\P\left( A\cap B\right) \\
 &=
 0.80+0.70-0.60 \\ 
 & =  0.90.
@@ -648,9 +655,9 @@ gives one way of computing its probability.
 
 
 $$\begin{aligned}
-P ( \{ \text{Passes at most one test} \}  )
-&= P\left(\left( A\cap B\right) ^{c}\right) \text{ \ \ \ } \\
-&=1-P\left( A\cap B\right) \\
+\P ( \{ \text{Passes at most one test} \}  )
+&= \P\left(\left( A\cap B\right) ^{c}\right) \text{ \ \ \ } \\
+&=1-\P\left( A\cap B\right) \\
 &=1-0.60=0.40.\end{aligned}$$ 
 
 The probability that Jane passes at most 1 test is 0.4.
@@ -672,10 +679,10 @@ A^{c}\cap B^{c} \\
 probability.
 
 $$\begin{aligned}
-P (  \{ \text{Fails both tests} \}  )
+\P (  \{ \text{Fails both tests} \}  )
  &=
- P\left( \left( A\cup B\right) ^{c}\right) \\
-&=1-P\left( A\cup B\right) \\
+ \P\left( \left( A\cup B\right) ^{c}\right) \\
+&=1-\P\left( A\cup B\right) \\
 &=1-0.90 \\
 &=
 0.10 \text{  from Part (a)}.\end{aligned}$$ 
@@ -698,16 +705,16 @@ $$\left\{ \text{Passes only one test}\right\} =%
 We hence have 
 $$
 \begin{aligned}
-P(\left\{ \text{Passes only one test}\right\})
+\P(\left\{ \text{Passes only one test}\right\})
 &=
-P\left( A\cap B^{c}\right) 
+\P\left( A\cap B^{c}\right) 
 +
-P\left( A^{c}\cap B\right)  \\
+\P\left( A^{c}\cap B\right)  \\
 &= 
-\left[ P\left( A\right) -P\left( A\cap B\right) \right]
-+ \left[ P\left( B\right) -P\left( A\cap B\right) \right] \\
+\left[ \P\left( A\right) -\P\left( A\cap B\right) \right]
++ \left[ \P\left( B\right) -\P\left( A\cap B\right) \right] \\
 &=
-P\left( A\right) +P\left( B\right) -2 \times P\left( A\cap B\right) \\
+\P\left( A\right) +\P\left( B\right) -2 \times \P\left( A\cap B\right) \\
 &=
 0.80+0.70-2\times 0.60  = 
 0.30.
@@ -741,11 +748,11 @@ The probability that Jane passes only 1 test is 0.3.
 
 Exercise 2
 
-(a) Suppose that $P\left( A\right) =0.85$ and $P\left( B\right) =0.75.$
-    Show that $$P\left( A\cap B\right) \geq 0.60.$$ 
+(a) Suppose that $\P\left( A\right) =0.85$ and $\P\left( B\right) =0.75.$
+    Show that $$\P\left( A\cap B\right) \geq 0.60.$$ 
 
 (b) More generally, prove the Bonferroni inequality:
-    $$P\left( \cap _{i=1}^{n}A_{i}\right) \geq \sum_{i=1}^{n}P\left( A_{i}\right)
+    $$\P\left( \cap _{i=1}^{n}A_{i}\right) \geq \sum_{i=1}^{n}\P\left( A_{i}\right)
     -\left( n-1\right) .$$
 
 
@@ -754,32 +761,32 @@ Exercise 2
 
 ::: {.content-hidden when-format="revealjs"}
 
-We know that $P\left( A\right) =0.85$ and $P\left(
+We know that $\P\left( A\right) =0.85$ and $\P\left(
 B\right) =0.75$ and wish to show that
-$$P\left( A\cap B\right) \geq 0.60.$$
+$$\P\left( A\cap B\right) \geq 0.60.$$
 
 Note that $A\cap B=\left( A^{c}\cup B^{c}\right) ^{c}$ (De Morgan
 rule)
 
 Hence:
-$$P\left( A\cap B\right) = 1-P\left( A^{c}\cup B^{c}\right)$$
+$$\P\left( A\cap B\right) = 1-\P\left( A^{c}\cup B^{c}\right)$$
 
 Also
-$$P\left( A^{c}\cup B^{c}\right)  \leq P\left( A^{c}\right) +P\left( B^{c}\right)$$
+$$\P\left( A^{c}\cup B^{c}\right)  \leq \P\left( A^{c}\right) +\P\left( B^{c}\right)$$
 
 
 Therefore $$\begin{aligned}
-P\left( A\cap B\right) 
+\P\left( A\cap B\right) 
 &=
-P\left( \left( A^{c}\cup B^{c}\right) ^{c}\right) \\
+\P\left( \left( A^{c}\cup B^{c}\right) ^{c}\right) \\
 &=
-1-P\left( A^{c}\cup B^{c}\right)  \\
+1-\P\left( A^{c}\cup B^{c}\right)  \\
 &\geq 
-1-\left[ P\left( A^{c}\right) +P\left( B^{c}\right) \right]  \\
+1-\left[ \P\left( A^{c}\right) +\P\left( B^{c}\right) \right]  \\
 &=
-1-\left[ 1-P\left( A\right) \right] -\left[ 1-P\left( B\right) \right]  \\
+1-\left[ 1-\P\left( A\right) \right] -\left[ 1-\P\left( B\right) \right]  \\
 &=
-P\left( A\right) +P\left( B\right) -1 \\
+\P\left( A\right) +\P\left( B\right) -1 \\
 & =
 0.85+0.75-1=0.60.\end{aligned}$$
 
@@ -792,7 +799,7 @@ P\left( A\right) +P\left( B\right) -1 \\
 ::: {.content-hidden when-format="revealjs"}
 
 $$\begin{aligned}
-P\left( \bigcap _{i=1}^{n}A_{i}\right) &\geq\sum_{i=1}^{n}P\left(
+\P\left( \bigcap _{i=1}^{n}A_{i}\right) &\geq\sum_{i=1}^{n}\P\left(
 A_{i}\right) -\left( n-1\right) . \\
 &&\end{aligned}$$
 
@@ -803,15 +810,15 @@ First note that $$\bigcap _{i=1}^{n}A_{i} \, = \,
 Therefore 
 $$
 \begin{aligned}
-P\left( \bigcap _{i=1}^{n}A_{i}\right) & =P\left( \left( \bigcup
+\P\left( \bigcap _{i=1}^{n}A_{i}\right) & =\P\left( \left( \bigcup
 _{i=1}^{n}A_{i}^{c}\right) ^{c}\right) \\
-& =1-P\left( \bigcup _{i=1}^{n}A_{i}^{c}\right)  \\
-& \geq 1-\sum_{i=1}^{n}P\left( A_{i}^{c}\right) \\
-& =1-\sum_{i=1}^{n}\left( 1-P\left( A_{i}\right) \right) &\text{ \ complement
+& =1-\P\left( \bigcup _{i=1}^{n}A_{i}^{c}\right)  \\
+& \geq 1-\sum_{i=1}^{n}\P\left( A_{i}^{c}\right) \\
+& =1-\sum_{i=1}^{n}\left( 1-\P\left( A_{i}\right) \right) &\text{ \ complement
 rule} \\
-& =1-\sum_{i=1}^{n}1+\sum_{i=1}^{n}P\left( A_{i}\right)
-=1-n+\sum_{i=1}^{n}P\left( A_{i}\right) \\
-& =\sum_{i=1}^{n}P\left( A_{i}\right) -\left( n-1\right) .
+& =1-\sum_{i=1}^{n}1+\sum_{i=1}^{n}\P\left( A_{i}\right)
+=1-n+\sum_{i=1}^{n}\P\left( A_{i}\right) \\
+& =\sum_{i=1}^{n}\P\left( A_{i}\right) -\left( n-1\right) .
 \end{aligned}$$
 
 :::
@@ -822,17 +829,17 @@ rule} \\
 
 Kolmogorov's axioms tell us that if we have (a) sample space, (b)
 collection of events, and wish to create a probability function
-$P(\cdot)$; what properties this function should have.
+$\P(\cdot)$; what properties this function should have.
 
-The last a few examples show that if such a function $P(\cdot)$ has
-been given, how one may derive the value of $P(A)$ from the
+The last a few examples show that if such a function $\P(\cdot)$ has
+been given, how one may derive the value of $\P(A)$ from the
 probabilities of other events.
 
 We next suggest a way to set up (a) sample space, (b) collection of
-events, and (c) probability function $P(\cdot)$ for a special type of
+events, and (c) probability function $\P(\cdot)$ for a special type of
 experiments.
 
-
+# Building probabilitie functions
 
 ## Equally likely outcomes
 
@@ -841,7 +848,7 @@ $$\Omega \, = \, \Bigl\{ \omega _{1},\omega _{2}, \ldots,\omega _{n}\Bigr\}$$
 
 In many applications, we trust that these distinct outcomes are equally
 likely so that we wish to make
-$$P (   \{ \omega _{i} \} )  = a \, , \quad a \in (0, 1].$$
+$$\P (   \{ \omega _{i} \} )  = a \, , \quad a \in (0, 1].$$
 
 For such an experiment, we get a natural probability function.
 
@@ -854,8 +861,8 @@ and $\{\omega _{i}\}_{i=1}^n$ are disjoint events.
 
 The probability theory Axioms require 
 $$\begin{aligned}
-1 &= P\left( \Omega \right)= P \Big ( \bigcup _{i=1}^{n}\left\{ \omega_{i}\right\} \Big ) 
-= \sum_{i=1}^{n}P\left( \left\{ \omega _{i}\right\} \right) 
+1 &= \P\left( \Omega \right)= \P \Big ( \bigcup _{i=1}^{n}\left\{ \omega_{i}\right\} \Big ) 
+= \sum_{i=1}^{n}\P\left( \left\{ \omega _{i}\right\} \right) 
 =\sum_{i=1}^{n} a \, = \, n a.
 \end{aligned}$$
 
@@ -867,8 +874,8 @@ Our only option is to let $a = 1 / n$.
 
 The axioms further require that for any event $A \subseteq \Omega$:
 $$\begin{aligned}
-P(A)
-&= \sum_{\omega _{i}\in A} P( \{ \omega_{i} \})
+\P(A)
+&= \sum_{\omega _{i}\in A} \P( \{ \omega_{i} \})
 = \sum_{\omega _{i}\in A}\frac{1}{n} =
 \frac{\#A}{\#\Omega}\\
 &=
@@ -1119,7 +1126,7 @@ The size of sample space is $\# \Omega = 36$.
 The number of favourable outcomes is $10$.
 
 Hence, under the equal probability model:
-$$P \{ \text{Same color} \} = {10}/{36} = {5}/{18}.$$
+$$\P \{ \text{Same color} \} = {10}/{36} = {5}/{18}.$$
 
 :::
 
@@ -1168,7 +1175,7 @@ it has $i$ children, $i=1, 2, 3, 4, 5$?
 
 ::: {.content-hidden when-format="revealjs"}
 
-| i | Families with i children | P(family has i children) |
+| i | Families with i children | $\P$(family has i children) |
 |---|---------------------------|---------------------------|
 | 1 | 4                         | 4/20                      |
 | 2 | 8                         | 8/20                      |
@@ -1186,7 +1193,7 @@ comes from a family having $i$ children, $i=1,2,3,4,5$?
 
 ::: {.content-hidden when-format="revealjs"}
 
-| i | Children from families with i children | P(child comes from family with i children) |
+| i | Children from families with i children | $\P$(child comes from family with i children) |
 |---|----------------------------------------|--------------------------------------------|
 | 1 | 4                                      | 4/48                                       |
 | 2 | 16                                     | 16/48                                      |
