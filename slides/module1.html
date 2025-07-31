@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/foldbox/foldbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.37">
+
+  <meta name="author" content="Daniel J. McDonald">
+  <meta name="dcterms.date" content="2025-07-31">
+  <title>Module 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-08d2d690ce1a137e99fc08d66e6410f1.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <style>
+  .Theorem {
+    --color1: #e54655;
+    --color2: #a41623;
+  }
+  .Example {
+    --color1: #a393bf;
+    --color2: #9c76e0;
+  }
+  .Definition {
+    --color1: #25ba70;
+    --color2: #177245;
+  }
+  .Conjecture {
+    --color1: #e54655;
+    --color2: #a41623;
+  }
+  .Corollary {
+    --color1: #e54655;
+    --color2: #a41623;
+  }
+  .Proof {
+    --color1: #c0c0c0;
+    --color2: #808080;
+  }
+  </style>
+<meta property="og:title" content="Module 1">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="random-swirls.svg" class="quarto-title-block center">
+  <div style="text-align:center; font-family:Gilda Display; font-size:1.3em; padding: 1em 0.5em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);">
+      <p class="org">Stat 302 - Winter 2025/26</p>
+      <br>
+      <h2 class="title">Module 1</h2>
+      <p class="subtitle"></p>
+
+      <br>
+      <div class="quarto-title-authors">
+      <div class="quarto-title-author">
+      <div class="quarto-title-author-name">
+      <h3>Daniel J. McDonald</h3>
+      </div>
+      </div>
+      </div>
+            <p class="date">Last modified — 31 Jul 2025</p>
+        </div>
+</section>
+<section id="intro-to-class" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> Intro to class</h1>
+
+</section>
+
+<section>
+<section id="basics" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> Basics</h1>
+
+</section>
+<section id="experiments" class="slide level2">
+<h2>Experiments</h2>
+<p><strong>Definition:</strong> A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact.</p>
+<p><strong>Example of an experiment:</strong> Release your pen from 4.9 meters above the ground.</p>
+<p><strong>Outcomes of the experiment:</strong></p>
+<ul>
+<li><p>The pen will fall to the ground.</p></li>
+<li><p>It takes about 1 second before it touches the ground.</p></li>
+</ul>
+</section>
+<section id="our-observation" class="slide level2">
+<h2>Our observation:</h2>
+<ul>
+<li><p>We are certain that the pen will touch the ground;</p></li>
+<li><p>we are less sure if it will take exactly 1 second.</p></li>
+</ul>
+</section>
+<section id="uncertainty" class="slide level2">
+<h2>Uncertainty</h2>
+<p><strong>Common sense:</strong> The outcome of some experiments cannot be determined with sufficient certainty beforehand.</p>
+<div id="Example*-2.1" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
+<ul>
+<li><p>Roll a die: which side will face up?</p></li>
+<li><p>Draw a card from a well-shuffled deck: which one you will get?</p></li>
+<li><p>How many students show up for class today?</p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="probability-theory" class="slide level2">
+<h2>Probability theory</h2>
+<ul>
+<li><p>Even though there seem to be no rules on the outcome of rolling a die, if we repeat the experiment many times, some pattern emerges.</p></li>
+<li><p>Probability theory aims to describe the pattern with a mathematical model.</p></li>
+<li><p>In ideal situations, the probability theory can be very successful: Casino always wins.</p></li>
+</ul>
+</section>
+<section id="probability-theory-1" class="slide level2">
+<h2>Probability theory</h2>
+<ul>
+<li><p><strong>Axioms in mathematics:</strong> Statements or propositions regarded as being established, accepted, or self-evidently true.</p></li>
+<li><p><strong>Mathematical Theorem:</strong> A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.</p></li>
+<li><p>If the accepted truths are falsified, the Theorem is also falsified.</p></li>
+</ul>
+</section>
+<section id="probability-theory-2" class="slide level2">
+<h2>Probability theory</h2>
+<ul>
+<li><p>The probability theory in Stat 302 is a branch of mathematics. It is a system based on a set of Axioms.</p></li>
+<li><p>Its conclusions cannot be falsified unless the Axioms are falsified.</p></li>
+<li><p>Stat 302 mostly lectures on mathematical aspects of the probability theory.</p></li>
+<li><p>We use real world examples to demonstrate the relevance of the theory.</p></li>
+</ul>
+</section>
+<section id="probability" class="slide level2">
+<h2>Probability</h2>
+<p>We now motivate two subjects of probability based on experiment whose outcome is uncertain.</p>
+</section></section>
+<section>
+<section id="set-theory" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> Set theory</h1>
+
+</section>
+<section id="sample-space" class="slide level2">
+<h2>Sample Space</h2>
+<div id="Definition*-3.1" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>Sample space is the set of all possible outcomes of a random experiment.<p></p>
+</div></details>
+</div>
+<p>We denote it by <span class="math inline">\(\Omega\)</span>, and a generic outcome, also called sample point, by <span class="math inline">\(\omega\)</span> (i.e.&nbsp;<span class="math inline">\(\omega \in \Omega\)</span>).</p>
+<ul>
+<li><p>There is no rule that we have to use <span class="math inline">\(\Omega\)</span> as the notation for the sample space.</p></li>
+<li><p>Always read the context.</p></li>
+</ul>
+</section>
+<section id="sample-space-1" class="slide level2">
+<h2>Sample Space</h2>
+<div id="Example*-3.2" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
+<ul>
+<li><p>Roll a die: <span class="math inline">\(\Omega = \{ 1,2,3,4,5, 6 \}\)</span>.</p></li>
+<li><p>Draw a card: <span class="math inline">\(\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}\)</span>.</p></li>
+<li><p>% yield of chemical process: <span class="math inline">\(\Omega =\left[ 0,100\right]\)</span>.</p></li>
+<li><p>Maximum wind speed in YVR in 2023: <span class="math inline">\(\Omega =[0, \infty)\)</span></p></li>
+</ul>
+</div></details>
+</div>
+<p><strong>Remark:</strong> We may not need to provide full description of <span class="math inline">\(\Omega\)</span> in many cases.</p>
+</section>
+<section id="events" class="slide level2">
+<h2>Events</h2>
+<div id="Definition*-3.3" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>An event is a subset of sample space <span class="math inline">\(\Omega\)</span>.<p></p>
+</div></details>
+</div>
+<p><strong>Notation:</strong> We commonly use upper case letters (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, …) for events.</p>
+<p>Because events are sets, all notions regarding sets are applicable:</p>
+<ul>
+<li><p><span class="math inline">\(\omega \in A\)</span> means “<span class="math inline">\(\omega\)</span> is an element of <span class="math inline">\(A\)</span>”.</p></li>
+<li><p><span class="math inline">\(C \subset D\)</span> means “<span class="math inline">\(C\)</span> is a subset of <span class="math inline">\(D\)</span>”.</p></li>
+<li><p>Remember operations <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> and so on.</p></li>
+</ul>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p>Events of interests are often formed by outcomes sharing some properties.</p>
+<div id="Example*-3.4" class="Example">
+<details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
+<ul>
+<li><p>Roll a dice:<br>
+<span class="math inline">\(A= \{ 2, 4, 6 \}\)</span> (“roll an even number”);<br>
+<span class="math inline">\(B= \{1, 2, 3\}\)</span> (“roll a 3 or less”).</p></li>
+<li><p>Chemical process: <span class="math inline">\(C= [ 9, 14 ] = \{ \text{yield is between 9 and 14\%} \}\)</span></p></li>
+<li><p>Max-wind-speed: <span class="math inline">\(A=(80, \infty )= \{ \text{over 80 km/hour}\}\)</span></p></li>
+</ul>
+</div></details>
+</div>
+<p>It is a useful skill to precisely list the sample points in a verbally described event.</p>
+</section>
+<section id="set-operations" class="slide level2">
+<h2>Set Operations</h2>
+<p>Suppose <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> are events (subsets of <span class="math inline">\(\Omega\)</span>).</p>
+<ul>
+<li><p><strong>Union:</strong> <span class="math inline">\(A \mathop{\mathrm{\mathchoice{\bigcup}{\cup}{\cup}{\cup}}}B\)</span> <span class="math display">\[\omega \in A \cup B \Leftrightarrow \omega \in A
+  \mbox{ or } \omega \in B\]</span></p></li>
+<li><p><strong>Intersection:</strong> <span class="math inline">\(A \cap B\)</span> <span class="math display">\[\omega \in A \cap B \Leftrightarrow \omega \in A
+  \mbox{ and } \omega \in B\]</span></p></li>
+<li><p><strong>Complement:</strong> <span class="math inline">\(A^c\)</span> <span class="math display">\[\omega \in A^c\Leftrightarrow \omega \notin A\]</span></p></li>
+<li><p><strong>Symmetric difference:</strong> <span class="math inline">\(A \, \triangle \, B\)</span> <span class="math display">\[A \, \triangle \, B \, = \, \left( A \cap B^c \right) \, \cup \, \left( A^c \cap B \right)\]</span></p></li>
+</ul>
+</section>
+<section id="properties-of-set-operations" class="slide level2">
+<h2>Properties of set operations</h2>
+<ul>
+<li><p>Commutative:</p>
+<ul>
+<li><p><span class="math inline">\(A \cup B \ = \ B \cup A\)</span></p></li>
+<li><p><span class="math inline">\(A \cap B \ = \ B \cap A\)</span></p></li>
+</ul></li>
+<li><p>Associative:</p>
+<ul>
+<li><p><span class="math inline">\(A\cup B\cup C \, = \, \left( A\cup B\right) \cup C=A\cup \left( B\cup C\right)\)</span></p></li>
+<li><p><span class="math inline">\(A\cap B\cap C \, = \, \left( A\cap B\right) \cap C=A\cap \left( B\cap C\right)\)</span></p></li>
+</ul></li>
+<li><p>Distributive:</p>
+<ul>
+<li><p><span class="math inline">\(\left( A\cup B\right) \cap C \, = \, \left( A\cap C\right) \cup \left( B\cap
+  C\right)\)</span></p></li>
+<li><p><span class="math inline">\(\left( A\cap B\right) \cup C \, = \, \left( A\cup C\right) \cap \left( B\cup
+  C\right)\)</span></p></li>
+</ul></li>
+<li><p><span class="math inline">\(A = B\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(A \subseteq B\)</span> and <span class="math inline">\(B \subseteq A\)</span></p></li>
+</ul>
+</section>
+<section id="de-morgans-laws" class="slide level2">
+<h2>De Morgan’s Laws</h2>
+<div id="Theorem*-3.5" class="Theorem">
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem</strong></summary><div>For any two events (sets) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have <span class="math display">\[( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}.\]</span><p></p>
+</div></details>
+</div>
+<p>To prove two events are equal as above, the general approach is to show both <span class="math display">\[( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}\]</span> and <span class="math display">\[A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}.\]</span></p>
+<p>We give part of a proof on the next slide.</p>
+</section>
+<section id="proof-of-de-morgans-laws" class="slide level2">
+<h2>Proof of De Morgan’s Laws</h2>
+<div id="Proof*-3.6" class="Proof">
+<p></p><details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>Let us show <span class="math inline">\(( A\cup B ) ^{c}  \subseteq  A^{c}\cap B^{c}\)</span>:<p></p>
+<ul>
+<li><p>take any <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span>, we must have <span class="math inline">\(\omega \notin A \cup B\)</span>;</p></li>
+<li><p>This implies <span class="math inline">\(\omega \notin A\)</span> and <span class="math inline">\(\omega \notin B\)</span> (because if either <span class="math inline">\(\omega \in A\)</span> or <span class="math inline">\(\omega \in B\)</span> then we’d have <span class="math inline">\(\omega \in A \cup B\)</span>).</p></li>
+<li><p>Hence <span class="math inline">\(\omega \in A^c\)</span> and <span class="math inline">\(\omega \in B^c\)</span>,</p></li>
+<li><p>This is the same as <span class="math inline">\(\omega \in A^c \cap B^c\)</span>.</p></li>
+<li><p>That is, <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span> implies <span class="math inline">\(\omega \in A^c \cap B^c\)</span> which is <span class="math display">\[( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c}.\]</span></p></li>
+</ul>
+<p>Try it yourself to prove <span class="math inline">\(A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}\)</span>.</p>
+</div></details>
+</div>
+</section>
+<section id="useful-identities" class="slide level2">
+<h2>Useful Identities</h2>
+<ul>
+<li><p><span class="math inline">\(A \ =  ( A\cap B ) \, \cup \,  ( A\cap B^{c} )\)</span></p>
+<ul>
+<li><p>First: <span class="math inline">\(A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>: Take <span class="math inline">\(\omega \in A\)</span>, then either <span class="math inline">\(\omega \in B\)</span> or <span class="math inline">\(\omega \notin B\)</span>. In the first case: <span class="math inline">\(\omega \in A \cap B\)</span>, in the second case: <span class="math inline">\(\omega \in A \cap B^c\)</span>. Thus <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>.</p></li>
+<li><p>Also: <span class="math inline">\(\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A\)</span>: Take <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>. If <span class="math inline">\(\omega \in \left( A\cap B\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>. If <span class="math inline">\(\omega \in \left( A\cap B^{c}\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>. Thus, we always have <span class="math inline">\(\omega \in A\)</span>.</p></li>
+</ul></li>
+<li><p><span class="math inline">\(A \, \cup\,  B \ = \ A \, \cup \left( B\cap A^{c}\right)\)</span></p>
+<ul>
+<li>Prove it!</li>
+</ul></li>
+</ul>
+</section>
+<section id="power-set" class="slide level2">
+<h2>Power set</h2>
+<p>The power set of <span class="math inline">\(\Omega\)</span> (denoted <span class="math inline">\(2^\Omega\)</span>) is the set of all possible subsets of <span class="math inline">\(\Omega\)</span>. <strong>Example:</strong> Suppose <span class="math inline">\(\Omega \ = \ \{ 1,2,3 \}\)</span>. Then <span class="math display">\[2^{\Omega }  \,
+=  \Bigl\{
+\varnothing ,
+\{ 1\} , \{ 2 \} , \{ 3 \} , \{ 1,2 \} , \{ 1,3 \} , \{ 2,3 \}, \{ 1, 2, 3 \} \Bigr\}\]</span></p>
+<ul>
+<li><p>The symbol <span class="math inline">\(\varnothing\)</span> denotes the empty set.</p></li>
+<li><p>If <span class="math inline">\(\Omega\)</span> has <span class="math inline">\(n\)</span> elements, then <span class="math inline">\(2^{\Omega }\)</span> has <span class="math inline">\(2^{n}\)</span> elements. In symbols: <span class="math display">\[\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }.\]</span></p></li>
+</ul>
+</section>
+<section id="reasoning-for-the-size-of-power-set" class="slide level2">
+<h2>Reasoning for the size of power set</h2>
+<p>List the <span class="math inline">\(n\)</span> elements of <span class="math inline">\(\Omega\)</span> as <span class="math display">\[\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}\]</span></p>
+<p>Any event <span class="math inline">\(A \subseteq \Omega\)</span> is uniquely obtained by including or excluding each of <span class="math inline">\(\omega _{1},\omega _{2},\ldots,\omega _{n}\)</span>.</p>
+<p>Hence, we have 2 options for each of the <span class="math inline">\(n\)</span> sample points, leading to <span class="math inline">\(2^n\)</span> distinct outcomes.</p>
+</section></section>
+<section>
+<section id="probability-1" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Probability</h1>
+
+</section>
+<section id="probability-of-an-event-an-possible-outcome" class="slide level2">
+<h2>Probability of an event, an possible outcome</h2>
+<p>Even though we cannot predict the outcome of an experiment well enough in many cases, we have an idea about the chance of various outcomes:</p>
+<ul>
+<li><p>If you toss a coin, the chance of observing a head is formidable.</p></li>
+<li><p>If you buy a lottery ticket, the chance of winning the grand price is negligible.</p></li>
+</ul>
+<p>In probability theory, we quantify the chance for “every subset” of the sample space in a self-consistent way.</p>
+<p>Such a system was first proposed by Kolmogorov.</p>
+</section>
+<section id="probability-axioms" class="slide level2">
+<h2>Probability Axioms</h2>
+<p>Let <span class="math inline">\(\Omega\)</span> be a sample space and <span class="math inline">\({\cal B}\)</span> be the collection of “all subsets” of <span class="math inline">\(\Omega\)</span>.</p>
+<div id="Definition*-4.1" class="Definition">
+<details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>
+<p>A probability function is a function <span class="math inline">\(\mathbb{P}\)</span> with domain <span class="math inline">\({\cal B}\)</span> so that</p>
+<ol type="1">
+<li><p><strong>Axiom 1:</strong> <span class="math inline">\(\mathbb{P}( \Omega ) =1\)</span>.</p></li>
+<li><p><strong>Axiom 2:</strong> For all <span class="math inline">\(A \in {\cal B}\)</span>, we have <span class="math inline">\(\mathbb{P}( A ) \geq 0\)</span>.</p></li>
+<li><p><strong>Axiom 3:</strong> If <span class="math inline">\(\{ A_{n}\}_{n \ge 1}\)</span> are a sequence of <strong>disjoint</strong> events, then <span class="math display">\[\mathbb{P}\left( \bigcup_{n=1}^{\infty }A_{n}\right) \,
+= \sum_{n=1}^{\infty }\mathbb{P}( A_{n})\]</span></p></li>
+</ol>
+</div></details>
+</div>
+</section>
+<section id="probability-2" class="slide level2">
+<h2>Probability</h2>
+<ul>
+<li><p>The value of <span class="math inline">\(\mathbb{P}(A)\)</span> is called the probability of event <span class="math inline">\(A\)</span>.</p></li>
+<li><p>Apparently, <span class="math inline">\(0 \leq \mathbb{P}(A) \leq 1\)</span>: trivial but useful. If your calculation gives an event negative probability value, re-do the calculation.</p></li>
+<li><p>The key phrase <strong>a sequence of</strong> is important: this rule does not go beyond.</p></li>
+<li><p>Being <strong>disjoint</strong> means for all <span class="math inline">\(i \neq j\)</span>, <span class="math display">\[A_i \cap A_j = \varnothing.\]</span></p></li>
+<li><p>As a mathematical theory, probability definition does not rely on an “uncertainty experiment”.</p></li>
+</ul>
+</section>
+<section id="properties-of-the-probability-function" class="slide level2">
+<h2>Properties of the probability function</h2>
+<p>Unless otherwise specified, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and so on are events, and <span class="math inline">\(\Omega\)</span> is the sample space.</p>
+<ul>
+<li><p>Probability of the complement: <span class="math display">\[\mathbb{P}( A^{c} ) =1-\mathbb{P}( A )\]</span></p></li>
+<li><p>Monotonicity: <span class="math display">\[A\subset B\Rightarrow \mathbb{P}( A ) \leq \mathbb{P}(B )\]</span></p></li>
+<li><p>Probability of the union: <span class="math display">\[\mathbb{P}( A\cup B ) =\mathbb{P}( A ) +\mathbb{P}( B ) - \mathbb{P}( A\cap B )\]</span></p></li>
+<li><p>Boole’s inequality: <span class="math display">\[\mathbb{P}( \bigcup _{i=1}^{m}A_{i} ) \leq \sum_{i=1}^{m}\mathbb{P}( A_{i} )\]</span></p></li>
+</ul>
+</section>
+<section id="proof-of-formula-for-complement" class="slide level2">
+<h2>Proof of formula for complement</h2>
+<p>Recall <strong>Mathematical Theorem:</strong> A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.</p>
+<p>By “proof” regarding probability formulas, we use a chain of reasoning to show they are implied by means of the accepted three Axioms.</p>
+</section>
+<section id="proof-of-formula-for-complement-1" class="slide level2">
+<h2>Proof of formula for complement</h2>
+<div id="mathbbp-ac-1-mathbbp-a" class="Proof" title="\mathbb{P}( A^{c} ) \ = \ 1-\mathbb{P}( A )">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof: </strong><span class="math inline">\(\mathbb{P}( A^{c} ) \ = \ 1-\mathbb{P}( A )\)</span></summary><div>
+<ul>
+<li><p>Note that (1) <span class="math inline">\(\Omega = A \cup A^{c}\)</span> and (2) <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> are disjoint.</p></li>
+<li><p>By Axioms 1 and 3, we have <span class="math display">\[1 =  \mathbb{P}( \Omega )  =  \mathbb{P}(A  ) +\mathbb{P}( A^c)\]</span> which implies <span class="math inline">\(\mathbb{P}( A^{c} ) =1-\mathbb{P}( A )\)</span>.</p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="monotonicity" class="slide level2">
+<h2>Monotonicity</h2>
+<div id="a-subset-b-rightarrow-mathbbp-a-leq-mathbbp-b" class="Proof" title="A \subset B \, \Rightarrow \, \mathbb{P}( A) \leq \mathbb{P}( B)">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof: </strong><span class="math inline">\(A \subset B \, \Rightarrow \, \mathbb{P}( A) \leq \mathbb{P}( B)\)</span></summary><div>
+<ul>
+<li><p>We note that <span class="math inline">\(B =  ( B\cap A ) \cup  ( B\cap A^{c})\)</span>;</p></li>
+<li><p>Since <span class="math inline">\(A \subset B\)</span> is given, we have <span class="math inline">\(B \cap A = A\)</span>. Hence, <span class="math inline">\(B =  A \cup ( B \cap A^{c})\)</span></p></li>
+<li><p>In addition, <span class="math inline">\(A\)</span> and <span class="math inline">\(B \cap A^{c}\)</span> are disjoint. By Axiom 3 , we get <span class="math inline">\(\mathbb{P}( B )  =  \mathbb{P}( A ) + \mathbb{P}( B\cap A^{c})\)</span>.</p></li>
+<li><p>By Axiom 2, <span class="math inline">\(\mathbb{P}( B\cap A^{c}) \ge 0\)</span>. Thus, <span class="math display">\[\mathbb{P}( B ) = \mathbb{P}( A ) + P  ( B\cap A^{c}) \ge  \mathbb{P}( A ).\]</span></p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="probability-of-a-union" class="slide level2">
+<h2>Probability of a union</h2>
+<div id="mathbbp-acup-b-mathbbp-a-mathbbp-b--mathbbp-acap-b" class="Proof" title="\mathbb{P}( A\cup B ) =\mathbb{P}( A ) +\mathbb{P}( B ) -\mathbb{P}( A\cap B )">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof: </strong><span class="math inline">\(\mathbb{P}( A\cup B ) =\mathbb{P}( A ) +\mathbb{P}( B ) -\mathbb{P}( A\cap B )\)</span></summary><div>
+<ul>
+<li><p>First recall that <span class="math inline">\(A\cup B = A\cup  ( B\cap A^{c} )\)</span>.</p></li>
+<li><p>Note that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\cap A^{c}\)</span> are disjoint events. Hence by Axiom 3: <span class="math display">\[\mathbb{P}( A\cup B ) =\mathbb{P}( A ) +\mathbb{P}( B \cap A^{c} )\]</span></p></li>
+<li><p>Splitting <span class="math inline">\(B\)</span> into union of two disjoint events: <span class="math inline">\(B  =  ( B\cap A ) \cup  ( B\cap A^c )\)</span> and applying Axiom 3, we get <span class="math display">\[\mathbb{P}( B) = \mathbb{P}( B\cap A ) +\mathbb{P}( B\cap A^c )\]</span></p></li>
+<li><p>The formula is obtained by combining the above two conclusions.</p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="proof-of-booles-inequality" class="slide level2">
+<h2>Proof of Boole’s inequality</h2>
+<p><span class="math display">\[\mathbb{P}\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}\mathbb{P}\left( A_{i}\right)\]</span></p>
+<div id="Proof*-4.5" class="Proof">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
+<ul>
+<li><p>We will prove it by induction.</p></li>
+<li><p>For <span class="math inline">\(n=2\)</span>: <span class="math display">\[\begin{aligned}
+  \mathbb{P}\left( A_{1}\cup A_{2}\right) &amp; = \mathbb{P}\left( A_{1}\right) +\mathbb{P}\left( A_{2}\right)
+  -\mathbb{P}\left( A_{1}\cap A_{2}\right) \\
+  \\
+  &amp; \leq \mathbb{P}\left( A_{1}\right) +\mathbb{P}\left(
+  A_{2}\right)\end{aligned}\]</span> because <span class="math inline">\(\mathbb{P}\left( A_{1}\cap A_{2}\right) \geq 0\)</span></p></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="booles-inequality-continued" class="slide level2">
+<h2>Boole’s inequality (continued)</h2>
+<div id="Proof*-4.6" class="Proof">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
+<ul>
+<li>Assume now that it holds for <span class="math inline">\(n\)</span>. We then have <span class="math display">\[
+\begin{aligned}
+\mathbb{P}\Big ( \bigcup _{i=1}^{n+1}A_{i} \Big )
+&amp; =
+\mathbb{P}\Big [ \Big ( \bigcup_{i=1}^{n}A_{i}\Big ) \bigcup A_{n+1}\Big ] &amp;\mbox{ associative prop.} \\
+&amp; \leq
+\mathbb{P}\Big[ \bigcup_{i=1}^{n}A_{i}\Big ] +\mathbb{P}\left( A_{n+1} \right) &amp;\mbox{ case n=2} \\
+&amp; \leq
+\sum_{i=1}^{n} \mathbb{P}\left( A_{i}\right) +\mathbb{P}\left( A_{n+1} \right) &amp;\mbox{ induction} \\
+&amp; =
+\sum_{i=1}^{n+1} \mathbb{P}\left( A_{i}\right).
+\end{aligned}
+\]</span></li>
+</ul>
+</div></details>
+</div>
+</section>
+<section id="example-of-applying-these-formulas" class="slide level2">
+<h2>Example of applying these formulas</h2>
+<p>John borrows 2 books.</p>
+<p>Suppose there is a 0.5 probability he likes the first book, 0.4 that he likes the second book, and 0.3 that he likes both.</p>
+<p>What is the probability that he will <strong>NOT</strong> like either of the 2 books?</p>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+</section>
+<section id="example-of-applying-formulas" class="slide level2">
+<h2>Example of applying formulas</h2>
+<p>Jane must take two tests, call them <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span>.</p>
+<p>Suppose the probability she passes test <span class="math inline">\(T_1\)</span> is <strong>0.8</strong>, test <span class="math inline">\(T_2\)</span> is <strong>0.7</strong> and both tests is <strong>0.6</strong>.</p>
+<p>Calculate the probability that:</p>
+<ol type="a">
+<li><p>She passes at least one test.</p></li>
+<li><p>She passes at most one test.</p></li>
+<li><p>She fails both tests.</p></li>
+<li><p>She passes only one test.</p></li>
+</ol>
+</section>
+<section id="solutions" class="slide level2">
+<h2>Solutions</h2>
+</section>
+<section id="solution-to-a-jane-passes-at-least-one-test" class="slide level2">
+<h2>Solution to (a) Jane passes at least one test</h2>
+</section>
+<section id="solution-to-b-jane-passes-at-most-one-test" class="slide level2">
+<h2>Solution to (b) Jane passes at most one test</h2>
+</section>
+<section id="solution-to-c-she-fails-both-tests" class="slide level2">
+<h2>Solution to (c) She fails both tests</h2>
+</section>
+<section id="solution-to-d-she-passes-only-one-test" class="slide level2">
+<h2>Solution to (d) She passes only one test</h2>
+</section>
+<section id="remarks" class="slide level2">
+<h2>Remarks</h2>
+<ul>
+<li><p>It is typical in introductory probability theory course to give a story first, followed by specifying events verbally.</p></li>
+<li><p>In these cases, your answer should be a sentence, not just with the context included.</p></li>
+<li><p>The best mathematical approach is to <strong>define</strong> some events, and express other events of interest using those events.</p></li>
+<li><p>Rather than relying on algebra as in our examples, it can be easier to use Venn diagram to have these events connected.</p></li>
+<li><p>There can be many ways to connect them, all lead to a viable probability calculation.</p></li>
+</ul>
+</section>
+<section id="exercise-without-a-story" class="slide level2">
+<h2>Exercise without a story</h2>
+<p>Exercise 2</p>
+<ol type="a">
+<li><p>Suppose that <span class="math inline">\(\mathbb{P}\left( A\right) =0.85\)</span> and <span class="math inline">\(\mathbb{P}\left( B\right) =0.75.\)</span> Show that <span class="math display">\[\mathbb{P}\left( A\cap B\right) \geq 0.60.\]</span></p></li>
+<li><p>More generally, prove the Bonferroni inequality: <span class="math display">\[\mathbb{P}\left( \cap _{i=1}^{n}A_{i}\right) \geq \sum_{i=1}^{n}\mathbb{P}\left( A_{i}\right)
+-\left( n-1\right) .\]</span></p></li>
+</ol>
+</section>
+<section id="solution-to-2-a" class="slide level2">
+<h2>Solution to 2 (a)</h2>
+</section>
+<section id="solution-to-example-2-b-prove-the-bonferroni-inequality" class="slide level2">
+<h2>Solution to Example 2 (b) Prove the Bonferroni inequality</h2>
+</section>
+<section id="refresh-your-memory-of-the-probability-axioms" class="slide level2">
+<h2>Refresh your memory of the probability axioms</h2>
+<p>Kolmogorov’s axioms tell us that if we have (a) sample space, (b) collection of events, and wish to create a probability function <span class="math inline">\(\mathbb{P}(\cdot)\)</span>; what properties this function should have.</p>
+<p>The last a few examples show that if such a function <span class="math inline">\(\mathbb{P}(\cdot)\)</span> has been given, how one may derive the value of <span class="math inline">\(\mathbb{P}(A)\)</span> from the probabilities of other events.</p>
+<p>We next suggest a way to set up (a) sample space, (b) collection of events, and (c) probability function <span class="math inline">\(\mathbb{P}(\cdot)\)</span> for a special type of experiments.</p>
+</section></section>
+<section>
+<section id="building-probabilitie-functions" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Building probabilitie functions</h1>
+
+</section>
+<section id="equally-likely-outcomes" class="slide level2">
+<h2>Equally likely outcomes</h2>
+<p>Suppose the sample space <span class="math inline">\(\Omega\)</span> is finite. <span class="math display">\[\Omega \, = \, \Bigl\{ \omega _{1},\omega _{2}, \ldots,\omega _{n}\Bigr\}\]</span></p>
+<p>In many applications, we trust that these distinct outcomes are equally likely so that we wish to make <span class="math display">\[\mathbb{P}(   \{ \omega _{i} \} )  = a \, , \quad a \in (0, 1].\]</span></p>
+<p>For such an experiment, we get a natural probability function.</p>
+</section>
+<section id="equally-likely-outcomes-1" class="slide level2">
+<h2>Equally likely outcomes</h2>
+<p>Notice that <span class="math inline">\(\Omega = \bigcup _{i=1}^{n} \left\{ \omega _{i}\right\}\)</span>, and <span class="math inline">\(\{\omega _{i}\}_{i=1}^n\)</span> are disjoint events.</p>
+<p>The probability theory Axioms require <span class="math display">\[\begin{aligned}
+1 &amp;= \mathbb{P}\left( \Omega \right)= \mathbb{P}\Big ( \bigcup _{i=1}^{n}\left\{ \omega_{i}\right\} \Big )
+= \sum_{i=1}^{n}\mathbb{P}\left( \left\{ \omega _{i}\right\} \right)
+=\sum_{i=1}^{n} a \, = \, n a.
+\end{aligned}\]</span></p>
+<p>Our only option is to let <span class="math inline">\(a = 1 / n\)</span>.</p>
+</section>
+<section id="equally-likely-outcomes-2" class="slide level2">
+<h2>Equally likely outcomes</h2>
+<p>The axioms further require that for any event <span class="math inline">\(A \subseteq \Omega\)</span>: <span class="math display">\[\begin{aligned}
+\mathbb{P}(A)
+&amp;= \sum_{\omega _{i}\in A} \mathbb{P}( \{ \omega_{i} \})
+= \sum_{\omega _{i}\in A}\frac{1}{n} =
+\frac{\#A}{\#\Omega}\\
+&amp;=
+\frac{\#\{\mbox{favorable outcomes} \}}{\#\{\mbox{possible outcomes}\}}
+\end{aligned}\]</span></p>
+<p>Being “favourable” means those in the event of interest: <span class="math inline">\(A\)</span> in this example.</p>
+</section>
+<section id="probability-calculation-examples" class="slide level2">
+<h2>Probability calculation examples</h2>
+<ul>
+<li><p>To calculate probabilities, we count the number of sample points in the event of interest.</p></li>
+<li><p>Counting the number of sample points in a set can be mathematically surprisingly complicated.</p></li>
+<li><p><strong>Combinatorial theory</strong> deals with this problem.</p></li>
+<li><p>We will learn some basic combinatorial rules and techniques for this purpose.</p></li>
+</ul>
+</section>
+<section id="counting-example-i" class="slide level2">
+<h2>Counting Example I</h2>
+<p>A die is rolled repeatedly until we see an outcome being 6.</p>
+<ol type="a">
+<li><p>Specify/describe the sample space.</p></li>
+<li><p>Let <span class="math inline">\(E_{n}\)</span> denote the event that the number of rolls is exactly <span class="math inline">\(n\)</span> (<span class="math inline">\(n=1,2, \ldots\)</span>). Describe the event <span class="math inline">\(E_{n}\)</span>.</p></li>
+<li><p>Describe the event <span class="math inline">\(E_{1}\cup E_{2}\)</span> and <span class="math inline">\(( \bigcup _{n=1}^{\infty} E_{n}) ^{c}\)</span>.</p></li>
+</ol>
+</section>
+<section id="solution-to-a-describe-the-sample-space" class="slide level2">
+<h2>Solution to (a) Describe the sample space</h2>
+</section>
+<section id="solution-to-b-describe-the-eventrolls-is-n" class="slide level2">
+<h2>Solution to (b) Describe the event…rolls is <span class="math inline">\(n\)</span></h2>
+</section>
+<section id="solution-c-e_1cup-e_2-and-bigcup_n1infty-e_n-c" class="slide level2">
+<h2>Solution (c) <span class="math inline">\(E_{1}\cup E_{2}\)</span> and <span class="math inline">\(( \bigcup_{n=1}^{\infty} E_{n}) ^{c}\)</span></h2>
+<p>Verbally interpreting <span class="math inline">\(E_{1}\cup E_{2}\)</span>, <span class="math inline">\(\bigcup_{n=1}^{\infty} E_{n}\)</span>, and <span class="math inline">\(( \bigcup_{n=1}^{\infty } E_n) ^{c}\)</span>:</p>
+</section>
+<section id="counting-example-ii" class="slide level2">
+<h2>Counting example II</h2>
+<p>A system has <strong>5 components</strong>, which can either be <strong>working</strong> or have <strong>failed</strong>.</p>
+<p>The experiment consists of observing the current status (W/F) of the 5 components.</p>
+<ol type="a">
+<li><p>Describe the sample space for this experiment.</p></li>
+<li><p>How much is <span class="math inline">\(\# \Omega\)</span>?</p></li>
+<li><p>Suppose that the system will work if either components (1 and 2), or (3 and 4), or (1, 3 and 5) are working.</p>
+<p>List the outcomes in the event <span class="math inline">\(D =\left\{ \mbox{The system works}\right\}\)</span>?</p></li>
+<li><p>Let <span class="math inline">\(A= \{ \text{components 4 and 5 have failed} \}\)</span>. How much is <span class="math inline">\(\# A\)</span>?</p></li>
+<li><p>List the outcomes in <span class="math inline">\(A \cap D\)</span>.</p></li>
+</ol>
+</section>
+<section id="answer-to-a-describe-the-sample-space" class="slide level2">
+<h2>Answer to (a) Describe the sample space</h2>
+</section>
+<section id="answer-to-b-how-many-outcomes-are-there-in-omega" class="slide level2">
+<h2>Answer to (b) How many outcomes are there in <span class="math inline">\(\Omega\)</span>?</h2>
+<p>NOTE: the number of elements of a set <span class="math inline">\(A\)</span> (aka its cardinal number) is denoted by &nbsp;<span class="math inline">\(\#A.\)</span> or <span class="math inline">\(|A|\)</span> or (sometimes) <span class="math inline">\(\Vert A \Vert\)</span></p>
+</section>
+<section id="answer-to-c-when-does-it-work" class="slide level2">
+<h2>Answer to (c) When does it work?</h2>
+<p><strong>(c) The system works if (1 and 2), or (3 and 4) or (1, 3 and 5) work.</strong></p>
+<p>Let <span class="math inline">\(D = \{ \mbox{The system works}\}\)</span>. Let us count it.</p>
+</section>
+<section id="answer-to-d-how-big-is-a" class="slide level2">
+<h2>Answer to (d) How big is <span class="math inline">\(|A|\)</span>?</h2>
+<p><strong>(d) A</strong><span class="math inline">\(=\left\{ \text{\textbf{4 and 5 have failed}}\right\}\)</span>. How many outcomes are there in A?</p>
+</section>
+<section id="answer-to-e-describe-all-the-outcomes-in-a-cap-d" class="slide level2">
+<h2>Answer to (e) Describe all the outcomes in <span class="math inline">\(A \cap D\)</span></h2>
+</section>
+<section id="example-iii" class="slide level2">
+<h2>Example III</h2>
+<p>Two dice have two sides painted red, two painted black, one painted yellow, and the other painted white.</p>
+<p>When this pair of dice is rolled, what is the probability that both dice show the same color facing up?</p>
+<p><strong>Remark</strong>: If not explicitly declared, this type of problem assumes “equal likely outcomes”.</p>
+</section>
+<section id="answer-to-example-iii" class="slide level2">
+<h2>Answer to Example III</h2>
+</section>
+<section id="example-iv" class="slide level2">
+<h2>Example IV</h2>
+<p>A small community consists of 20 families.</p>
+<p>Four of them have 1 child, 8 have 2 children, 5 have 3 children, 2 have 4 children, and 1 has 5 children.</p>
+<ol type="a">
+<li><p>What is the probability that a randomly chosen family has <span class="math inline">\(i\)</span> children, for each <span class="math inline">\(1 \le i \le 5\)</span>?</p></li>
+<li><p>What is the probability that a randomly chosen child comes from a family with <span class="math inline">\(i\)</span> children, for each <span class="math inline">\(1 \le i \le 5\)</span>?</p></li>
+</ol>
+<p><strong>Jargon</strong>: By “randomly chosen”, it says that the <strong>specific unit</strong> is equally likely selected.</p>
+<p>Applying the equal probability experiment/model for (a): family; (b): child.</p>
+</section>
+<section id="answer-to-example-iv" class="slide level2">
+<h2>Answer to Example IV</h2>
+<p>We organize the information as follows:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>i</th>
+<th>Families with i children</th>
+<th>Children from families w/ i children</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>20</strong></td>
+<td><strong>48</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Catch</strong>: There are 20 families, 48 children in this community.</p>
+</section>
+<section id="answer-to-a" class="slide level2">
+<h2>Answer to (a)</h2>
+<p>If one family is chosen at random, what is the probability it has <span class="math inline">\(i\)</span> children, <span class="math inline">\(i=1, 2, 3, 4, 5\)</span>?</p>
+</section>
+<section id="answer-to-b" class="slide level2">
+<h2>Answer to (b)</h2>
+<p>If one child is randomly chosen, what is the probability that it comes from a family having <span class="math inline">\(i\)</span> children, <span class="math inline">\(i=1,2,3,4,5\)</span>?</p>
+<p><strong>Remark</strong> Part (a) and Part (b) are probability calculations under <strong>Two Different</strong> experiments.</p>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../style/stat302.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Stat 302 - Winter 2025/26</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+              // default icon
+              link.classList.add("external");
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

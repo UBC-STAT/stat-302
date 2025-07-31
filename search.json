@@ -1,0 +1,539 @@
+[
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": " Schedule",
+    "section": "",
+    "text": "Insert schedule with links to slides here.\n\n\n\n\n\n\n\nAll lecture slides as .qmd files are available here.\n\n\n\n\n\n\n\n\n\nInstructions to create .pdfs of the lecture slides (works in Google Chrome or Chromium).\n\n\nOpen some Slides in the browser.\nToggle into Print View by pressing the E key. (It may not appear that anything has happened)\nOpen the Print dialog: CTRL / CMD + P.\nChange the Destination setting to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save 🎉\n\n\n\n\n\n\nModule 1",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "slides/module1.html#experiments",
+    "href": "slides/module1.html#experiments",
+    "title": "",
+    "section": "Experiments",
+    "text": "Experiments\nDefinition: A scientific procedure undertaken to make a discovery, test a hypothesis, or demonstrate a known fact.\nExample of an experiment: Release your pen from 4.9 meters above the ground.\nOutcomes of the experiment:\n\nThe pen will fall to the ground.\nIt takes about 1 second before it touches the ground."
+  },
+  {
+    "objectID": "slides/module1.html#our-observation",
+    "href": "slides/module1.html#our-observation",
+    "title": "",
+    "section": "Our observation:",
+    "text": "Our observation:\n\nWe are certain that the pen will touch the ground;\nwe are less sure if it will take exactly 1 second."
+  },
+  {
+    "objectID": "slides/module1.html#uncertainty",
+    "href": "slides/module1.html#uncertainty",
+    "title": "",
+    "section": "Uncertainty",
+    "text": "Uncertainty\nCommon sense: The outcome of some experiments cannot be determined with sufficient certainty beforehand.\n\nExample\n\nRoll a die: which side will face up?\nDraw a card from a well-shuffled deck: which one you will get?\nHow many students show up for class today?"
+  },
+  {
+    "objectID": "slides/module1.html#probability-theory",
+    "href": "slides/module1.html#probability-theory",
+    "title": "",
+    "section": "Probability theory",
+    "text": "Probability theory\n\nEven though there seem to be no rules on the outcome of rolling a die, if we repeat the experiment many times, some pattern emerges.\nProbability theory aims to describe the pattern with a mathematical model.\nIn ideal situations, the probability theory can be very successful: Casino always wins."
+  },
+  {
+    "objectID": "slides/module1.html#probability-theory-1",
+    "href": "slides/module1.html#probability-theory-1",
+    "title": "",
+    "section": "Probability theory",
+    "text": "Probability theory\n\nAxioms in mathematics: Statements or propositions regarded as being established, accepted, or self-evidently true.\nMathematical Theorem: A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.\nIf the accepted truths are falsified, the Theorem is also falsified."
+  },
+  {
+    "objectID": "slides/module1.html#probability-theory-2",
+    "href": "slides/module1.html#probability-theory-2",
+    "title": "",
+    "section": "Probability theory",
+    "text": "Probability theory\n\nThe probability theory in Stat 302 is a branch of mathematics. It is a system based on a set of Axioms.\nIts conclusions cannot be falsified unless the Axioms are falsified.\nStat 302 mostly lectures on mathematical aspects of the probability theory.\nWe use real world examples to demonstrate the relevance of the theory."
+  },
+  {
+    "objectID": "slides/module1.html#probability",
+    "href": "slides/module1.html#probability",
+    "title": "",
+    "section": "Probability",
+    "text": "Probability\nWe now motivate two subjects of probability based on experiment whose outcome is uncertain."
+  },
+  {
+    "objectID": "slides/module1.html#sample-space",
+    "href": "slides/module1.html#sample-space",
+    "title": "",
+    "section": "Sample Space",
+    "text": "Sample Space\n\nDefinitionSample space is the set of all possible outcomes of a random experiment.\n\n\nWe denote it by \\(\\Omega\\), and a generic outcome, also called sample point, by \\(\\omega\\) (i.e. \\(\\omega \\in \\Omega\\)).\n\nThere is no rule that we have to use \\(\\Omega\\) as the notation for the sample space.\nAlways read the context."
+  },
+  {
+    "objectID": "slides/module1.html#sample-space-1",
+    "href": "slides/module1.html#sample-space-1",
+    "title": "",
+    "section": "Sample Space",
+    "text": "Sample Space\n\nExample\n\nRoll a die: \\(\\Omega = \\{ 1,2,3,4,5, 6 \\}\\).\nDraw a card: \\(\\Omega = \\{ 2\\spadesuit, 2\\diamondsuit, \\ldots, A\\clubsuit ,A \\heartsuit  \\}\\).\n% yield of chemical process: \\(\\Omega =\\left[ 0,100\\right]\\).\nMaximum wind speed in YVR in 2023: \\(\\Omega =[0, \\infty)\\)\n\n\n\nRemark: We may not need to provide full description of \\(\\Omega\\) in many cases."
+  },
+  {
+    "objectID": "slides/module1.html#events",
+    "href": "slides/module1.html#events",
+    "title": "",
+    "section": "Events",
+    "text": "Events\n\nDefinitionAn event is a subset of sample space \\(\\Omega\\).\n\n\nNotation: We commonly use upper case letters (\\(A\\), \\(B\\), \\(C\\), …) for events.\nBecause events are sets, all notions regarding sets are applicable:\n\n\\(\\omega \\in A\\) means “\\(\\omega\\) is an element of \\(A\\)”.\n\\(C \\subset D\\) means “\\(C\\) is a subset of \\(D\\)”.\nRemember operations \\(A \\cup B\\), \\(A \\cap B\\) and so on."
+  },
+  {
+    "objectID": "slides/module1.html#examples",
+    "href": "slides/module1.html#examples",
+    "title": "",
+    "section": "Examples",
+    "text": "Examples\nEvents of interests are often formed by outcomes sharing some properties.\n\nExample\n\nRoll a dice:\n\\(A= \\{ 2, 4, 6 \\}\\) (“roll an even number”);\n\\(B= \\{1, 2, 3\\}\\) (“roll a 3 or less”).\nChemical process: \\(C= [ 9, 14 ] = \\{ \\text{yield is between 9 and 14\\%} \\}\\)\nMax-wind-speed: \\(A=(80, \\infty )= \\{ \\text{over 80 km/hour}\\}\\)\n\n\n\nIt is a useful skill to precisely list the sample points in a verbally described event."
+  },
+  {
+    "objectID": "slides/module1.html#set-operations",
+    "href": "slides/module1.html#set-operations",
+    "title": "",
+    "section": "Set Operations",
+    "text": "Set Operations\nSuppose \\(A\\), \\(B\\) are events (subsets of \\(\\Omega\\)).\n\nUnion: \\(A \\mathop{\\mathrm{\\mathchoice{\\bigcup}{\\cup}{\\cup}{\\cup}}}B\\) \\[\\omega \\in A \\cup B \\Leftrightarrow \\omega \\in A\n  \\mbox{ or } \\omega \\in B\\]\nIntersection: \\(A \\cap B\\) \\[\\omega \\in A \\cap B \\Leftrightarrow \\omega \\in A\n  \\mbox{ and } \\omega \\in B\\]\nComplement: \\(A^c\\) \\[\\omega \\in A^c\\Leftrightarrow \\omega \\notin A\\]\nSymmetric difference: \\(A \\, \\triangle \\, B\\) \\[A \\, \\triangle \\, B \\, = \\, \\left( A \\cap B^c \\right) \\, \\cup \\, \\left( A^c \\cap B \\right)\\]"
+  },
+  {
+    "objectID": "slides/module1.html#properties-of-set-operations",
+    "href": "slides/module1.html#properties-of-set-operations",
+    "title": "",
+    "section": "Properties of set operations",
+    "text": "Properties of set operations\n\nCommutative:\n\n\\(A \\cup B \\ = \\ B \\cup A\\)\n\\(A \\cap B \\ = \\ B \\cap A\\)\n\nAssociative:\n\n\\(A\\cup B\\cup C \\, = \\, \\left( A\\cup B\\right) \\cup C=A\\cup \\left( B\\cup C\\right)\\)\n\\(A\\cap B\\cap C \\, = \\, \\left( A\\cap B\\right) \\cap C=A\\cap \\left( B\\cap C\\right)\\)\n\nDistributive:\n\n\\(\\left( A\\cup B\\right) \\cap C \\, = \\, \\left( A\\cap C\\right) \\cup \\left( B\\cap\n  C\\right)\\)\n\\(\\left( A\\cap B\\right) \\cup C \\, = \\, \\left( A\\cup C\\right) \\cap \\left( B\\cup\n  C\\right)\\)\n\n\\(A = B\\) \\(\\Leftrightarrow\\) \\(A \\subseteq B\\) and \\(B \\subseteq A\\)"
+  },
+  {
+    "objectID": "slides/module1.html#de-morgans-laws",
+    "href": "slides/module1.html#de-morgans-laws",
+    "title": "",
+    "section": "De Morgan’s Laws",
+    "text": "De Morgan’s Laws\n\nTheoremFor any two events (sets) \\(A\\) and \\(B\\), we have \\[( A\\cup B ) ^{c} \\, = \\, A^{c}\\cap B^{c}.\\]\n\n\nTo prove two events are equal as above, the general approach is to show both \\[( A\\cup B )^{c}  \\subseteq  A^{c}\\cap B^{c}\\] and \\[A^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}.\\]\nWe give part of a proof on the next slide."
+  },
+  {
+    "objectID": "slides/module1.html#proof-of-de-morgans-laws",
+    "href": "slides/module1.html#proof-of-de-morgans-laws",
+    "title": "",
+    "section": "Proof of De Morgan’s Laws",
+    "text": "Proof of De Morgan’s Laws\n\nProofLet us show \\(( A\\cup B ) ^{c}  \\subseteq  A^{c}\\cap B^{c}\\):\n\ntake any \\(\\omega \\in  ( A\\cup B )^c\\), we must have \\(\\omega \\notin A \\cup B\\);\nThis implies \\(\\omega \\notin A\\) and \\(\\omega \\notin B\\) (because if either \\(\\omega \\in A\\) or \\(\\omega \\in B\\) then we’d have \\(\\omega \\in A \\cup B\\)).\nHence \\(\\omega \\in A^c\\) and \\(\\omega \\in B^c\\),\nThis is the same as \\(\\omega \\in A^c \\cap B^c\\).\nThat is, \\(\\omega \\in  ( A\\cup B )^c\\) implies \\(\\omega \\in A^c \\cap B^c\\) which is \\[( A\\cup B ) ^{c} \\, \\subseteq \\, A^{c}\\cap B^{c}.\\]\n\nTry it yourself to prove \\(A^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}\\)."
+  },
+  {
+    "objectID": "slides/module1.html#useful-identities",
+    "href": "slides/module1.html#useful-identities",
+    "title": "",
+    "section": "Useful Identities",
+    "text": "Useful Identities\n\n\\(A \\ =  ( A\\cap B ) \\, \\cup \\,  ( A\\cap B^{c} )\\)\n\nFirst: \\(A \\subseteq \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\): Take \\(\\omega \\in A\\), then either \\(\\omega \\in B\\) or \\(\\omega \\notin B\\). In the first case: \\(\\omega \\in A \\cap B\\), in the second case: \\(\\omega \\in A \\cap B^c\\). Thus \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\).\nAlso: \\(\\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right) \\subseteq A\\): Take \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\). If \\(\\omega \\in \\left( A\\cap B\\right)\\) then \\(\\omega \\in A\\). If \\(\\omega \\in \\left( A\\cap B^{c}\\right)\\) then \\(\\omega \\in A\\). Thus, we always have \\(\\omega \\in A\\).\n\n\\(A \\, \\cup\\,  B \\ = \\ A \\, \\cup \\left( B\\cap A^{c}\\right)\\)\n\nProve it!"
+  },
+  {
+    "objectID": "slides/module1.html#power-set",
+    "href": "slides/module1.html#power-set",
+    "title": "",
+    "section": "Power set",
+    "text": "Power set\nThe power set of \\(\\Omega\\) (denoted \\(2^\\Omega\\)) is the set of all possible subsets of \\(\\Omega\\). Example: Suppose \\(\\Omega \\ = \\ \\{ 1,2,3 \\}\\). Then \\[2^{\\Omega }  \\,\n=  \\Bigl\\{\n\\varnothing ,\n\\{ 1\\} , \\{ 2 \\} , \\{ 3 \\} , \\{ 1,2 \\} , \\{ 1,3 \\} , \\{ 2,3 \\}, \\{ 1, 2, 3 \\} \\Bigr\\}\\]\n\nThe symbol \\(\\varnothing\\) denotes the empty set.\nIf \\(\\Omega\\) has \\(n\\) elements, then \\(2^{\\Omega }\\) has \\(2^{n}\\) elements. In symbols: \\[\\#  ( 2^{\\Omega } ) \\ = \\ 2^{\\#\\Omega }.\\]"
+  },
+  {
+    "objectID": "slides/module1.html#reasoning-for-the-size-of-power-set",
+    "href": "slides/module1.html#reasoning-for-the-size-of-power-set",
+    "title": "",
+    "section": "Reasoning for the size of power set",
+    "text": "Reasoning for the size of power set\nList the \\(n\\) elements of \\(\\Omega\\) as \\[\\Omega =\\left\\{ \\omega _{1},\\omega _{2},...,\\omega _{n}\\right\\}\\]\nAny event \\(A \\subseteq \\Omega\\) is uniquely obtained by including or excluding each of \\(\\omega _{1},\\omega _{2},\\ldots,\\omega _{n}\\).\nHence, we have 2 options for each of the \\(n\\) sample points, leading to \\(2^n\\) distinct outcomes."
+  },
+  {
+    "objectID": "slides/module1.html#probability-of-an-event-an-possible-outcome",
+    "href": "slides/module1.html#probability-of-an-event-an-possible-outcome",
+    "title": "",
+    "section": "Probability of an event, an possible outcome",
+    "text": "Probability of an event, an possible outcome\nEven though we cannot predict the outcome of an experiment well enough in many cases, we have an idea about the chance of various outcomes:\n\nIf you toss a coin, the chance of observing a head is formidable.\nIf you buy a lottery ticket, the chance of winning the grand price is negligible.\n\nIn probability theory, we quantify the chance for “every subset” of the sample space in a self-consistent way.\nSuch a system was first proposed by Kolmogorov."
+  },
+  {
+    "objectID": "slides/module1.html#probability-axioms",
+    "href": "slides/module1.html#probability-axioms",
+    "title": "",
+    "section": "Probability Axioms",
+    "text": "Probability Axioms\nLet \\(\\Omega\\) be a sample space and \\({\\cal B}\\) be the collection of “all subsets” of \\(\\Omega\\).\n\nDefinition\nA probability function is a function \\(\\mathbb{P}\\) with domain \\({\\cal B}\\) so that\n\nAxiom 1: \\(\\mathbb{P}( \\Omega ) =1\\).\nAxiom 2: For all \\(A \\in {\\cal B}\\), we have \\(\\mathbb{P}( A ) \\geq 0\\).\nAxiom 3: If \\(\\{ A_{n}\\}_{n \\ge 1}\\) are a sequence of disjoint events, then \\[\\mathbb{P}\\left( \\bigcup_{n=1}^{\\infty }A_{n}\\right) \\,\n= \\sum_{n=1}^{\\infty }\\mathbb{P}( A_{n})\\]"
+  },
+  {
+    "objectID": "slides/module1.html#probability-2",
+    "href": "slides/module1.html#probability-2",
+    "title": "",
+    "section": "Probability",
+    "text": "Probability\n\nThe value of \\(\\mathbb{P}(A)\\) is called the probability of event \\(A\\).\nApparently, \\(0 \\leq \\mathbb{P}(A) \\leq 1\\): trivial but useful. If your calculation gives an event negative probability value, re-do the calculation.\nThe key phrase a sequence of is important: this rule does not go beyond.\nBeing disjoint means for all \\(i \\neq j\\), \\[A_i \\cap A_j = \\varnothing.\\]\nAs a mathematical theory, probability definition does not rely on an “uncertainty experiment”."
+  },
+  {
+    "objectID": "slides/module1.html#properties-of-the-probability-function",
+    "href": "slides/module1.html#properties-of-the-probability-function",
+    "title": "",
+    "section": "Properties of the probability function",
+    "text": "Properties of the probability function\nUnless otherwise specified, \\(A\\), \\(B\\) and so on are events, and \\(\\Omega\\) is the sample space.\n\nProbability of the complement: \\[\\mathbb{P}( A^{c} ) =1-\\mathbb{P}( A )\\]\nMonotonicity: \\[A\\subset B\\Rightarrow \\mathbb{P}( A ) \\leq \\mathbb{P}(B )\\]\nProbability of the union: \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) - \\mathbb{P}( A\\cap B )\\]\nBoole’s inequality: \\[\\mathbb{P}( \\bigcup _{i=1}^{m}A_{i} ) \\leq \\sum_{i=1}^{m}\\mathbb{P}( A_{i} )\\]"
+  },
+  {
+    "objectID": "slides/module1.html#proof-of-formula-for-complement",
+    "href": "slides/module1.html#proof-of-formula-for-complement",
+    "title": "",
+    "section": "Proof of formula for complement",
+    "text": "Proof of formula for complement\nRecall Mathematical Theorem: A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.\nBy “proof” regarding probability formulas, we use a chain of reasoning to show they are implied by means of the accepted three Axioms."
+  },
+  {
+    "objectID": "slides/module1.html#proof-of-formula-for-complement-1",
+    "href": "slides/module1.html#proof-of-formula-for-complement-1",
+    "title": "",
+    "section": "Proof of formula for complement",
+    "text": "Proof of formula for complement\n\nProof: \\(\\mathbb{P}( A^{c} ) \\ = \\ 1-\\mathbb{P}( A )\\)\n\nNote that (1) \\(\\Omega = A \\cup A^{c}\\) and (2) \\(A\\) and \\(A^c\\) are disjoint.\nBy Axioms 1 and 3, we have \\[1 =  \\mathbb{P}( \\Omega )  =  \\mathbb{P}(A  ) +\\mathbb{P}( A^c)\\] which implies \\(\\mathbb{P}( A^{c} ) =1-\\mathbb{P}( A )\\)."
+  },
+  {
+    "objectID": "slides/module1.html#monotonicity",
+    "href": "slides/module1.html#monotonicity",
+    "title": "",
+    "section": "Monotonicity",
+    "text": "Monotonicity\n\nProof: \\(A \\subset B \\, \\Rightarrow \\, \\mathbb{P}( A) \\leq \\mathbb{P}( B)\\)\n\nWe note that \\(B =  ( B\\cap A ) \\cup  ( B\\cap A^{c})\\);\nSince \\(A \\subset B\\) is given, we have \\(B \\cap A = A\\). Hence, \\(B =  A \\cup ( B \\cap A^{c})\\)\nIn addition, \\(A\\) and \\(B \\cap A^{c}\\) are disjoint. By Axiom 3 , we get \\(\\mathbb{P}( B )  =  \\mathbb{P}( A ) + \\mathbb{P}( B\\cap A^{c})\\).\nBy Axiom 2, \\(\\mathbb{P}( B\\cap A^{c}) \\ge 0\\). Thus, \\[\\mathbb{P}( B ) = \\mathbb{P}( A ) + P  ( B\\cap A^{c}) \\ge  \\mathbb{P}( A ).\\]"
+  },
+  {
+    "objectID": "slides/module1.html#probability-of-a-union",
+    "href": "slides/module1.html#probability-of-a-union",
+    "title": "",
+    "section": "Probability of a union",
+    "text": "Probability of a union\n\nProof: \\(\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) -\\mathbb{P}( A\\cap B )\\)\n\nFirst recall that \\(A\\cup B = A\\cup  ( B\\cap A^{c} )\\).\nNote that \\(A\\) and \\(B\\cap A^{c}\\) are disjoint events. Hence by Axiom 3: \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B \\cap A^{c} )\\]\nSplitting \\(B\\) into union of two disjoint events: \\(B  =  ( B\\cap A ) \\cup  ( B\\cap A^c )\\) and applying Axiom 3, we get \\[\\mathbb{P}( B) = \\mathbb{P}( B\\cap A ) +\\mathbb{P}( B\\cap A^c )\\]\nThe formula is obtained by combining the above two conclusions."
+  },
+  {
+    "objectID": "slides/module1.html#proof-of-booles-inequality",
+    "href": "slides/module1.html#proof-of-booles-inequality",
+    "title": "",
+    "section": "Proof of Boole’s inequality",
+    "text": "Proof of Boole’s inequality\n\\[\\mathbb{P}\\left( \\bigcup _{i=1}^{n}A_{i}\\right)  \\leq \\sum_{i=1}^{n}\\mathbb{P}\\left( A_{i}\\right)\\]\n\nProof\n\nWe will prove it by induction.\nFor \\(n=2\\): \\[\\begin{aligned}\n  \\mathbb{P}\\left( A_{1}\\cup A_{2}\\right) & = \\mathbb{P}\\left( A_{1}\\right) +\\mathbb{P}\\left( A_{2}\\right)\n  -\\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) \\\\\n  \\\\\n  & \\leq \\mathbb{P}\\left( A_{1}\\right) +\\mathbb{P}\\left(\n  A_{2}\\right)\\end{aligned}\\] because \\(\\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) \\geq 0\\)"
+  },
+  {
+    "objectID": "slides/module1.html#booles-inequality-continued",
+    "href": "slides/module1.html#booles-inequality-continued",
+    "title": "",
+    "section": "Boole’s inequality (continued)",
+    "text": "Boole’s inequality (continued)\n\nProof\n\nAssume now that it holds for \\(n\\). We then have \\[\n\\begin{aligned}\n\\mathbb{P}\\Big ( \\bigcup _{i=1}^{n+1}A_{i} \\Big )\n& =\n\\mathbb{P}\\Big [ \\Big ( \\bigcup_{i=1}^{n}A_{i}\\Big ) \\bigcup A_{n+1}\\Big ] &\\mbox{ associative prop.} \\\\\n& \\leq\n\\mathbb{P}\\Big[ \\bigcup_{i=1}^{n}A_{i}\\Big ] +\\mathbb{P}\\left( A_{n+1} \\right) &\\mbox{ case n=2} \\\\\n& \\leq\n\\sum_{i=1}^{n} \\mathbb{P}\\left( A_{i}\\right) +\\mathbb{P}\\left( A_{n+1} \\right) &\\mbox{ induction} \\\\\n& =\n\\sum_{i=1}^{n+1} \\mathbb{P}\\left( A_{i}\\right).\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/module1.html#example-of-applying-these-formulas",
+    "href": "slides/module1.html#example-of-applying-these-formulas",
+    "title": "",
+    "section": "Example of applying these formulas",
+    "text": "Example of applying these formulas\nJohn borrows 2 books.\nSuppose there is a 0.5 probability he likes the first book, 0.4 that he likes the second book, and 0.3 that he likes both.\nWhat is the probability that he will NOT like either of the 2 books?"
+  },
+  {
+    "objectID": "slides/module1.html#solution",
+    "href": "slides/module1.html#solution",
+    "title": "",
+    "section": "Solution",
+    "text": "Solution"
+  },
+  {
+    "objectID": "slides/module1.html#example-of-applying-formulas",
+    "href": "slides/module1.html#example-of-applying-formulas",
+    "title": "",
+    "section": "Example of applying formulas",
+    "text": "Example of applying formulas\nJane must take two tests, call them \\(T_1\\) and \\(T_2\\).\nSuppose the probability she passes test \\(T_1\\) is 0.8, test \\(T_2\\) is 0.7 and both tests is 0.6.\nCalculate the probability that:\n\nShe passes at least one test.\nShe passes at most one test.\nShe fails both tests.\nShe passes only one test."
+  },
+  {
+    "objectID": "slides/module1.html#solutions",
+    "href": "slides/module1.html#solutions",
+    "title": "",
+    "section": "Solutions",
+    "text": "Solutions"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-a-jane-passes-at-least-one-test",
+    "href": "slides/module1.html#solution-to-a-jane-passes-at-least-one-test",
+    "title": "",
+    "section": "Solution to (a) Jane passes at least one test",
+    "text": "Solution to (a) Jane passes at least one test"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-b-jane-passes-at-most-one-test",
+    "href": "slides/module1.html#solution-to-b-jane-passes-at-most-one-test",
+    "title": "",
+    "section": "Solution to (b) Jane passes at most one test",
+    "text": "Solution to (b) Jane passes at most one test"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-c-she-fails-both-tests",
+    "href": "slides/module1.html#solution-to-c-she-fails-both-tests",
+    "title": "",
+    "section": "Solution to (c) She fails both tests",
+    "text": "Solution to (c) She fails both tests"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-d-she-passes-only-one-test",
+    "href": "slides/module1.html#solution-to-d-she-passes-only-one-test",
+    "title": "",
+    "section": "Solution to (d) She passes only one test",
+    "text": "Solution to (d) She passes only one test"
+  },
+  {
+    "objectID": "slides/module1.html#remarks",
+    "href": "slides/module1.html#remarks",
+    "title": "",
+    "section": "Remarks",
+    "text": "Remarks\n\nIt is typical in introductory probability theory course to give a story first, followed by specifying events verbally.\nIn these cases, your answer should be a sentence, not just with the context included.\nThe best mathematical approach is to define some events, and express other events of interest using those events.\nRather than relying on algebra as in our examples, it can be easier to use Venn diagram to have these events connected.\nThere can be many ways to connect them, all lead to a viable probability calculation."
+  },
+  {
+    "objectID": "slides/module1.html#exercise-without-a-story",
+    "href": "slides/module1.html#exercise-without-a-story",
+    "title": "",
+    "section": "Exercise without a story",
+    "text": "Exercise without a story\nExercise 2\n\nSuppose that \\(\\mathbb{P}\\left( A\\right) =0.85\\) and \\(\\mathbb{P}\\left( B\\right) =0.75.\\) Show that \\[\\mathbb{P}\\left( A\\cap B\\right) \\geq 0.60.\\]\nMore generally, prove the Bonferroni inequality: \\[\\mathbb{P}\\left( \\cap _{i=1}^{n}A_{i}\\right) \\geq \\sum_{i=1}^{n}\\mathbb{P}\\left( A_{i}\\right)\n-\\left( n-1\\right) .\\]"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-2-a",
+    "href": "slides/module1.html#solution-to-2-a",
+    "title": "",
+    "section": "Solution to 2 (a)",
+    "text": "Solution to 2 (a)"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-example-2-b-prove-the-bonferroni-inequality",
+    "href": "slides/module1.html#solution-to-example-2-b-prove-the-bonferroni-inequality",
+    "title": "",
+    "section": "Solution to Example 2 (b) Prove the Bonferroni inequality",
+    "text": "Solution to Example 2 (b) Prove the Bonferroni inequality"
+  },
+  {
+    "objectID": "slides/module1.html#refresh-your-memory-of-the-probability-axioms",
+    "href": "slides/module1.html#refresh-your-memory-of-the-probability-axioms",
+    "title": "",
+    "section": "Refresh your memory of the probability axioms",
+    "text": "Refresh your memory of the probability axioms\nKolmogorov’s axioms tell us that if we have (a) sample space, (b) collection of events, and wish to create a probability function \\(\\mathbb{P}(\\cdot)\\); what properties this function should have.\nThe last a few examples show that if such a function \\(\\mathbb{P}(\\cdot)\\) has been given, how one may derive the value of \\(\\mathbb{P}(A)\\) from the probabilities of other events.\nWe next suggest a way to set up (a) sample space, (b) collection of events, and (c) probability function \\(\\mathbb{P}(\\cdot)\\) for a special type of experiments."
+  },
+  {
+    "objectID": "slides/module1.html#equally-likely-outcomes",
+    "href": "slides/module1.html#equally-likely-outcomes",
+    "title": "",
+    "section": "Equally likely outcomes",
+    "text": "Equally likely outcomes\nSuppose the sample space \\(\\Omega\\) is finite. \\[\\Omega \\, = \\, \\Bigl\\{ \\omega _{1},\\omega _{2}, \\ldots,\\omega _{n}\\Bigr\\}\\]\nIn many applications, we trust that these distinct outcomes are equally likely so that we wish to make \\[\\mathbb{P}(   \\{ \\omega _{i} \\} )  = a \\, , \\quad a \\in (0, 1].\\]\nFor such an experiment, we get a natural probability function."
+  },
+  {
+    "objectID": "slides/module1.html#equally-likely-outcomes-1",
+    "href": "slides/module1.html#equally-likely-outcomes-1",
+    "title": "",
+    "section": "Equally likely outcomes",
+    "text": "Equally likely outcomes\nNotice that \\(\\Omega = \\bigcup _{i=1}^{n} \\left\\{ \\omega _{i}\\right\\}\\), and \\(\\{\\omega _{i}\\}_{i=1}^n\\) are disjoint events.\nThe probability theory Axioms require \\[\\begin{aligned}\n1 &= \\mathbb{P}\\left( \\Omega \\right)= \\mathbb{P}\\Big ( \\bigcup _{i=1}^{n}\\left\\{ \\omega_{i}\\right\\} \\Big )\n= \\sum_{i=1}^{n}\\mathbb{P}\\left( \\left\\{ \\omega _{i}\\right\\} \\right)\n=\\sum_{i=1}^{n} a \\, = \\, n a.\n\\end{aligned}\\]\nOur only option is to let \\(a = 1 / n\\)."
+  },
+  {
+    "objectID": "slides/module1.html#equally-likely-outcomes-2",
+    "href": "slides/module1.html#equally-likely-outcomes-2",
+    "title": "",
+    "section": "Equally likely outcomes",
+    "text": "Equally likely outcomes\nThe axioms further require that for any event \\(A \\subseteq \\Omega\\): \\[\\begin{aligned}\n\\mathbb{P}(A)\n&= \\sum_{\\omega _{i}\\in A} \\mathbb{P}( \\{ \\omega_{i} \\})\n= \\sum_{\\omega _{i}\\in A}\\frac{1}{n} =\n\\frac{\\#A}{\\#\\Omega}\\\\\n&=\n\\frac{\\#\\{\\mbox{favorable outcomes} \\}}{\\#\\{\\mbox{possible outcomes}\\}}\n\\end{aligned}\\]\nBeing “favourable” means those in the event of interest: \\(A\\) in this example."
+  },
+  {
+    "objectID": "slides/module1.html#probability-calculation-examples",
+    "href": "slides/module1.html#probability-calculation-examples",
+    "title": "",
+    "section": "Probability calculation examples",
+    "text": "Probability calculation examples\n\nTo calculate probabilities, we count the number of sample points in the event of interest.\nCounting the number of sample points in a set can be mathematically surprisingly complicated.\nCombinatorial theory deals with this problem.\nWe will learn some basic combinatorial rules and techniques for this purpose."
+  },
+  {
+    "objectID": "slides/module1.html#counting-example-i",
+    "href": "slides/module1.html#counting-example-i",
+    "title": "",
+    "section": "Counting Example I",
+    "text": "Counting Example I\nA die is rolled repeatedly until we see an outcome being 6.\n\nSpecify/describe the sample space.\nLet \\(E_{n}\\) denote the event that the number of rolls is exactly \\(n\\) (\\(n=1,2, \\ldots\\)). Describe the event \\(E_{n}\\).\nDescribe the event \\(E_{1}\\cup E_{2}\\) and \\(( \\bigcup _{n=1}^{\\infty} E_{n}) ^{c}\\)."
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-a-describe-the-sample-space",
+    "href": "slides/module1.html#solution-to-a-describe-the-sample-space",
+    "title": "",
+    "section": "Solution to (a) Describe the sample space",
+    "text": "Solution to (a) Describe the sample space"
+  },
+  {
+    "objectID": "slides/module1.html#solution-to-b-describe-the-eventrolls-is-n",
+    "href": "slides/module1.html#solution-to-b-describe-the-eventrolls-is-n",
+    "title": "",
+    "section": "Solution to (b) Describe the event…rolls is \\(n\\)",
+    "text": "Solution to (b) Describe the event…rolls is \\(n\\)"
+  },
+  {
+    "objectID": "slides/module1.html#solution-c-e_1cup-e_2-and-bigcup_n1infty-e_n-c",
+    "href": "slides/module1.html#solution-c-e_1cup-e_2-and-bigcup_n1infty-e_n-c",
+    "title": "",
+    "section": "Solution (c) \\(E_{1}\\cup E_{2}\\) and \\(( \\bigcup_{n=1}^{\\infty} E_{n}) ^{c}\\)",
+    "text": "Solution (c) \\(E_{1}\\cup E_{2}\\) and \\(( \\bigcup_{n=1}^{\\infty} E_{n}) ^{c}\\)\nVerbally interpreting \\(E_{1}\\cup E_{2}\\), \\(\\bigcup_{n=1}^{\\infty} E_{n}\\), and \\(( \\bigcup_{n=1}^{\\infty } E_n) ^{c}\\):"
+  },
+  {
+    "objectID": "slides/module1.html#counting-example-ii",
+    "href": "slides/module1.html#counting-example-ii",
+    "title": "",
+    "section": "Counting example II",
+    "text": "Counting example II\nA system has 5 components, which can either be working or have failed.\nThe experiment consists of observing the current status (W/F) of the 5 components.\n\nDescribe the sample space for this experiment.\nHow much is \\(\\# \\Omega\\)?\nSuppose that the system will work if either components (1 and 2), or (3 and 4), or (1, 3 and 5) are working.\nList the outcomes in the event \\(D =\\left\\{ \\mbox{The system works}\\right\\}\\)?\nLet \\(A= \\{ \\text{components 4 and 5 have failed} \\}\\). How much is \\(\\# A\\)?\nList the outcomes in \\(A \\cap D\\)."
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-a-describe-the-sample-space",
+    "href": "slides/module1.html#answer-to-a-describe-the-sample-space",
+    "title": "",
+    "section": "Answer to (a) Describe the sample space",
+    "text": "Answer to (a) Describe the sample space"
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-b-how-many-outcomes-are-there-in-omega",
+    "href": "slides/module1.html#answer-to-b-how-many-outcomes-are-there-in-omega",
+    "title": "",
+    "section": "Answer to (b) How many outcomes are there in \\(\\Omega\\)?",
+    "text": "Answer to (b) How many outcomes are there in \\(\\Omega\\)?\nNOTE: the number of elements of a set \\(A\\) (aka its cardinal number) is denoted by  \\(\\#A.\\) or \\(|A|\\) or (sometimes) \\(\\Vert A \\Vert\\)"
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-c-when-does-it-work",
+    "href": "slides/module1.html#answer-to-c-when-does-it-work",
+    "title": "",
+    "section": "Answer to (c) When does it work?",
+    "text": "Answer to (c) When does it work?\n(c) The system works if (1 and 2), or (3 and 4) or (1, 3 and 5) work.\nLet \\(D = \\{ \\mbox{The system works}\\}\\). Let us count it."
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-d-how-big-is-a",
+    "href": "slides/module1.html#answer-to-d-how-big-is-a",
+    "title": "",
+    "section": "Answer to (d) How big is \\(|A|\\)?",
+    "text": "Answer to (d) How big is \\(|A|\\)?\n(d) A\\(=\\left\\{ \\text{\\textbf{4 and 5 have failed}}\\right\\}\\). How many outcomes are there in A?"
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-e-describe-all-the-outcomes-in-a-cap-d",
+    "href": "slides/module1.html#answer-to-e-describe-all-the-outcomes-in-a-cap-d",
+    "title": "",
+    "section": "Answer to (e) Describe all the outcomes in \\(A \\cap D\\)",
+    "text": "Answer to (e) Describe all the outcomes in \\(A \\cap D\\)"
+  },
+  {
+    "objectID": "slides/module1.html#example-iii",
+    "href": "slides/module1.html#example-iii",
+    "title": "",
+    "section": "Example III",
+    "text": "Example III\nTwo dice have two sides painted red, two painted black, one painted yellow, and the other painted white.\nWhen this pair of dice is rolled, what is the probability that both dice show the same color facing up?\nRemark: If not explicitly declared, this type of problem assumes “equal likely outcomes”."
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-example-iii",
+    "href": "slides/module1.html#answer-to-example-iii",
+    "title": "",
+    "section": "Answer to Example III",
+    "text": "Answer to Example III"
+  },
+  {
+    "objectID": "slides/module1.html#example-iv",
+    "href": "slides/module1.html#example-iv",
+    "title": "",
+    "section": "Example IV",
+    "text": "Example IV\nA small community consists of 20 families.\nFour of them have 1 child, 8 have 2 children, 5 have 3 children, 2 have 4 children, and 1 has 5 children.\n\nWhat is the probability that a randomly chosen family has \\(i\\) children, for each \\(1 \\le i \\le 5\\)?\nWhat is the probability that a randomly chosen child comes from a family with \\(i\\) children, for each \\(1 \\le i \\le 5\\)?\n\nJargon: By “randomly chosen”, it says that the specific unit is equally likely selected.\nApplying the equal probability experiment/model for (a): family; (b): child."
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-example-iv",
+    "href": "slides/module1.html#answer-to-example-iv",
+    "title": "",
+    "section": "Answer to Example IV",
+    "text": "Answer to Example IV\nWe organize the information as follows:\n\n\n\ni\nFamilies with i children\nChildren from families w/ i children\n\n\n\n\n1\n4\n4\n\n\n2\n8\n16\n\n\n3\n5\n15\n\n\n4\n2\n8\n\n\n5\n1\n5\n\n\nTotal\n20\n48\n\n\n\nCatch: There are 20 families, 48 children in this community."
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-a",
+    "href": "slides/module1.html#answer-to-a",
+    "title": "",
+    "section": "Answer to (a)",
+    "text": "Answer to (a)\nIf one family is chosen at random, what is the probability it has \\(i\\) children, \\(i=1, 2, 3, 4, 5\\)?"
+  },
+  {
+    "objectID": "slides/module1.html#answer-to-b",
+    "href": "slides/module1.html#answer-to-b",
+    "title": "",
+    "section": "Answer to (b)",
+    "text": "Answer to (b)\nIf one child is randomly chosen, what is the probability that it comes from a family having \\(i\\) children, \\(i=1,2,3,4,5\\)?\nRemark Part (a) and Part (b) are probability calculations under Two Different experiments."
+  },
+  {
+    "objectID": "assignments/index.html",
+    "href": "assignments/index.html",
+    "title": " Assignments",
+    "section": "",
+    "text": "Potentially post assignments here.",
+    "crumbs": [
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stat 302",
+    "section": "",
+    "text": "At the end of the course, you will be able to:\n\nDo stuff.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": " Syllabus",
+    "section": "",
+    "text": "Term 2025 Winter 1: 05 Sep - 07 Dec 2025",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-info",
+    "href": "syllabus.html#course-info",
+    "title": " Syllabus",
+    "section": "Course info",
+    "text": "Course info\nInstructor:\nDaniel McDonald\nOffice: Earth Sciences Building 3106\nEmail: daniel@stat.ubc.ca\nOffice hours:\nTBD\nCourse webpage:\nWWW: https://ubc-stat.github.io/stat-302/\nSee also Canvas\nLectures:\nTue/Thu 0800h - 0930h\nSee Canvas for location\nTextbooks:\nPrerequisite:\nSTAT 306 or CPSC 340",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-objectives",
+    "href": "syllabus.html#course-objectives",
+    "title": " Syllabus",
+    "section": "Course objectives",
+    "text": "Course objectives\nThis is a course in statistical learning methods. Based on the theory of linear models covered in Stat 306, this course will focus on applying many techniques of data analysis to interesting datasets.\nThe course combines analysis with methodology and computational aspects. It treats both the “art” of understanding unfamiliar data and the “science” of analyzing that data in terms of statistical properties. The focus will be on practical aspects of methodology and intuition to help students develop tools for selecting appropriate methods and approaches to problems in their own lives.\nThis is not a “how to program” course, nor a “tour of machine learning methods”. Rather, this course is about how to understand some ML methods. STAT 306 tends to give background in many of the tools of understanding as well as working with already-written R packages. On the other hand, CPSC 340 introduces many methods with a focus on “from-scratch” implementation (in Julia or Python). This course will try to bridge the gap between these approaches. Depending on which course you took, you may be more or less skilled in some aspects than in others. That’s OK and expected.\n\nLearning outcomes\n\nAssess the prediction properties of the supervised learning methods covered in class;\nCorrectly use regularization to improve predictions from linear models, and also to identify important explanatory variables;\nExplain the practical difference between predictions obtained with parametric and non-parametric methods, and decide in specific applications which approach should be used;\nSelect and construct appropriate ensembles to obtain improved predictions in different contexts;\nUse and interpret principal components and other dimension reduction techniques;\nEmploy reasonable coding practices and understand basic R syntax and function.\nWrite reports and use proper version control; engage with standard software.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#textbooks",
+    "href": "syllabus.html#textbooks",
+    "title": " Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nRequired:\nAn Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, 2013, Springer, New York. (denoted [ISLR])\nAvailable free online: https://www.statlearning.com\n\n\nOptional (but excellent):\nThe Elements of Statistical Learning, Hastie, Tibshirani, Friedman, 2009, Second Edition, Springer, New York. (denoted [ESL])\nAlso available free online: https://web.stanford.edu/~hastie/ElemStatLearn/\nThis second book is a more advanced treatment of a superset of the topics we will cover. If you want to learn more and understand the material more deeply, this is the book for you. All readings from [ESL] are optional.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-assessment-opportunities",
+    "href": "syllabus.html#course-assessment-opportunities",
+    "title": " Syllabus",
+    "section": "Course assessment opportunities",
+    "text": "Course assessment opportunities\n\nEffort-based component\nLabs: [0, 20]\nHomework assignments: [0, 50]\nClickers: [0, 10]\nTotal: min(65, Labs + Homework + Clickers)\n\n\nLabs\nThese are intended to keep you on track. They are to be submitted via pull requests in your personal labs-&lt;username&gt; repo (see the computing tab for descriptions on how to do this).\nLabs typically have a few questions for you to answer or code to implement. These are to be done during lab periods. But you can do them on your own as well. These are worth 2 points each up to a maximum of 20 points. They are due at 2300 on the day of your assigned lab section.\nIf you attend lab, you may share a submission with another student (with acknowledgement on the PR). If you do not attend lab, you must work on your own (subject to the collaboration instructions for Assignments below).\n\nRules.\nYou must submit via PR by the deadline. Your PR must include at least 3 commits. After lab 2, failure to include at least 3 commits will result in a maximum score of 1.\n\n\n\n\n\n\nTip\n\n\n\nIf you attend your lab section, you may work in pairs, submitting a single document to one of your Repos. Be sure to put both names on the document, and mention the collaboration on your PR. You still have until 11pm to submit.\n\n\n\n\nMarking.\nThe overriding theme here is “if you put in the effort, you’ll get all the points.” Grading scheme:\n\n2 if basically all correct\n\n1 if complete but with some major errors, or mostly complete and mostly correct\n\n0 otherwise\n\nYou may submit as many labs as you wish up to 20 total points.\nThere are no appeals on grades.\nIt’s important here to recognize just how important active participation in these activities is. You learn by doing, and this is your opportunity to learn in a low-stakes environment. One thing you’ll learn, for example, is that all animals urinate in 21 seconds.1\n\n\n\nAssignments\nThere will be 5 assignments. These are submitted via pull request similar to the labs but to the homework-&lt;username&gt; repo. Each assignment is worth up to 10 points. They are due by 2300 on the deadline. You must make at least 5 commits. Failure to have at least 5 commits will result in a 25% deduction on HW1 and a 50% deduction thereafter. No exceptions.\nAssignments are typically lightly marked. The median last year was 8/10. But they are not easy. Nor are they short. They often involve a combination of coding, writing, description, and production of statistical graphics.\nAfter receiving a mark and feedback, if you score less than 7, you may make corrections to bring your total to 7. This means, if you fix everything that you did wrong, you get 7. Not 10. The revision must be submitted within 1 week of getting your mark. Only 1 revision per assignment. The TA decision is final. Note that the TAs will only regrade parts you missed, but if you somehow make it worse, they can deduct more points.\nThe revision allowance applies only if you got 3 or more points of “content” deductions. If you missed 3 points for content and 2 more for “penalties” (like insufficient commits, code that runs off the side of the page, etc), then you are ineligible.\n\nPolicy on collaboration on assignments\nDiscussing assignments with your classmates is allowed and encouraged, but it is important that every student get practice working on these problems. This means that all the work you turn in must be your own. The general policy on homework collaboration is:\n\nYou must first make a serious effort to solve the problem.\nIf you are stuck after doing so, you may ask for help from another student. You may discuss strategies to solve the problem, but you may not look at their code, nor may they spell out the solution to you step-by-step.\nOnce you have gotten help, you must write your own solution individually. You must disclose, in your GitHub pull request, the names of anyone from whom you got help.\nThis also applies in reverse: if someone approaches you for help, you must not provide it unless they have already attempted to solve the problem, and you may not share your code or spell out the solution step-by-step.\n\n\n\n\n\n\n\nWarning\n\n\n\nAdherence to the above policy means that identical answers, or nearly identical answers, cannot occur. Thus, such occurrences are violations of the Course’s Academic honesty policy.\n\n\nThese rules also apply to getting help from other people such as friends not in the course (try the problem first, discuss strategies, not step-by-step solutions, acknowledge those from whom you received help).\nYou may not use homework help websites, ChatGPT, Stack Overflow, and so on under any circumstances. The purpose here is to learn. Good faith efforts toward learning are rewarded.\nYou can always, of course, ask me for help on Slack. And public Slack questions are allowed and encouraged.\nYou may also use external sources (books, websites, papers, …) to\n\nLook up programming language documentation, find useful packages, find explanations for error messages, or remind yourself about the syntax for some feature. I do this all the time in the real world. Wikipedia is your friend.\nRead about general approaches to solving specific problems (e.g. a guide to dynamic programming or a tutorial on unit testing in your programming language), or\nClarify material from the course notes or assignments.\n\nBut external sources must be used to support your solution, not to obtain your solution. You may not use them to\n\nFind solutions to the specific problems assigned as homework (in words or in code)—you must independently solve the problem assigned, not translate a solution presented online or elsewhere.\nFind course materials or solutions from this or similar courses from previous years, or\nCopy text or code to use in your submissions without attribution.\n\nIf you use code from online or other sources, you must include code comments identifying the source. It must be clear what code you wrote and what code is from other sources. This rule also applies to text, images, and any other material you submit.\nPlease talk to me if you have any questions about this policy. Any form of plagiarism or cheating will result in sanctions to be determined by me, including grade penalties (such as negative points for the assignment or reductions in letter grade) or course failure. I am obliged to report violations to the appropriate University authorities. See also the text below.\n\n\n\nClickers\nThese are short multiple choice and True / False questions. They happen in class. For each question, correct answers are worth 4, incorrect answers are worth 2. You get 0 points for not answering.\nSuppose there are N total clicker questions, and you have x points. Your final score for this component is\nmax(0, min(5 * x / N - 5, 10)).\nNote that if your average is less than 1, you get 0 points in this component.\n\n\n\n\n\n\nImportant\n\n\n\nIn addition, your final grade in this course will be reduced by 1 full letter grade.\n\n\nThis means that if you did everything else and get a perfect score on the final exam, you will get a 79. Two people did this last year. They were sad.\n\n\n\n\n\n\nWarning\n\n\n\nDON’T DO THIS!!\n\n\nThis may sound harsh, but think about what is required for such a penalty. You’d have to skip more than 50% of class meetings and get every question wrong when you are in class. This is an in-person course. It is not possible to get an A without attending class on a regular basis.\nTo compensate, I will do my best to post recordings of lectures. Past experience has shown 2 things:\n\nYou learn better by attending class than by skipping and “watching”.\nSometimes the technology messes up. So there’s no guarantee that these will be available.\n\nThe purpose is to let you occasionally miss class for any reason with minimal consequences. See also below. If for some reason you need to miss longer streches of time, please contact me or discuss your situation with your Academic Advisor as soon as possible. Don’t wait until December.\n\n\n\nYour score on HW, Labs, and Clickers\nThe total you can accumulate across these 3 components is 65 points. But you can get there however you want. The total available is 80 points. The rest is up to you. But with choice, comes responsibility.\nRules:\n\nNothing dropped.\nNo extensions.\nIf you miss a lab or a HW deadline, then you miss it.\nMake up for missed work somewhere else.\nIf you isolate due to Covid, fine. You miss a few clickers and maybe a lab (though you can do it remotely).\nIf you have a job interview and can’t complete an assignment on time, then skip it.\n\nWe’re not going to police this stuff. You don’t need to let me know. There is no reason that every single person enrolled in this course shouldn’t get &gt; 65 in this class.\nIllustrative scenarios:\n\nDoing 80% on 5 homeworks, coming to class and getting 50% correct, get 2 points on 8 labs gets you 65 points.\nDoing 90% on 5 homeworks, getting 50% correct on all the clickers, averaging 1/2 on all the labs gets you 65 points.\nGoing to all the labs and getting 100%, 100% on 4 homeworks, plus being wrong on every clicker gets you 65 points\n\nChoose your own adventure. Note that the biggest barrier to getting to 65 is skipping the assignments.\n\n\n\n\nFinal exam\n35 points\n\n\nAll multiple choice, T/F, matching.\nThe clickers are the best preparation.\nQuestions may ask you to understand or find mistakes in code.\nNo writing code.\n\nThe Final is very hard. By definition, it cannot be effort-based.\nIt is intended to separate those who really understand the material from those who don’t. Last year, the median was 50%. But if you put in the work (do all the effort points) and get 50%, you get an 83 (an A-). If you put in the work (do all the effort points) and skip the final, you get a 65. You do not have to pass the final to pass the course. You don’t even have to take the final.\nThe point of this scheme is for those who work hard to do well. But only those who really understand the material will get 90+.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#health-issues-and-considerations",
+    "href": "syllabus.html#health-issues-and-considerations",
+    "title": " Syllabus",
+    "section": "Health issues and considerations",
+    "text": "Health issues and considerations\n\nCovid Safety in the Classroom\n\n\n\n\n\n\nImportant\n\n\n\nIf you think you’re sick, stay home no matter what.\n\n\nMasks. Masks are recommended. For our in-person meetings in this class, it is important that all of us feel as comfortable as possible engaging in class activities while sharing an indoor space. Masks are a primary tool to make it harder for Covid-19 to find a new host. Please feel free to wear one or not given your own personal circumstances. Note that there are some people who cannot wear a mask. These individuals are equally welcome in our class.\nVaccination. If you have not yet had a chance to get vaccinated against Covid-19, vaccines are available to you, free. See http://www.vch.ca/covid-19/covid-19-vaccine for help finding an appointment. Boosters will be available later this term. The higher the rate of vaccination in our community overall, the lower the chance of spreading this virus. You are an important part of the UBC community. Please arrange to get vaccinated if you have not already done so. The same goes for Flu.\n\n\nYour personal health\n\n\n\n\n\n\nWarning\n\n\n\nIf you are sick, it’s important that you stay home – no matter what you think you may be sick with (e.g., cold, flu, other).\n\n\n\nDo not come to class if you have Covid symptoms, have recently tested positive for Covid, or are required to quarantine. You can check this website to find out if you should self-isolate or self-monitor: http://www.bccdc.ca/health-info/diseases-conditions/covid-19/self-isolation#Who.\nYour precautions will help reduce risk and keep everyone safer. In this class, the marking scheme is intended to provide flexibility so that you can prioritize your health and still be able to succeed. All work can be completed outside of class with reasonable time allowances.\nIf you do miss class because of illness:\n\nMake a connection early in the term to another student or a group of students in the class. You can help each other by sharing notes. If you don’t yet know anyone in the class, post on the discussion forum to connect with other students.\nConsult the class resources on here and on Canvas. We will post all the slides, readings, and recordings for each class day.\nUse Slack for help.\nCome to virtual office hours.\nSee the marking scheme for reassurance about what flexibility you have. No part of your final grade will be directly impacted by missing class.\n\nIf you are sick on final exam day, do not attend the exam. You must follow up with your home faculty’s advising office to apply for deferred standing. Students who are granted deferred standing write the final exam at a later date. If you’re a Science student, you must apply for deferred standing (an academic concession) through Science Advising no later than 48 hours after the missed final exam/assignment. Learn more and find the application online. For additional information about academic concessions, see the UBC policy here.\n\n\n\n\n\n\n\nNote\n\n\n\nPlease talk with me if you have any concerns or ask me if you are worried about falling behind.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#university-policies",
+    "href": "syllabus.html#university-policies",
+    "title": " Syllabus",
+    "section": "University policies",
+    "text": "University policies\nUBC provides resources to support student learning and to maintain healthy lifestyles but recognizes that sometimes crises arise and so there are additional resources to access including those for survivors of sexual violence. UBC values respect for the person and ideas of all members of the academic community. Harassment and discrimination are not tolerated nor is suppression of academic freedom. UBC provides appropriate accommodation for students with disabilities and for religious, spiritual and cultural observances. UBC values academic honesty and students are expected to acknowledge the ideas generated by others and to uphold the highest academic standards in all of their actions. Details of the policies and how to access support are available here.\n\nAcademic honesty and standards\nUBC Vancouver Statement\nAcademic honesty is essential to the continued functioning of the University of British Columbia as an institution of higher learning and research. All UBC students are expected to behave as honest and responsible members of an academic community. Breach of those expectations or failure to follow the appropriate policies, principles, rules, and guidelines of the University with respect to academic honesty may result in disciplinary action.\nFor the full statement, please see the 2022/23 Vancouver Academic Calendar\nCourse specific\nSeveral commercial services have approached students regarding selling class notes/study guides to their classmates. Please be advised that selling a faculty member’s notes/study guides individually or on behalf of one of these services using UBC email or Canvas, violates both UBC information technology and UBC intellectual property policy. Selling the faculty member’s notes/study guides to fellow students in this course is not permitted. Violations of this policy will be considered violations of UBC Academic Honesty and Standards and will be reported to the Dean of Science as a violation of course rules. Sanctions for academic misconduct may include a failing grade on the assignment for which the notes/study guides are being sold, a reduction in your final course grade, a failing grade in the course, among other possibilities. Similarly, contracting with any service that results in an individual other than the enrolled student providing assistance on quizzes or exams or posing as an enrolled student is considered a violation of UBC’s academic honesty standards.\nSome of the problems that are assigned are similar or identical to those assigned in previous years by me or other instructors for this or other courses. Using proofs or code from anywhere other than the textbooks, this year’s course notes, or the course website is not only considered cheating (as described above), it is easily detectable cheating. Such behavior is strictly forbidden.\nIn previous years, I have caught students cheating on the exams or assignments. I did not enforce any penalty because the action did not help. Cheating, in my experience, occurs because students don’t understand the material, so the result is usually a failing grade even before I impose any penalty and report the incident to the Dean’s office. I carefully structure exams and assignments to make it so that I can catch these issues. I will catch you, and it does not help. Do your own work, and use the TAs and me as resources. If you are struggling, we are here to help.\n\n\n\n\n\n\nCaution\n\n\n\nIf I suspect cheating, your case will be forwarded to the Dean’s office. No questions asked.\n\n\nGenerative AI\nTools to help you code more quickly are rapidly becoming more prevalent. I use them regularly myself. The point of this course is not to “complete assignments” but to learn coding (and other things). With that goal in mind, I recommend you avoid the use of Generative AI. It is unlikely to contribute directly to your understanding of the material. Furthermore, I have experimented with certain tools on the assignments for this course and have found the results underwhelming.\nThe material in this course is best learned through trial and error. Avoiding this mechanism (with generative AI or by copying your friend) is a short-term solution at best. I have tried to structure this course to discourage these types of short cuts, and minimize the pressure you may feel to take them.\n\n\nAcademic Concessions\nThese are handled according to UBC policy. Please see\n\nUBC student services\nUBC Vancouver Academic Calendar\nFaculty of Science Concessions\n\n\n\nMissed final exam\nStudents who miss the final exam must report to their Faculty advising office within 72 hours of the missed exam, and must supply supporting documentation. Only your Faculty Advising office can grant deferred standing in a course. You must also notify your instructor prior to (if possible) or immediately after the exam. Your instructor will let you know when you are expected to write your deferred exam. Deferred exams will ONLY be provided to students who have applied for and received deferred standing from their Faculty.\n\n\nTake care of yourself\nCourse work at this level can be intense, and I encourage you to take care of yourself. Do your best to maintain a healthy lifestyle this semester by eating well, exercising, avoiding drugs and alcohol, getting enough sleep and taking some time to relax. This will help you achieve your goals and cope with stress. I struggle with these issues too, and I try hard to set aside time for things that make me happy (cooking, playing/listening to music, exercise, going for walks).\nAll of us benefit from support during times of struggle. If you are having any problems or concerns, do not hesitate to speak with me. There are also many resources available on campus that can provide help and support. Asking for support sooner rather than later is almost always a good idea.\nIf you or anyone you know experiences any academic stress, difficult life events, or feelings like anxiety or depression, I strongly encourage you to seek support. UBC Counseling Services is here to help: call 604 822 3811 or visit their website. Consider also reaching out to a friend, faculty member, or family member you trust to help get you the support you need.\n\nA dated PDF is available at this link.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#footnotes",
+    "href": "syllabus.html#footnotes",
+    "title": " Syllabus",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nA careful reading of this paper with the provocative title “Law of Urination: all mammals empty their bladders over the same duration” reveals that the authors actually mean something far less precise. In fact, their claim is more accurately stated as “mammals over 3kg in body weight urinate in 21 seconds with a standard deviation of 13 seconds”. But the accurate characterization is far less publicity-worthy.↩︎",
+    "crumbs": [
+      "Syllabus"
+    ]
+  }
+]
