@@ -29,7 +29,7 @@ website:
       - text: Syllabus
         url: syllabus.qmd
       - text: Schedule
-        url: schedule/index.qmd
+        url: schedule.qmd
       - text: Assignments
         url: assignments/index.qmd
 

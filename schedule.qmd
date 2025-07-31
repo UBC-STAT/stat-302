@@ -31,3 +31,5 @@ Instructions to create `.pdf`s of the lecture slides (works in Google Chrome or 
 </details>
 
 :::
+
+* [Module 1](slides/module1.qmd)
