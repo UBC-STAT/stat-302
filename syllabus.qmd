@@ -25,13 +25,8 @@ __Lectures__:
 Tue/Thu 0800h - 0930h  
 See Canvas for location
 
-
-__Textbooks__:  
-
-
-
 __Prerequisite__:  
-STAT 306 or CPSC 340   
+One of MATH 200, 217, 226, 253 or 254  
 
 
 ## Course objectives

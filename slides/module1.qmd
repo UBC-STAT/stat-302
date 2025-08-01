@@ -1,6 +1,6 @@
 ---
 title: Module 1
-author: Daniel J. McDonald
+author: Matias
 format: 
   revealjs: default
   pdf: default
