@@ -1,8 +1,11 @@
 ._*_xref.json
 *.DS_Store
+_site/
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
 /.quarto/
+*_files/
+*_cache/
