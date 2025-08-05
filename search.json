@@ -90,6 +90,426 @@
     ]
   },
   {
+    "objectID": "slides/module2.html#finite-sample-space-special-case",
+    "href": "slides/module2.html#finite-sample-space-special-case",
+    "title": "",
+    "section": "Finite Sample Space: special case",
+    "text": "Finite Sample Space: special case\nIn many cases, the sample space contains finite number of possible outcomes.\nMoreover, it is justifiable to assign equal probability to every possible outcome"
+  },
+  {
+    "objectID": "slides/module2.html#example",
+    "href": "slides/module2.html#example",
+    "title": "",
+    "section": "Example",
+    "text": "Example\n\nExperiment: roll a fair die;\nSample space: \\(\\Omega = \\{1, 2, 3, 4, 5, 6\\}\\).\nTypically assume (a) and (b):\n\n\\[\\begin{align}\n(a) \\quad & \\mathbb{P}(\\{1\\}) = \\mathbb{P}(\\{2\\}) = \\cdots = \\mathbb{P}(\\{6\\})\\\\\n(b) \\quad & \\mathbb{P}(\\Omega) = 1\\\\\n\\Longrightarrow &\\mathbb{P}( \\omega ) = 1/6 \\textrm{ for any } \\omega=\\{1\\},\\dots,\\{6\\}.\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/module2.html#essence-of-this-chapter",
+    "href": "slides/module2.html#essence-of-this-chapter",
+    "title": "",
+    "section": "Essence of this chapter",
+    "text": "Essence of this chapter\nWhen equal likely is declared/assumed,\n\nsubsequent probability calculation is conceptually easy,\ncan be challenging technically.\n\nThis chapter goes over some general techniques for probability calculation of this nature."
+  },
+  {
+    "objectID": "slides/module2.html#equally-likely-outcomes",
+    "href": "slides/module2.html#equally-likely-outcomes",
+    "title": "",
+    "section": "Equally likely outcomes",
+    "text": "Equally likely outcomes\nLet \\(A\\) be a subset (event) of a sample space \\(\\Omega\\).\n\\[\n\\mathbb{P}\\left( A\\right) = \\frac{\\text{number of elements in }A}{\\text{number of\nelements in }\\Omega }\n\\]\nAll that matters in this case is the numbers of elements is different sets."
+  },
+  {
+    "objectID": "slides/module2.html#basic-principle",
+    "href": "slides/module2.html#basic-principle",
+    "title": "",
+    "section": "Basic principle",
+    "text": "Basic principle\nSuppose that a random experiment has 2 steps. \n\nStep 1 has \\(n_1\\) possible outcomes, and\nStep 2 has \\(n_2\\) possible outcomes.\n\nThen, \\[\\mbox{total number of possible outcomes} \\ = \\ n_1 \\times n_2\\]"
+  },
+  {
+    "objectID": "slides/module2.html#unstated-assumption",
+    "href": "slides/module2.html#unstated-assumption",
+    "title": "",
+    "section": "Unstated Assumption:",
+    "text": "Unstated Assumption:\nthe outcome of the first step does not affect the outcomes of the second step."
+  },
+  {
+    "objectID": "slides/module2.html#extension-to-k-step-experiments",
+    "href": "slides/module2.html#extension-to-k-step-experiments",
+    "title": "",
+    "section": "Extension to “k step” experiments",
+    "text": "Extension to “k step” experiments\nIf a random experiment has k steps.\n\nStep 1 has \\(n_1\\) possible outcomes,\nStep 2 has \\(n_2\\) possible outcomes,\n\n\\(\\quad\\quad\\quad\\vdots\\quad\\quad\\quad\\)\n\nStep k has \\(n_k\\) possible outcomes.\n\nThen, \\[\\mbox{total number of outcomes} \\ = \\ n_1 \\times n_2 \\times n_3 \\times \\cdots \\times n_k\\]\n\n\n\n\n\n\nNote\n\n\nthe outcomes of these steps do not affect each other."
+  },
+  {
+    "objectID": "slides/module2.html#license-plates",
+    "href": "slides/module2.html#license-plates",
+    "title": "",
+    "section": "License plates",
+    "text": "License plates\n\nExampleHow many different license plates with 7 characters are possible if the first 3 places are letters and the last 4 are numbers?\n\n\n\n26 choices for the 1st, 2nd and 3rd entry, and\n10 choices for each of the last 4 entries.\n\n\\[\n\\begin{aligned}\n\\# \\mbox{of plates} \\ &= \\ 26 \\times 26\\times 26\\times 10\\times 10\\times 10\\times 10 \\\\\n& = \\ 26^3 \\times 10^4\\\\\n& = 175,760,000\n\\end{aligned}\n\\]\nThe assumption holds that the outcomes of these steps do not affect each other."
+  },
+  {
+    "objectID": "slides/module2.html#special-license-plates",
+    "href": "slides/module2.html#special-license-plates",
+    "title": "",
+    "section": "Special license plates",
+    "text": "Special license plates\n\nExampleWhat happens if letters and numbers cannot be repeated?\n\n\n\n26 choices for the 1st entry,\n25 choices for the 2nd entry,\n24 choices for the 3rd entry,\n10 choices for the 4th entry,\n9 choices for the 5th entry,\n8 choices for the 6th entry, and\n7 choices for the 7th entry.\n\n\\[\\begin{aligned}\n\\# \\mbox{of plates w/o rep }\n&= 26 \\times 25 \\times 24 \\times 10 \\times 9 \\times 8 \\times 7 \\\\\n& = 78,624,000\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#shuffling-license-plates",
+    "href": "slides/module2.html#shuffling-license-plates",
+    "title": "",
+    "section": "Shuffling license plates",
+    "text": "Shuffling license plates\n\nExampleWhat is the probability that a randomly chosen plate has no repetitions?\n\n\nWe haven’t specified that some plates are more or less likely to be chosen.\nSo we assume that each is equally likely.\nBe aware of the background information we have just presented."
+  },
+  {
+    "objectID": "slides/module2.html#shuffling-license-plates-solution",
+    "href": "slides/module2.html#shuffling-license-plates-solution",
+    "title": "",
+    "section": "Shuffling license plates (solution)",
+    "text": "Shuffling license plates (solution)\n\n\nThe event in question is \\[A = \\{\\mbox{license plate without repetition}\\}.\\]\nThe sample space contains all plates whose first 3 are letters and the last 4 are numbers.\n\nBeing explicit with the definitions will help you avoid mistakes.\nThe probability that a randomly chosen plate has no repetitions is given by \\[\\begin{aligned}\n\\mathbb{P}(A)\n&=\\frac{\\text{\\# of plates w/o rep}}{\\text{\\# of plates }} \\\\\n&=\\frac{78,624,000}{175,760,000} \\\\\n&= 0.44734\\\\\n&\\approx 0.45\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#permutation",
+    "href": "slides/module2.html#permutation",
+    "title": "",
+    "section": "Permutation",
+    "text": "Permutation\n\nDefinitionA permutation of a set is an arrangement of its elements in a specific order.\n\n\n\nExampleConsider the set \\(A = \\left\\{ 1, 2, 3, 4, 5 \\right\\}\\)\n\nSome permutations of the elements of A are:\n\n\\[\\left( 3, 5, 2, 4, 1 \\right), \\, \\left( 2, 1, 3, 4, 5 \\right), \\,\n\\left( 5, 4, 2, 1, 3 \\right), \\quad\n\\mbox{ etc.}\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#counting-permutations",
+    "href": "slides/module2.html#counting-permutations",
+    "title": "",
+    "section": "Counting permutations",
+    "text": "Counting permutations\nHow many permutations of the set \\(\\left\\{ 1, 2, \\ldots, n \\right\\}\\) are there?\nThere are\n\n\\(n\\) choices for the 1st entry,\n\\((n-1)\\) choices for the 2nd entry,\n\\((n-2)\\) choices for the 3rd entry,\n\n\\(\\quad\\quad\\quad\\vdots\\quad\\quad\\quad\\)\n\n\\(2\\) choices for the \\((n-1)^{\\text{th}}\\) entry, and\n\\(1\\) choice for the last (\\(n^{\\text{th}}\\)) entry.\n\nThus, there are \\[n \\times (n-1)\n\\times (n-2)\n\\times \\cdots\n\\times 2 \\times 1 \\, = \\, n!\n\\] possible permutations of \\(\\left\\{ 1, 2, \\ldots, n \\right\\}\\)"
+  },
+  {
+    "objectID": "slides/module2.html#counting-permutations-1",
+    "href": "slides/module2.html#counting-permutations-1",
+    "title": "",
+    "section": "Counting permutations",
+    "text": "Counting permutations\n\n\n\n\n\n\nKey assumption in counting permutations this way:\n\n\nall \\(n\\) objects are distinct.\n\n\n\n\nWhen some of them are not distinct, the number of possible distinct outcomes by re-arrangement (“permutation”) is not given by this formula.\nWe need a different formula."
+  },
+  {
+    "objectID": "slides/module2.html#example-1",
+    "href": "slides/module2.html#example-1",
+    "title": "",
+    "section": "Example",
+    "text": "Example\nIn how many different ways can the letters of “pepper” be arranged? Answer:\n\nIf the letters were all different, we would have \\(6!=720\\) arrangements.\nBut each arrangement does not change if:\n\nwe permute the 3 p’s (3! ways of doing this)\nwe permute the 2 e’s (2! ways of doing this)\n\nThus, in the list of 6! arrangements, each “p/e” pattern appears \\(3! \\times 2!\\) times: \\[\\text{number of arrangements}=\\frac{6!}{3!2!}=60.\\]"
+  },
+  {
+    "objectID": "slides/module2.html#international-chess",
+    "href": "slides/module2.html#international-chess",
+    "title": "",
+    "section": "International chess",
+    "text": "International chess\nA chess tournament with 10 players:\n\n\n\n# of players\nCountry of origin\n\n\n\n\n4\nRussia 🇷🇺\n\n\n3\nUSA 🇺🇸\n\n\n2\nArgentina 🇦🇷\n\n\n1\nBrazil 🇧🇷\n\n\n\n\nExample: Counting outcomesIf we see only nationalities in the final rank, how many outcomes are possible?\n\n\n\nExample: Go Argentina 🇦🇷If all players have an equal chance to win, what is the probability that Argentina wins the tournament?"
+  },
+  {
+    "objectID": "slides/module2.html#counting-outcomes-1",
+    "href": "slides/module2.html#counting-outcomes-1",
+    "title": "",
+    "section": "Counting outcomes",
+    "text": "Counting outcomes\nIf we see only nationalities in the final rank, how many outcomes are possible?\n\nThere are \\(10!\\) permutations for the players.\nEach country-ranking pattern appears \\(4! \\times 3! \\times 2!\\) times (Russian players can be permuted in \\(4!\\) ways, USA players in \\(3!\\) ways, etc.).\nIf we see only nationalities, there are \\[\\frac{10!}{4! \\times 3! \\times 2!} = \\frac{3628800}{288}= 12600\\] possible outcomes."
+  },
+  {
+    "objectID": "slides/module2.html#go-argentina-1",
+    "href": "slides/module2.html#go-argentina-1",
+    "title": "",
+    "section": "Go Argentina 🇦🇷",
+    "text": "Go Argentina 🇦🇷\nCount favourable outcomes: an Argentinian player is ranked first.\n\nThere are 2 choices for the top ranked player,\nThere are \\(9!\\) ways of arranging (ranking) the other 9 players.\nThus, we have \\[2 \\times 9! = 725760\\] rankings where an Argentinian player is first.\n\nBut if we see only nationalities, these outcomes are not distinct!"
+  },
+  {
+    "objectID": "slides/module2.html#go-argentina-2",
+    "href": "slides/module2.html#go-argentina-2",
+    "title": "",
+    "section": "Go Argentina 🇦🇷",
+    "text": "Go Argentina 🇦🇷\nEach country pattern appears \\(4! \\times 3! \\times 2!\\) times.\nThe number of country rankings where Argentina appears 1st is \\[\\frac{725760}{4! \\times 3! \\times 2!}= 2520.\\]\nTherefore, \\[\\begin{aligned}\n\\mathbb{P}\\left( \\left\\{ \\text{Argentina wins}\\right\\} \\right)\n&=\\frac{\\#\\text{of favorable outcomes}}{\\#\\text{of possible outcomes}} \\\\\n&=\\frac{2520}{12600}\\\\\n&=0.20.\n\\end{aligned}\n\\]\nFor assignments, keep only 3 significant digits in general if no neat numerical outcome."
+  },
+  {
+    "objectID": "slides/module2.html#simpler-approach",
+    "href": "slides/module2.html#simpler-approach",
+    "title": "",
+    "section": "Simpler approach 🤦",
+    "text": "Simpler approach 🤦\nWhat is the probability the Argentina player wins the tournament?\n\nIf all players have equal chance to win.\nThere are 10 players, and two of them are Argentina.\nThe probability is therefore \\(2/10\\)."
+  },
+  {
+    "objectID": "slides/module2.html#combinations",
+    "href": "slides/module2.html#combinations",
+    "title": "",
+    "section": "Combinations",
+    "text": "Combinations\n\nDefinitionA combination of size \\(m\\) is a subset of \\(m\\) items from a set of size \\(n\\) with \\(m \\leq n\\).\n\n\n\nConsider the set \\[S=\\left\\{ 1,2,3,4,5\\right\\}\\]\nThe following are all the sets of size 3 from \\(S\\):\n\n\n\n\n\\(\\{ 1,2,3\\}\\)\n\\(\\left\\{ 1,4,5\\right\\}\\)\n\n\n\\(\\{ 1,2,4\\}\\)\n\\(\\left\\{ 2,3,4\\right\\}\\)\n\n\n\\(\\{ 1,2,5\\}\\)\n\\(\\left\\{ 2,3,5\\right\\}\\)\n\n\n\\(\\{ 1,3,4\\}\\)\n\\(\\left\\{ 2,4,5\\right\\}\\)\n\n\n\\(\\{ 1,3,5\\}\\)\n\\(\\left\\{ 3,4,5\\right\\}\\)\n\n\n\n\nWe call these sets “combinations” when we only care which elements are in the set."
+  },
+  {
+    "objectID": "slides/module2.html#combinations-1",
+    "href": "slides/module2.html#combinations-1",
+    "title": "",
+    "section": "Combinations",
+    "text": "Combinations\n\nNote that the order of the elements does not matter (these are sets, not sequences).\n\n\\[\\Bigl\\{ 1, 2, 4 \\Bigr\\} \\, = \\,\n\\Bigl\\{ 4, 1, 2 \\Bigr\\} \\, = \\,\n\\Bigl\\{ 2, 4, 1 \\Bigr\\} \\, = \\, \\cdots\n\\]\n\nGiven a set of \\(n\\) distinct items \\[S = \\{s_1,\\ s_2,\\ \\dots, s_n\\}\\] how many different combinations of size \\(m \\le n\\) can be formed?"
+  },
+  {
+    "objectID": "slides/module2.html#number-of-combinations",
+    "href": "slides/module2.html#number-of-combinations",
+    "title": "",
+    "section": "Number of combinations",
+    "text": "Number of combinations\nThis concept, the number of combinations of size \\(m\\) out of set of size \\(n \\ge\nm\\) has various notations\n\\[\\binom{n}{m} = \\left._{n} C_{m}\\right. = C_m^n\\]\n\n\\(n\\): size of the set from which combinations are drawn\n\\(m\\): size of the combinations\n\n\n\n\n\n\n\nTip\n\n\nIn this course, we use \\(\\binom{n}{m}\\)."
+  },
+  {
+    "objectID": "slides/module2.html#example-2",
+    "href": "slides/module2.html#example-2",
+    "title": "",
+    "section": "Example",
+    "text": "Example\nFor example, when \\(n=5\\) and \\(m=3\\) we have\n\n\n\n\\(\\{ 1,2,3\\}\\)\n\\(\\left\\{ 1,4,5\\right\\}\\)\n\n\n\\(\\{ 1,2,4\\}\\)\n\\(\\left\\{ 2,3,4\\right\\}\\)\n\n\n\\(\\{ 1,2,5\\}\\)\n\\(\\left\\{ 2,3,5\\right\\}\\)\n\n\n\\(\\{ 1,3,4\\}\\)\n\\(\\left\\{ 2,4,5\\right\\}\\)\n\n\n\\(\\{ 1,3,5\\}\\)\n\\(\\left\\{ 3,4,5\\right\\}\\)\n\n\n\nand a direct count shows that the number of combinations is\n\\[\\binom{5}{3}= {10}.\\]"
+  },
+  {
+    "objectID": "slides/module2.html#general-definition-of-combination",
+    "href": "slides/module2.html#general-definition-of-combination",
+    "title": "",
+    "section": "General definition of combination",
+    "text": "General definition of combination\n\\[\\binom{n}{m} = \\frac{n!}{m!(n-m)!}\\]\n\nThese are also called binomial coefficients.\nThey have many beautiful interpretations.\n\n\n\n\n\n\nPascal’s Triangle\n\n\n\n\n\n\n\nYang Hui’s Triangle"
+  },
+  {
+    "objectID": "slides/module2.html#how-many-is-binomnm",
+    "href": "slides/module2.html#how-many-is-binomnm",
+    "title": "",
+    "section": "How many is \\(\\binom{n}{m}\\)?",
+    "text": "How many is \\(\\binom{n}{m}\\)?\nNote that combinations can be constructed using permutations as follows:\n\npick \\(m\\) items out of the \\(n\\) items, in order;\neach of these \\(m\\)-long permutations generates a subset;\nbut many (how many?) of these permutations correspond to the same subset"
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-first-version",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-first-version",
+    "title": "",
+    "section": "Intuition for the combination formula (first version)",
+    "text": "Intuition for the combination formula (first version)\nGiven a set of \\(n\\) distinct items\n\\[S = \\Bigl\\{ s_1, s_2, \\ldots, s_n \\Bigr\\}\\]\nwe can form\n\\[n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-m+1)\\]\ndifferent \\(m\\)-tuples by choosing from elements of \\(S\\)"
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-first-version-1",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-first-version-1",
+    "title": "",
+    "section": "Intuition for the combination formula (first version)",
+    "text": "Intuition for the combination formula (first version)\n\nHowever, any permutation of these \\(m\\) elements corresponds to the same subset\nThere are \\(m!\\) ways to reorder these \\(m\\) elements\nIn other words, each different subset appears \\(m!\\) times in the list of ordered \\(m\\)-tuples\n\nHence, the number of combinations is: \\[\n\\frac{n \\, (n-1) \\, (n-2) \\, \\cdots \\, (n - m + 1)}{m!}\n= \\frac{n \\, (n-1) \\, (n-2) \\, \\cdots \\, (n - m + 1)}{m!}\n\\frac{n!}{m! \\, (n - m)!}.\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-second-version",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-second-version",
+    "title": "",
+    "section": "Intuition for the combination formula (second version)",
+    "text": "Intuition for the combination formula (second version)\nAnother way to construct combinations using permutations uses the intuition:\n\ntake a permutation of all \\(n\\) items in the set\nkeep the first \\(m\\) terms of the permutation, and discard the remaining \\((n-m)\\) terms."
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-second-version-1",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-second-version-1",
+    "title": "",
+    "section": "Intuition for the combination formula (second version)",
+    "text": "Intuition for the combination formula (second version)\n\\[\\overset{\\text{permutation}}\n{\\overbrace{ ( i_{1},\\ldots, i_{m},i_{m+1}, \\ldots, i_{n} ) }}\n\\to\n\\overset{m}{\\overbrace{i_{1},\\ldots,i_{m}}} \\text{ }\n\\overset{n-m}{\\overbrace{i_{m+1}, \\ldots, i_{n}}}\n\\to\n\\overset{\\text{combination}}{\\overbrace{ \\{ i_{1},\\ldots, i_{m} \\} }}.\\]\nConcrete example — \\(m=3\\)  and \\(n=5\\).\n\\[\\begin{aligned}\n\\overset{\\text{permutation}} {\\overbrace{ (5,1,4,2,3 ) }}\n&\\longrightarrow\n\\overbrace{5,1,4}  \\overbrace{2,3}\n&\\longrightarrow\n\\overset{\\text{combination}} {\\overbrace {\\{ 1,4,5 \\}}} \\\\\n\\overset{\\text{permutation}} {\\overbrace{ ( 5,1,4,3,2 ) }}\n&\\longrightarrow\n\\overbrace{5,1,4}  \\overbrace{3,2}\n&\\longrightarrow\n\\overset{\\text{combination}}{\\overbrace{\\{ 1,4,5 \\} }} \\\\\n\\overset{\\text{permutation}} {\\overbrace{ ( 1,5,4,3,2 ) }}\n&\\longrightarrow\n\\overbrace{1,5,4}  \\overbrace{3,2}\n&\\longrightarrow\n\\overset{\\text{combination}}{\\overbrace{\\{ 1,4,5 \\} }}\n\\end{aligned}\\]\n\n\n\n\n\n\nPermutations sharing the same first 3 and last 2 elements give the same combination."
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-second-version-2",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-second-version-2",
+    "title": "",
+    "section": "Intuition for the combination formula (second version)",
+    "text": "Intuition for the combination formula (second version)\n\nEach permutation generates a combination\nBut many permutations generate the same combination\nThe number of permutation needs to be corrected to remove repetitions\nTwo permutations lead to the same combination if and only if their first \\(m\\) elements are identical, and they need not to be in the same order."
+  },
+  {
+    "objectID": "slides/module2.html#intuition-for-the-combination-formula-second-version-3",
+    "href": "slides/module2.html#intuition-for-the-combination-formula-second-version-3",
+    "title": "",
+    "section": "Intuition for the combination formula (second version)",
+    "text": "Intuition for the combination formula (second version)\n\nFor a permutation of length \\(n\\),\nthere are \\(m!\\) ways to re-order its first \\(m\\) elements and\n\\((n-m)!\\) ways to re-order its last \\(n-m\\) elements:\nThe total number of repetitions is \\[m!\\times \\left(n-m\\right) !\\]\nThere are \\(n!\\) distinct length-\\(n\\) permutations.\nTherefore, the number of distinct combinations is \\[\\binom{n}{m} = \\, \\frac{n!}{m!\\left( n-m\\right) !}.\\]"
+  },
+  {
+    "objectID": "slides/module2.html#conventions",
+    "href": "slides/module2.html#conventions",
+    "title": "",
+    "section": "Conventions",
+    "text": "Conventions\nWe define \\[0!=1\\]\nSo, for example \\[\n\\begin{aligned}\n\\binom{5}{5}\n&=\\frac{5!}{5!\\left( 5-5\\right) !}=\\frac{5!}{5!\\text{ }0!}=1 &\\text{(as you would guess)}\\\\\n\\binom{5}{0}\n&=\\frac{5!}{0!\\text{ }5!\\text{ }}=1 &\\text{(convention, but sensical)}.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#lotto-649",
+    "href": "slides/module2.html#lotto-649",
+    "title": "",
+    "section": "Lotto 6/49",
+    "text": "Lotto 6/49\n\nPlayer chooses 6 distinct integers between 0 and 49.\nDealer randomly selects 6 distinct integers between 0 and 49.\nThe more of matches, the bigger the prize.\nWhat is the probability that the player matches is \\(k \\in \\{0,\\dots,6\\}\\) integers?"
+  },
+  {
+    "objectID": "slides/module2.html#lotto-649-solution",
+    "href": "slides/module2.html#lotto-649-solution",
+    "title": "",
+    "section": "Lotto 6/49 solution",
+    "text": "Lotto 6/49 solution"
+  },
+  {
+    "objectID": "slides/module2.html#lotto-649-solution-numerical-values",
+    "href": "slides/module2.html#lotto-649-solution-numerical-values",
+    "title": "",
+    "section": "Lotto 6/49 solution: numerical values",
+    "text": "Lotto 6/49 solution: numerical values\n\n\n\n\\(k\\)\n\\(P\\left( k \\mbox{ matches } \\right)\\)\n\n\n\n\n0\n0.444\n\n\n1\n0.410\n\n\n2\n0.128\n\n\n3\n0.017\n\n\n4\n0.001\n\n\n5\n1.66\\(\\times\\) 10\\(^{-5}\\)\n\n\n6\n6.29\\(\\times\\) 10\\(^{-8}\\)"
+  },
+  {
+    "objectID": "slides/module2.html#summary",
+    "href": "slides/module2.html#summary",
+    "title": "",
+    "section": "Summary",
+    "text": "Summary\n\nWe exclusively considered the experiments with a finite number of possible outcomes.\nWe only considered cases where all outcomes are equally likely.\nEither by brute-force or by combinatoric algebra, we enumerate the numbers of “outcomes in favour of an event” and “outcomes in the sample space”.\nThe ratio is the answer to “the probability of the event”.\n\nSometimes, using rules about probability can simplify brute-force calculations."
+  },
+  {
+    "objectID": "slides/module2.html#general-formula-with-proportional-probability-of-intersection",
+    "href": "slides/module2.html#general-formula-with-proportional-probability-of-intersection",
+    "title": "",
+    "section": "General formula with proportional probability of intersection",
+    "text": "General formula with proportional probability of intersection\n\nTheoremSuppose an intersection of any \\(h\\) subsets has the same probability \\(p_h\\). Then,\n\\[\\mathbb{P}\\left( A_{1}\\cup A_{2}\\cup \\cdots \\cup A_{n}\\right)\n= \\sum_{h=1}^{n}\\left( -1\\right) ^{h-1}\\binom{n}{h}\\text{ }p_{h}.\\]\n\n\nEvery intersection of \\(h\\) subsets has probability \\(p_h\\): \\[\\begin{aligned}\np_{1} &= \\mathbb{P}\\left( A_{1}\\right) = \\mathbb{P}\\left( A_{2}\\right) =\\cdots = \\mathbb{P}\\left(\nA_{n}\\right) \\\\\np_{2} &= \\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) = \\mathbb{P}\\left( A_{1}\\cap A_{3}\\right)\n=\\cdots = \\mathbb{P}\\left( A_{n-1}\\cap A_{n}\\right) \\\\\np_{3} &= \\mathbb{P}\\left( A_{1}\\cap A_{2}\\cap A_{3}\\right) =\\cdots = \\mathbb{P}\\left(\nA_{n-2}\\cap A_{n-3}\\cap A_{n}\\right) \\\\\n&\\quad\\quad \\vdots \\\\\np_{n} &= \\mathbb{P}\\left( A_{1}\\cap A_{2}\\cap \\cdots \\cap A_{n}\\right)\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/module2.html#gentle-proof",
+    "href": "slides/module2.html#gentle-proof",
+    "title": "",
+    "section": "Gentle proof",
+    "text": "Gentle proof\nLet’s build some intuition first."
+  },
+  {
+    "objectID": "slides/module2.html#the-probability-of-event-a-or-b-or-c-or-dots",
+    "href": "slides/module2.html#the-probability-of-event-a-or-b-or-c-or-dots",
+    "title": "",
+    "section": "The probability of event \\(A\\), or \\(B\\), or \\(C\\), or \\(\\dots\\)",
+    "text": "The probability of event \\(A\\), or \\(B\\), or \\(C\\), or \\(\\dots\\)\n\\[\\mathbb{P}\\Bigl( A_{1}\\cup A_{2}\\cup \\cdots \\cup A_{n}\\Bigr)\\]\nSuppose \\(n=2\\):\n\\[\\begin{aligned}\n\\mathbb{P}\\left( A_{1}\\cup A_{2}\\right) & = \\mathbb{P}\\left( A_{1}\\right) + \\mathbb{P}\\left( A_{2}\\right)\n-\\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) & \\text{rule} \\\\\n& \\\\\n&= \\mathbb{P}\\left( A_{1}\\right) + \\mathbb{P}\\left( A_{2}\\right) & \\mbox{desired events (inclusion)} \\\\\n& \\\\\n& \\quad - \\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) & \\mbox{double counting (exclusion)} \\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/module2.html#what-about-n3",
+    "href": "slides/module2.html#what-about-n3",
+    "title": "",
+    "section": "What about \\(n=3\\)?",
+    "text": "What about \\(n=3\\)?\nClaim:\n\\[\\begin{aligned}\n& \\mathbb{P}\\left( A_{1}\\cup A_{2}\\cup A_{3}\\right)\\\\ \\\\\n&= \\mathbb{P}\\left( A_{1}\\right) + \\mathbb{P}\\left(\nA_{2}\\right) + \\mathbb{P}\\left( A_{3}\\right) & \\mbox{desired events (inclusion)} \\\\ \\\\\n&\\quad -\\ \\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) -\\mathbb{P}\\left( A_{1}\\cap A_{3}\\right) -\nP\\left(A_{2}\\cap A_{3}\\right) & \\mbox{double counted (exclusion)} \\\\ \\\\\n&\\quad+\\ \\mathbb{P}\\left( A_{1}\\cap A_{2}\\cap A_{3}\\right) & \\mbox{removed too much (inclusion)}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/module2.html#proof-of-claim-a-union-of-n3-sets",
+    "href": "slides/module2.html#proof-of-claim-a-union-of-n3-sets",
+    "title": "",
+    "section": "Proof of claim: A union of \\(n=3\\) sets",
+    "text": "Proof of claim: A union of \\(n=3\\) sets\n\nProof\\[\\begin{aligned}\n& \\mathbb{P}\\left( A_{1}\\cup A_{2}\\cup A_{3}\\right)\\\\\n&= \\mathbb{P}\\left[ \\left( A_{1}\\cup A_{2}\\right) \\cup A_{3}\\right] \\\\\n&= \\mathbb{P}\\left( A_{1}\\cup A_{2}\\right) + \\mathbb{P}\\left( A_{3}\\right) -\n\\mathbb{P}\\left[ \\left( A_{1}\\cup A_{2}\\right) \\cap A_{3}\\right] \\\\\n&= \\mathbb{P}\\left( A_{1}\\right) + \\mathbb{P}\\left( A_{2}\\right) -\n\\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) + \\mathbb{P}\\left( A_{3}\\right) \\\\\n&\\quad -\\ \\mathbb{P}\\left[ \\left( A_{1}\\cap A_{3}\\right) \\cup\n\\left( A_{2}\\cap A_{3}\\right) \\right] \\\\\n&= \\mathbb{P}\\left( A_{1}\\right) + \\mathbb{P}\\left( A_{2}\\right) + \\mathbb{P}\\left( A_{3}\\right) -\n\\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) \\\\\n&\\quad -\\ \\left[ \\mathbb{P}\\left( A_{1}\\cap A_{3}\\right) +\n\\mathbb{P}\\left( A_{2}\\cap A_{3}\\right)\n-\\mathbb{P}\\left( A_{1}\\cap A_{2}\\cap A_{3}\\right) \\right] \\\\\n&= \\mathbb{P}\\left( A_{1}\\right) +P\\left( A_{2}\\right) + P\\left( A_{3}\\right) &\\text{inclusion} \\\\\n&\\quad -\\ \\mathbb{P}\\left( A_{1}\\cap A_{2}\\right) - \\mathbb{P}\\left( A_{1}\\cap A_{3}\\right) - \\mathbb{P}\\left( A_{2}\\cap A_{3}\\right) &\\text{exclusion} \\\\\n&\\quad +\\ \\mathbb{P}\\left( A_{1}\\cap A_{2}\\cap A_{3}\\right) &\\text{inclusion}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/module2.html#general-formula",
+    "href": "slides/module2.html#general-formula",
+    "title": "",
+    "section": "General formula",
+    "text": "General formula\n\\[\\begin{aligned}\n\\mathbb{P}\\left( \\mathop{\\mathrm{\\mathchoice{\\bigcup}{\\cup}{\\cup}{\\cup}}}_{i=1}^{n}A_{i}\\right) & =\\sum_{1\\leq i\\leq n} \\mathbb{P}\\left(\nA_{i}\\right) & \\text{inclusion} \\\\\n& \\quad-\\ \\sum_{i&lt;j} \\mathbb{P}\\left( A_{i}\\cap A_{j}\\right)\n&\\text{exclusion} \\\\\n& \\quad+\\ \\sum_{i&lt;j&lt;k} \\mathbb{P}\\left( A_{i}\\cap A_{j}\\cap A_{k}\\right)\n& \\text{inclusion} \\\\\n& \\quad -\\ \\sum_{i&lt;j&lt;k&lt;h}\n\\mathbb{P}\\left( A_{i}\\cap A_{j}\\cap A_{k}\\cap A_{h}\\right) & \\text{exclusion} \\\\\n& \\qquad \\qquad \\vdots \\\\\n& \\quad +\\\n(-1)^{n-1}\\mathbb{P}\\left( A_{1}\\cap A_{2}\\cdots \\cap A_{n}\\right)\n&\\text{inclusion}\n\\end{aligned}\\]"
+  },
+  {
+    "objectID": "slides/module2.html#section",
+    "href": "slides/module2.html#section",
+    "title": "",
+    "section": "",
+    "text": "🤮\nAlways holds."
+  },
+  {
+    "objectID": "slides/module2.html#section-1",
+    "href": "slides/module2.html#section-1",
+    "title": "",
+    "section": "",
+    "text": "Didn’t use intersection of any \\(h\\) subsets has the same probability \\(p_h\\)"
+  },
+  {
+    "objectID": "slides/module2.html#proportional-probability-of-intersection",
+    "href": "slides/module2.html#proportional-probability-of-intersection",
+    "title": "",
+    "section": "Proportional probability of intersection",
+    "text": "Proportional probability of intersection\n\\[\\begin{aligned}\n\\sum_{i=1}^n \\mathbb{P}\\left( A_{i}\\right)\n&= \\sum_{i} p_{1}= np_{1}=\\binom{n}{1} p_{1}\\\\\n\\sum_{i M j} \\mathbb{P}\\left( A_{i}\\cap A_{j}\\right)  \n&= \\sum_{i &lt; j} p_{2}=\\binom{n}{2} p_{2}\\\\\n\\sum_{i &lt; j &lt; k} \\mathbb{P}\\left( A_{i}\\cap A_{j}\\cap A_{k}\\right)\n&= \\sum_{i &lt; j &lt; k} p_{3}= \\binom{n}{3} p_{3}\\\\\n&\\quad\\quad\\quad\\vdots\n\\end{aligned}\\]\n\nPlug this into the 🤮 formula and you’re done!\n\\[\\mathbb{P}\\left( A_{1}\\cup A_{2}\\cup \\cdots \\cup A_{n}\\right)\n= \\sum_{h=1}^{n}\\left( -1\\right) ^{h-1}\\binom{n}{h}\\text{ }p_{h}.\\]"
+  },
+  {
+    "objectID": "slides/module2.html#possibly-helpful",
+    "href": "slides/module2.html#possibly-helpful",
+    "title": "",
+    "section": "Possibly helpful",
+    "text": "Possibly helpful\n\nAn event of interest can be complex if viewed directly.\nSometimes, it can be decomposed as the result of set operations of simpler events.\nWhen the probabilities of these simpler events are manageable, we may make use of probability rules.\nIndividual steps might be simple, but the architecture may be confusing."
+  },
+  {
+    "objectID": "slides/module2.html#student-exams",
+    "href": "slides/module2.html#student-exams",
+    "title": "",
+    "section": "Student exams",
+    "text": "Student exams\nSuppose that the probability that some students in this class gets at least 80 on the midterm. We’ll consider 4 students.\nSuppose that\n\\[\\begin{aligned}\n\\mathbb{P}(\\text{one student gets 80+}) &= 1/2, \\text{ for any student}\\\\\n\\mathbb{P}(\\text{two students get 80+}) &= (1/2)^2, \\text{ for any 2 students}\\\\\n\\mathbb{P}(\\text{three students get 80+}) &= (1/2)^3, \\text{ for any 3 students}\\\\\n\\mathbb{P}(\\text{four students get 80+}) &= (1/2)^4.\n\\end{aligned}\\]\nCalculate the probability that\n\nat least one student gets at least 80,\nno student gets at least 80, and\nonly student number 4 gets at least 80."
+  },
+  {
+    "objectID": "slides/module2.html#problem-setup",
+    "href": "slides/module2.html#problem-setup",
+    "title": "",
+    "section": "Problem setup",
+    "text": "Problem setup"
+  },
+  {
+    "objectID": "slides/module2.html#a.-at-least-one-student-gets-at-least-80-solution",
+    "href": "slides/module2.html#a.-at-least-one-student-gets-at-least-80-solution",
+    "title": "",
+    "section": "a. at least one student gets at least 80 (solution)",
+    "text": "a. at least one student gets at least 80 (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#b.-no-student-gets-at-least-80-solution",
+    "href": "slides/module2.html#b.-no-student-gets-at-least-80-solution",
+    "title": "",
+    "section": "b. no student gets at least 80 (solution)",
+    "text": "b. no student gets at least 80 (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#c.-only-student-number-4-gets-at-least-80-solution",
+    "href": "slides/module2.html#c.-only-student-number-4-gets-at-least-80-solution",
+    "title": "",
+    "section": "c. only student number 4 gets at least 80 (solution)",
+    "text": "c. only student number 4 gets at least 80 (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#c.-only-student-number-4-gets-at-least-80-solution-1",
+    "href": "slides/module2.html#c.-only-student-number-4-gets-at-least-80-solution-1",
+    "title": "",
+    "section": "c. only student number 4 gets at least 80 (solution)",
+    "text": "c. only student number 4 gets at least 80 (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#couples-at-a-party",
+    "href": "slides/module2.html#couples-at-a-party",
+    "title": "",
+    "section": "Couples at a party",
+    "text": "Couples at a party\n\n\\(n\\) couples attend a dance party.\nAt one moment, each lady randomly picks a gentleman to dance.\nWhat is the probability that none of them pick their partner?"
+  },
+  {
+    "objectID": "slides/module2.html#couples-at-a-party-solution",
+    "href": "slides/module2.html#couples-at-a-party-solution",
+    "title": "",
+    "section": "Couples at a party (solution)",
+    "text": "Couples at a party (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#the-number-of-failed-processors",
+    "href": "slides/module2.html#the-number-of-failed-processors",
+    "title": "",
+    "section": "The number of failed processors",
+    "text": "The number of failed processors\nA cell phone has 4 GPUs to run ChatGPT.\nThe more working GPUs, the faster you can get answers to your homework.\nLet \\(G_i\\) be the event that processor \\(i\\) fails.\n\n\nThe probability of failures is known: \\[\\begin{aligned}\n&\\mathbb{P}(G_i) = 0.1 \\quad \\forall i\\\\\n&\\mathbb{P}( G_{i}\\cap G_{j}) =0.01 \\quad\\forall i\\neq j\\\\\n&\\mathbb{P}( G_{i}\\cap G_{j}\\cap G_{h}) =0.001 \\quad\\forall i\\neq j\\neq h\\\\\n&\\mathbb{P}( G_{1}\\cap G_{2}\\cap G_{3}\\cap G_{4}) =0.0001\n\\end{aligned}\\]\n\n\nWhat is the probability that\n\nThe phone has at least one failed GPU?\nThe phone has all GPUs working?\nThe phone has exactly one failed GPU?\nSay, the phone can solve your homework if at most one GPU fails. What is the probability that your homework is solved?"
+  },
+  {
+    "objectID": "slides/module2.html#a.-the-phone-has-at-least-one-failed-gpu-solution",
+    "href": "slides/module2.html#a.-the-phone-has-at-least-one-failed-gpu-solution",
+    "title": "",
+    "section": "a. The phone has at least one failed GPU? (solution)",
+    "text": "a. The phone has at least one failed GPU? (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#b.-the-phone-has-all-gpus-working",
+    "href": "slides/module2.html#b.-the-phone-has-all-gpus-working",
+    "title": "",
+    "section": "b. The phone has all GPUs working?",
+    "text": "b. The phone has all GPUs working?"
+  },
+  {
+    "objectID": "slides/module2.html#c.-the-phone-has-exactly-one-failed-gpu-solution",
+    "href": "slides/module2.html#c.-the-phone-has-exactly-one-failed-gpu-solution",
+    "title": "",
+    "section": "c. The phone has exactly one failed GPU? (solution)",
+    "text": "c. The phone has exactly one failed GPU? (solution)"
+  },
+  {
+    "objectID": "slides/module2.html#d.-homework-solved.-solution",
+    "href": "slides/module2.html#d.-homework-solved.-solution",
+    "title": "",
+    "section": "d. Homework solved. (solution)",
+    "text": "d. Homework solved. (solution)\n\\[\\begin{aligned}\nB &=\\left\\{ \\text{Item works}\\right\\}\\\\\n&=\\left\\{ \\text{Zero failed\ncomponents}\\right\\} \\mathop{\\mathrm{\\mathchoice{\\bigcup}{\\cup}{\\cup}{\\cup}}}\\left\\{ \\text{One failed component}\\right\\} \\\\\n&=B_{0}\\cup B_{1}\\\\\n\\Rightarrow \\mathbb{P}(B) &= \\mathbb{P}(B_0) + \\mathbb{P}(B_1) \\quad\\quad \\text{(disjoint)} \\\\\n&= 0.6561 + 0.2916 = 0.9477\n\\end{aligned}\\]\n\n\n\n\n\n\nNote\n\n\nFor further practice, try to verify that\n\nthe probability of two failed GPUs is 0.0486;  \nand the probability of three failed GPUs is 0.0036."
+  },
+  {
     "objectID": "slides/module1.html#experiments",
     "href": "slides/module1.html#experiments",
     "title": "",
