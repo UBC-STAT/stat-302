@@ -1,0 +1,1071 @@
+---
+title: Module 2
+author: Matias
+format: 
+  revealjs: default
+  pdf: default
+---
+
+::: {.content-hidden}
+{{< include _latexmacros.qmd >}}
+:::
+
+
+
+## Finite Sample Space: special case
+
+In many cases, the sample space contains finite number of possible
+outcomes.
+
+Moreover, it is justifiable to assign equal probability to every
+possible outcome
+
+
+
+## Example
+
+-   Experiment: roll a fair die;
+-   Sample space: $\Omega = \{1, 2, 3, 4, 5, 6\}$.
+-   Typically assume (a) and (b):
+
+\begin{align}
+(a) \quad & \P(\{1\}) = \P(\{2\}) = \cdots = \P(\{6\})\\
+(b) \quad & \P(\Omega) = 1\\
+\Longrightarrow &\P( \omega ) = 1/6 \textrm{ for any } \omega=\{1\},\dots,\{6\}.
+\end{align}
+
+
+## Essence of this chapter
+
+When [equal likely]{.secondary} is declared/assumed,
+
+-   subsequent probability calculation is conceptually easy,
+-   can be challenging technically.
+
+This chapter goes over some general techniques for probability
+calculation of this nature.
+
+# Counting equally likely outcomes {.inverse}
+
+## Equally likely outcomes
+
+Let $A$ be a subset (event) of a sample space $\Omega$.
+
+$$
+\P\left( A\right) = \frac{\text{number of elements in }A}{\text{number of
+elements in }\Omega }
+$$
+
+All that matters in this case is the numbers of elements is different sets.
+
+
+
+## Basic principle
+
+Suppose that a random experiment has **2 steps**. 
+
+-   Step 1 has $n_1$ possible outcomes, and 
+-   Step 2 has $n_2$ possible outcomes.
+
+Then, $$\mbox{total number of possible outcomes} \ = \ n_1 \times n_2$$
+
+::: {.callout-danger}
+## Unstated Assumption:
+the outcome of the first step does not affect the outcomes of the second step.
+:::
+
+
+
+
+## Extension to "k step" experiments
+
+If a random experiment has **k steps**. 
+
+-   Step 1 has $n_1$ possible outcomes, 
+-   Step 2 has $n_2$ possible outcomes, 
+
+$\quad\quad\quad\vdots\quad\quad\quad$, 
+
+-   Step k has $n_k$ possible outcomes.
+
+Then,
+$$\mbox{total number of outcomes} \ = \ n_1 \times n_2 \times n_3 \times \cdots \times n_k$$
+
+::: {.callout-note}
+the outcomes of these steps do not affect each other.
+:::
+
+
+## License plates
+
+::: Example
+How many different license plates with 7 characters are possible if the
+first 3 places are letters and the last 4 are numbers?
+:::
+
+
+-   26 choices for the 1st, 2nd and 3rd entry, and
+
+-   10 choices for each of the last 4 entries.
+
+
+$$
+\begin{aligned}
+\# \mbox{of plates} \ &= \ 26 \times 26\times 26\times 10\times 10\times 10\times 10 \\
+& = \ 26^3 \times 10^4\\
+& = 175,760,000 
+\end{aligned}
+$$
+
+The assumption holds that the outcomes of these steps do not affect
+each other.
+
+
+
+## Special license plates
+
+::: Example
+What happens if letters and numbers cannot be repeated? 
+:::
+
+-   26 choices for the 1st entry,
+-   25 choices for the 2nd entry,
+-   24 choices for the 3rd entry,
+-   10 choices for the 4th entry,
+-   9 choices for the 5th entry,
+-   8 choices for the 6th entry, and
+-   7 choices for the 7th entry.
+
+$$\begin{aligned}
+\# \mbox{of plates w/o rep } 
+&= 26 \times 25 \times 24 \times 10 \times 9 \times 8 \times 7 \\
+& = 78,624,000
+\end{aligned}
+$$
+
+
+
+## Shuffling license plates
+
+::: Example
+What is the probability that a randomly chosen plate has no repetitions?
+:::
+
+We haven't specified that some plates are more or less likely to be chosen. 
+
+So we assume that each is equally likely.
+
+Be aware of the background information we have just presented.
+
+
+
+## Shuffling license plates (solution)
+
+<!--::: {.content-hidden when-format="revealjs"}-->
+
+-   The event in question is
+    $$A = \{\mbox{license plate without repetition}\}.$$
+
+-   The sample space contains all plates whose first 3 are letters and
+    the last 4 are numbers.
+
+Being explicit with the definitions will help you avoid mistakes.
+
+The probability that a randomly chosen plate has no repetitions is given by
+$$\begin{aligned}
+\P(A)
+&=\frac{\text{\# of plates w/o rep}}{\text{\# of plates }} \\
+&=\frac{78,624,000}{175,760,000} \\
+&= 0.44734\\
+&\approx 0.45
+\end{aligned}
+$$
+
+<!--:::-->
+
+# When order matters {.inverse}
+
+## Permutation
+
+::: Definition
+A permutation of a set is an arrangement of its elements in a specific
+order.
+:::
+
+::: Example
+Consider the set $A = \left\{ 1, 2, 3, 4, 5 \right\}$ 
+
+* Some permutations of the elements of A are:
+
+$$\left( 3, 5, 2, 4, 1 \right), \, \left( 2, 1, 3, 4, 5 \right), \, 
+\left( 5, 4, 2, 1, 3 \right), \quad
+\mbox{ etc.}
+$$
+
+:::
+
+
+## Counting permutations
+
+How many permutations of the set $\left\{ 1, 2, \ldots, n \right\}$ are
+there?
+
+ There are
+
+-   $n$ choices for the 1st entry,
+-   $(n-1)$ choices for the 2nd entry,
+-   $(n-2)$ choices for the 3rd entry,
+
+$\quad\quad\quad\vdots\quad\quad\quad$
+
+-   $2$ choices for the $(n-1)^{\text{th}}$ entry, and
+-   $1$ choice for the last ($n^{\text{th}}$) entry.
+
+Thus, there are 
+$$n \times (n-1) 
+\times (n-2) 
+\times \cdots 
+\times 2 \times 1 \, = \, n!
+$$ 
+possible permutations of
+$\left\{ 1, 2, \ldots, n \right\}$
+
+
+
+## Counting permutations
+
+::: {.callout-important}
+## Key assumption in counting permutations this way: 
+
+all $n$ objects are distinct.
+:::
+
+* When some of them are not distinct, the number of possible distinct
+outcomes by re-arrangement ("permutation") is not given by this formula.
+
+* We need a different formula.
+
+
+
+## Example
+
+In how many different ways can the letters of "pepper" be arranged? 
+Answer:
+
+-   If the letters were all different, we would have $6!=720$
+    arrangements. 
+-   But each arrangement does not change if: 
+    -   we permute the 3 p's (3! ways of doing this)
+    -   we permute the 2 e's (2! ways of doing this)
+-   Thus, in the list of 6! arrangements, each "p/e" pattern appears
+    $3! \times 2!$ times:
+    $$\text{number of arrangements}=\frac{6!}{3!2!}=60.$$
+
+
+
+## International chess
+
+A chess tournament with 10 players: 
+
+\# of players | Country of origin
+:----:|:----
+4 | Russia 🇷🇺
+3 | USA 🇺🇸
+2 | Argentina 🇦🇷
+1 | Brazil 🇧🇷
+
+::: Example
+## Counting outcomes
+If we see only nationalities in the final rank, how many outcomes
+    are possible? 
+:::
+
+::: Example
+## Go Argentina 🇦🇷
+If all players have an equal chance to win, what is the probability
+that Argentina wins the tournament?
+:::
+
+
+
+## Counting outcomes
+
+If we see only nationalities in the final rank, how many outcomes
+are possible?
+
+-   There are $10!$ permutations for the players.
+-   Each country-ranking pattern appears $4! \times 3! \times 2!$ times
+    (Russian players can be permuted in $4!$ ways, USA players in $3!$
+    ways, etc.).
+-   If we see only nationalities, there are
+    $$\frac{10!}{4! \times 3! \times 2!} = \frac{3628800}{288}= 12600$$ 
+    possible outcomes.
+
+
+
+## Go Argentina 🇦🇷
+
+Count favourable outcomes: an Argentinian player is ranked
+first.
+
+-   There are 2 choices for the top ranked player, 
+-   There are $9!$ ways of arranging (ranking) the other 9 players. 
+-   Thus, we have $$2 \times 9! = 725760$$ rankings where an
+    Argentinian player is first.
+
+But if we see only nationalities, these outcomes are not distinct!
+
+
+
+## Go Argentina 🇦🇷 
+
+Each country pattern appears $4! \times 3! \times 2!$ times. 
+
+The number of country rankings where Argentina appears 1st is
+$$\frac{725760}{4! \times 3! \times 2!}= 2520.$$
+
+Therefore, 
+$$\begin{aligned}
+\P\left( \left\{ \text{Argentina wins}\right\} \right) 
+&=\frac{\#\text{of favorable outcomes}}{\#\text{of possible outcomes}} \\
+&=\frac{2520}{12600}\\
+&=0.20.
+\end{aligned}
+$$
+
+For assignments, keep [only]{.secondary} 3 significant digits in general if no
+neat numerical outcome.
+
+
+<!--
+
+## Try it yourself
+
+Your turn now: repeat this problem, but now distinguishing individual
+players. 
+
+-   For (a), there are $10!$ possible outcomes. 
+
+-   For (b), count how many rankings have an Argentinian player 1st.
+    
+
+-   Calculate the probability that Argentina wins the tournament. Does
+    the result surprise you? Explain carefully and concisely.
+
+-->
+
+
+
+## Simpler approach 🤦
+
+What is the probability the Argentina player wins the tournament?
+
+-   If all players have equal chance to win. 
+-   There are 10 players, and two of them are Argentina. 
+-   The probability is therefore $2/10$.
+
+
+# When order doesn't matter {.inverse}
+
+## Combinations
+
+::: Definition
+A combination of size $m$ is a subset of $m$ items from a set of size $n$
+with $m \leq n$. 
+:::
+
+* Consider the set $$S=\left\{ 1,2,3,4,5\right\}$$ 
+
+* The following are all the sets of size 3 from $S$:
+
+|   |   |
+|---|---|
+$\{ 1,2,3\}$ | $\left\{ 1,4,5\right\}$
+$\{ 1,2,4\}$ | $\left\{ 2,3,4\right\}$
+$\{ 1,2,5\}$ | $\left\{ 2,3,5\right\}$
+$\{ 1,3,4\}$ | $\left\{ 2,4,5\right\}$
+$\{ 1,3,5\}$ | $\left\{ 3,4,5\right\}$
+
+
+* We call these sets "combinations" when we only care which elements are in the set.
+
+## Combinations
+
+-   Note that [the order of the elements does not matter]{.secondary} (these are
+    sets, not sequences). 
+
+$$\Bigl\{ 1, 2, 4 \Bigr\} \, = \, 
+\Bigl\{ 4, 1, 2 \Bigr\} \, = \, 
+\Bigl\{ 2, 4, 1 \Bigr\} \, = \, \cdots
+$$
+
+
+-   Given a set of $n$ distinct items 
+$$S = \{s_1,\ s_2,\ \dots, s_n\}$$
+how many [different combinations of size]{.secondary}
+$m \le n$ can be formed?
+
+
+
+## Number of combinations
+
+
+
+This concept, [the number of combinations of size $m$ out of set of size $n \ge
+m$]{.primary} has various notations
+    
+$$\binom{n}{m} = \left._{n} C_{m}\right. = C_m^n$$
+    
+-   $n$: size of the set from which combinations are drawn
+-   $m$: size of the combinations 
+
+    
+::: {.callout-tip}
+In this course, we use $\binom{n}{m}$.
+:::
+
+
+## Example
+
+For example, when $n=5$ and $m=3$ we have
+
+|   |   |
+|---|---|
+$\{ 1,2,3\}$ | $\left\{ 1,4,5\right\}$
+$\{ 1,2,4\}$ | $\left\{ 2,3,4\right\}$
+$\{ 1,2,5\}$ | $\left\{ 2,3,5\right\}$
+$\{ 1,3,4\}$ | $\left\{ 2,4,5\right\}$
+$\{ 1,3,5\}$ | $\left\{ 3,4,5\right\}$
+
+and a direct count shows that the number of combinations is
+
+$$\binom{5}{3}= {10}.$$
+
+## General definition of combination
+
+$$\binom{n}{m} = \frac{n!}{m!(n-m)!}$$
+
+. . .
+
+These are also called [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient). 
+
+They have many beautiful interpretations.
+
+::: {layout-ncol=2}
+![Pascal's Triangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
+
+![Yang Hui's Triangle](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yanghui_triangle.gif/250px-Yanghui_triangle.gif)
+:::
+
+## How many is $\binom{n}{m}$?
+
+Note that combinations can be constructed
+using [permutations]{.primary} as follows:
+
+-   pick $m$ items out of the $n$ items, in order; 
+-   each of these $m$-long permutations generates a subset; 
+-   but many (how many?) of these permutations correspond to the same
+    subset
+
+
+
+## Intuition for the combination formula (first version)
+
+Given a set of $n$ distinct items
+
+$$S = \Bigl\{ s_1, s_2, \ldots, s_n \Bigr\}$$
+
+we can form
+
+$$n \times (n-1) \times (n-2) \times \cdots \times (n-m+1)$$ 
+
+different $m$-tuples by choosing from elements of $S$
+
+
+
+## Intuition for the combination formula (first version)
+
+* However, any permutation of these $m$ elements corresponds to the
+same subset
+* There are $m!$ ways to reorder these $m$ elements 
+* In other words, each different subset appears $m!$ times in the list of
+ordered $m$-tuples  
+* Hence, the number of combinations is:
+$$
+\frac{n \, (n-1) \, (n-2) \, \cdots \, (n - m + 1)}{m!}
+ = \frac{n \, (n-1) \, (n-2) \, \cdots \, (n - m + 1)}{m!}
+\frac{n!}{m! \, (n - m)!}.
+$$
+
+
+
+## Intuition for the combination formula (second version)
+
+Another way to construct combinations using [permutations]{.primary} uses the intuition:
+
+-   take a permutation of all $n$ items in the set 
+-   keep the first $m$ terms of the permutation, and discard the
+    remaining $(n-m)$ terms.
+
+
+## Intuition for the combination formula (second version)
+
+$$\overset{\text{permutation}}
+{\overbrace{ ( i_{1},\ldots, i_{m},i_{m+1}, \ldots, i_{n} ) }} 
+\to
+\overset{m}{\overbrace{i_{1},\ldots,i_{m}}} \text{ }
+\overset{n-m}{\overbrace{i_{m+1}, \ldots, i_{n}}}
+\to
+\overset{\text{combination}}{\overbrace{ \{ i_{1},\ldots, i_{m} \} }}.$$
+
+Concrete example --- $m=3$  and $n=5$.
+
+$$\begin{aligned}
+\overset{\text{permutation}} {\overbrace{ (5,1,4,2,3 ) }}
+&\longrightarrow 
+\overbrace{5,1,4}  \overbrace{2,3}
+&\longrightarrow 
+\overset{\text{combination}} {\overbrace {\{ 1,4,5 \}}} \\
+\overset{\text{permutation}} {\overbrace{ ( 5,1,4,3,2 ) }}
+&\longrightarrow 
+\overbrace{5,1,4}  \overbrace{3,2}
+&\longrightarrow 
+\overset{\text{combination}}{\overbrace{\{ 1,4,5 \} }} \\
+\overset{\text{permutation}} {\overbrace{ ( 1,5,4,3,2 ) }}
+&\longrightarrow
+\overbrace{1,5,4}  \overbrace{3,2}
+&\longrightarrow 
+\overset{\text{combination}}{\overbrace{\{ 1,4,5 \} }} 
+\end{aligned}$$
+
+::: {.callout-note appearance="simple"}
+Permutations sharing the same first 3 and last 2 elements give the
+same combination.
+:::
+
+
+## Intuition for the combination formula (second version)
+
+
+
+-   Each [permutation]{.primary} generates a [combination]{.secondary}
+
+-   But [many permutations]{.primary} generate the [same combination]{.secondary}
+
+-   The number of permutation needs to be [corrected to remove
+    repetitions]{.secondary}
+
+-   Two permutations lead to the same combination if and only if their
+    first $m$ elements are identical, and they need not to be in the
+    same order.
+
+
+
+
+
+## Intuition for the combination formula (second version)
+
+* For a permutation of length $n$, 
+* there are $m!$ ways to re-order its first $m$ elements and
+* $(n-m)!$ ways to re-order its last $n-m$ elements:
+* The total number of repetitions is $$m!\times \left(n-m\right) !$$
+* There are $n!$ distinct length-$n$ permutations. 
+* Therefore, the number of distinct combinations is
+$$\binom{n}{m} = \, \frac{n!}{m!\left( n-m\right) !}.$$
+
+
+
+## Conventions
+
+We define $$0!=1$$
+
+So, for example 
+$$
+\begin{aligned}
+\binom{5}{5}
+&=\frac{5!}{5!\left( 5-5\right) !}=\frac{5!}{5!\text{ }0!}=1 &\text{(as you would guess)}\\
+\binom{5}{0}
+&=\frac{5!}{0!\text{ }5!\text{ }}=1 &\text{(convention, but sensical)}.
+\end{aligned}
+$$
+
+
+
+## Lotto 6/49
+
+
+-   Player chooses 6 distinct integers between 0 and 49. 
+
+-   Dealer randomly selects 6 distinct integers between 0 and 49. 
+
+-   The more of matches, the bigger the prize. 
+
+-   What is the probability that the player matches is $k \in \{0,\dots,6\}$ integers?
+
+
+## Lotto 6/49 solution
+
+::: {.content-hidden when-format="revealjs"}
+* Simplify everything: an urn contains 50 balls, 6 of which are red (whichever 6
+the player picked).
+* What is the probability that the dealer selects $k$ red balls?
+
+$$
+A_k =  \text{the number of matches is $k$};\quad\quad\quad
+D_k = \text{dealer selects are $k$ red balls}.
+$$
+Claim: $\P(A_k)  = \P( D_k)$.
+    
+-   The number of the possible outcomes of dealer's draw is
+    $\# \Omega =\binom{50}{6}$.
+
+
+-   Number of [favorable dealer's draws]{.secondary} is
+    $$\# D_k =  \binom{6}{k} \times \binom{44}{6-k}.$$
+
+-   Therefore, the desired probability is given by
+    $$\P(A_k) =  \frac{ \binom{6} {k} \times \binom{44} {6-k} }{\binom{50}{6}}.$$
+
+:::
+
+## Lotto 6/49 solution: numerical values
+
+
+   $k$   $P\left( k \mbox{ matches } \right)$
+  ----- --------------------------------------
+   0                 0.444
+   1                 0.410
+   2                 0.128
+   3                 0.017
+   4                 0.001
+   5           1.66$\times$ 10$^{-5}$
+   6           6.29$\times$ 10$^{-8}$
+
+
+
+
+## Summary
+
+-   We exclusively considered the experiments with a [finite]{.secondary} number
+    of possible outcomes.
+
+-   We only considered cases where all outcomes are equally likely.
+    
+-   Either by brute-force or by combinatoric algebra, we enumerate the
+    numbers of "outcomes in favour of an event" and "outcomes in the
+    sample space".
+
+-   The ratio is the answer to "the probability of the event".
+
+
+Sometimes, using rules about probability can simplify brute-force calculations.
+
+# Using symmetry to simplify unions
+
+
+## General formula with proportional probability of intersection
+
+::: Theorem
+Suppose an intersection of any $h$ subsets has the same probability $p_h$.
+Then,
+
+$$\P\left( A_{1}\cup A_{2}\cup \cdots \cup A_{n}\right)
+ = \sum_{h=1}^{n}\left( -1\right) ^{h-1}\binom{n}{h}\text{ }p_{h}.$$
+:::
+
+Every intersection of $h$ subsets has probability $p_h$:
+$$\begin{aligned}
+p_{1} &= \P\left( A_{1}\right) = \P\left( A_{2}\right) =\cdots = \P\left(
+A_{n}\right) \\
+p_{2} &= \P\left( A_{1}\cap A_{2}\right) = \P\left( A_{1}\cap A_{3}\right)
+=\cdots = \P\left( A_{n-1}\cap A_{n}\right) \\
+p_{3} &= \P\left( A_{1}\cap A_{2}\cap A_{3}\right) =\cdots = \P\left(
+A_{n-2}\cap A_{n-3}\cap A_{n}\right) \\
+&\quad\quad \vdots \\
+p_{n} &= \P\left( A_{1}\cap A_{2}\cap \cdots \cap A_{n}\right)\end{aligned}
+$$
+
+## Gentle proof
+
+Let's build some intuition first.
+
+## The probability of event $A$, or $B$, or $C$, or $\dots$
+
+$$\P\Bigl( A_{1}\cup A_{2}\cup \cdots \cup A_{n}\Bigr)$$ 
+
+Suppose $n=2$:
+
+$$\begin{aligned}
+\P\left( A_{1}\cup A_{2}\right) & = \P\left( A_{1}\right) + \P\left( A_{2}\right)
+-\P\left( A_{1}\cap A_{2}\right) & \text{rule} \\
+& \\
+&= \P\left( A_{1}\right) + \P\left( A_{2}\right) & \mbox{desired events (inclusion)} \\
+& \\
+& \quad - \P\left( A_{1}\cap A_{2}\right) & \mbox{double counting (exclusion)} \end{aligned}$$
+
+
+## What about $n=3$?
+
+Claim:
+
+$$\begin{aligned}
+& \P\left( A_{1}\cup A_{2}\cup A_{3}\right)\\ \\
+&= \P\left( A_{1}\right) + \P\left(
+A_{2}\right) + \P\left( A_{3}\right) & \mbox{desired events (inclusion)} \\ \\
+&\quad -\ \P\left( A_{1}\cap A_{2}\right) -\P\left( A_{1}\cap A_{3}\right) - 
+P\left(A_{2}\cap A_{3}\right) & \mbox{double counted (exclusion)} \\ \\
+&\quad+\ \P\left( A_{1}\cap A_{2}\cap A_{3}\right) & \mbox{removed too much (inclusion)}
+\end{aligned}$$
+
+
+
+## Proof of claim: A union of $n=3$ sets
+
+::: Proof
+$$\begin{aligned}
+& \P\left( A_{1}\cup A_{2}\cup A_{3}\right)\\
+&= \P\left[ \left( A_{1}\cup A_{2}\right) \cup A_{3}\right] \\
+&= \P\left( A_{1}\cup A_{2}\right) + \P\left( A_{3}\right) -
+\P\left[ \left( A_{1}\cup A_{2}\right) \cap A_{3}\right] \\
+&= \P\left( A_{1}\right) + \P\left( A_{2}\right) - 
+\P\left( A_{1}\cap A_{2}\right) + \P\left( A_{3}\right) \\
+&\quad -\ \P\left[ \left( A_{1}\cap A_{3}\right) \cup 
+\left( A_{2}\cap A_{3}\right) \right] \\
+&= \P\left( A_{1}\right) + \P\left( A_{2}\right) + \P\left( A_{3}\right) -
+\P\left( A_{1}\cap A_{2}\right) \\
+&\quad -\ \left[ \P\left( A_{1}\cap A_{3}\right) + 
+\P\left( A_{2}\cap A_{3}\right)
+-\P\left( A_{1}\cap A_{2}\cap A_{3}\right) \right] \\
+&= \P\left( A_{1}\right) +P\left( A_{2}\right) + P\left( A_{3}\right) &\text{inclusion} \\
+&\quad -\ \P\left( A_{1}\cap A_{2}\right) - \P\left( A_{1}\cap A_{3}\right) - \P\left( A_{2}\cap A_{3}\right) &\text{exclusion} \\
+&\quad +\ \P\left( A_{1}\cap A_{2}\cap A_{3}\right) &\text{inclusion}
+\end{aligned}$$
+:::
+
+
+## General formula
+
+$$\begin{aligned}
+\P\left( \union_{i=1}^{n}A_{i}\right) & =\sum_{1\leq i\leq n} \P\left(
+A_{i}\right) & \text{inclusion} \\
+& \quad-\ \sum_{i<j} \P\left( A_{i}\cap A_{j}\right) 
+&\text{exclusion} \\
+& \quad+\ \sum_{i<j<k} \P\left( A_{i}\cap A_{j}\cap A_{k}\right) 
+& \text{inclusion} \\
+& \quad -\ \sum_{i<j<k<h} 
+\P\left( A_{i}\cap A_{j}\cap A_{k}\cap A_{h}\right) & \text{exclusion} \\
+& \qquad \qquad \vdots \\
+& \quad +\ 
+(-1)^{n-1}\P\left( A_{1}\cap A_{2}\cdots \cap A_{n}\right) 
+&\text{inclusion}
+\end{aligned}$$
+
+##
+
+::: {.r-fit-text}
+🤮
+
+Always holds.
+:::
+
+##
+
+::: {.r-fit-text}
+Didn't use [intersection of any $h$ subsets has the same probability $p_h$]{.primary}
+:::
+
+
+
+## Proportional probability of intersection
+
+$$\begin{aligned}
+\sum_{i=1}^n \P\left( A_{i}\right)
+&= \sum_{i} p_{1}= np_{1}=\binom{n}{1} p_{1}\\ 
+\sum_{i M j} \P\left( A_{i}\cap A_{j}\right)  
+&= \sum_{i < j} p_{2}=\binom{n}{2} p_{2}\\
+\sum_{i < j < k} \P\left( A_{i}\cap A_{j}\cap A_{k}\right)
+&= \sum_{i < j < k} p_{3}= \binom{n}{3} p_{3}\\
+&\quad\quad\quad\vdots
+\end{aligned}$$
+
+. . .
+
+Plug this into the 🤮 formula and you're done!
+
+$$\P\left( A_{1}\cup A_{2}\cup \cdots \cup A_{n}\right)
+= \sum_{h=1}^{n}\left( -1\right) ^{h-1}\binom{n}{h}\text{ }p_{h}.$$
+
+
+
+# More worked problems
+
+## Possibly helpful 
+
+-   An event of interest can be complex if viewed directly.
+
+-   Sometimes, it can be decomposed as the result of set operations of
+    simpler events.
+
+-   When the probabilities of these simpler events are manageable, we
+    may make use of probability rules.
+
+-   Individual steps might be simple, but the architecture may be confusing.
+
+
+## Student exams
+
+Suppose that the probability that some students in this class gets at least 80 on
+the midterm. We'll consider 4 students. 
+
+Suppose that
+
+$$\begin{aligned}
+\P(\text{one student gets 80+}) &= 1/2, \text{ for any student}\\
+\P(\text{two students get 80+}) &= (1/2)^2, \text{ for any 2 students}\\
+\P(\text{three students get 80+}) &= (1/2)^3, \text{ for any 3 students}\\
+\P(\text{four students get 80+}) &= (1/2)^4.
+\end{aligned}$$
+
+Calculate the probability that
+
+a. at least one student gets at least 80,
+b. no student gets at least 80, and
+c. only student number 4 gets at least 80.
+
+## Problem setup
+
+::: {.content-hidden when-format="revealjs"}
+
+First, we define events.
+
+Let $A_i$ be the event that student $i$ gets at least 80.
+
+:::
+
+## a. at least one student gets at least 80 (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+At least one of the $A_{i}$'s occurs.
+
+Event of interest $A_{1}\cup A_{2}\cup A_{3}\cup A_{4}$.
+$$\begin{aligned}
+\P\left( A_{1}\cup A_{2}\cup A_{3}\cup A_{4}\right) 
+&= \binom{4}{1}p_{1}-\binom{4}{2}p_{2}+\binom{4}{3}p_{3}-\binom{4}{4}p_{4} \\
+&= 4(1/2)-6(1/2)^{2}+4(1/2)^{3} -(1/2)^{4} \\
+&=\frac{1}{2}\left( 4-\frac{6}{2}+\frac{4}{4}-\frac{1}{8}\right) \\
+&= 15/16 = 0.9375.
+\end{aligned}$$
+:::
+
+
+## b. no student gets at least 80 (solution)
+
+::: {.content-hidden when-format="revealjs"}
+The event of interest is
+$$A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\cap
+A_{4}^{c} = \left( A_{1}\cup A_{2}\cup A_{3}\cup A_{4}\right)^c.$$
+
+Therefore
+$$\begin{aligned}
+\P\left( A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\cap A_{4}^{c}\right)  
+&=1-\P\left( A_{1}\cup A_{2}\cup A_{3}\cup A_{4}\right)  \\
+&=1-15/16 = 1/16 = 0.0625.
+\end{aligned}$$ 
+:::
+
+
+## c. only student number 4 gets at least 80 (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+This is the same as "only $A_{4}$ occurs".  
+
+* The event of interest is $$A_{1}^{c} \cap A_{2}^{c} \cap A_{3}^{c} \cap A_{4}$$.
+
+* Recall that $\P\left( C\cap D\right) =\P\left( C\right) - \P\left( C\cap D^{c}\right)$
+* Take $C=A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}$ and $D=A_{4}$ to obtain 
+
+$$\P(A_1^c \cap A_2^c \cap A_3^c \cap A_4) =  
+\P(A_1^c \cap A_2^c \cap A_3^c) - \P(A_1^c \cap A_2^c \cap A_3^c \cap A_4^c).$$
+
+* We already have the second part, so we need $\P\left(A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\right)$
+
+:::
+
+## c. only student number 4 gets at least 80 (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+By De Morgan's Law, we have
+$A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c} = (A_{1}\cup A_{2} \cup A_{3})^c$
+
+We also have that 
+$\P((A_{1}\cup A_{2} \cup A_{3})^c) = 1 - \P(A_{1}\cup A_{2} \cup A_{3}).$
+
+We can find,
+$$\begin{aligned}
+P\left( A_{1}\cup A_{2}\cup A_{3}\right) 
+&=\binom{3}{1}\frac{1}{2}-\binom{3}{2}\frac{1}{4}+\binom{3}{3}\frac{1}{8} 
+=\frac{1}{2}\left( 3-\frac{3}{2}+\frac{1}{4}\right) = 7/8 = 0.875.
+\end{aligned}$$
+
+And finally,
+$$\begin{aligned}
+\P\left( A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\cap A_{4}\right) &= 
+\P\left(A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\right)
+- \P\left( A_{1}^{c}\cap A_{2}^{c}\cap A_{3}^{c}\cap A_{4}^{c}\right)\\
+& = (1-7/8) - 1/16 = 1/16 = 0.0625.\end{aligned}$$
+
+:::
+
+
+## Couples at a party
+
+-   $n$ couples attend a dance party.
+
+-   At one moment, each lady randomly picks a gentleman to dance.
+
+-   What is the probability that none of them pick their partner?
+
+
+
+## Couples at a party (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+-   Let
+    $A_i$ be the event the $i$th lady dances with her partner for
+    $i=1, 2, \ldots$. Clearly, $\P(A_i) = 1/n$.
+
+-   The event of interest is $\{ A_1 \cup A_2 \cup \cdots \cup A_n\}^c.$
+
+-   In general, for $k=1, 2, \ldots, n$,
+    $$p_k = \P(A_1 \cup A_2 \cup \cdots \cup A_k) = \frac{(n-k)!}{n!}.$$
+
+-   Therefore, 
+    $$\begin{aligned}
+    \P( A_1 \cup A_2 \cup \cdots \cup A_n)
+    &= \sum_{k=1}^n (-1)^{k-1} \binom{n}{k} \frac{(n-k)!}{n!}
+    = \sum_{k=1}^n (-1)^{k-1} \frac{1}{k!}.\end{aligned}$$
+
+-   The probability of the event of our interest is therefore
+    $$1 - \P( A_1 \cup A_2 \cup \cdots \cup A_n)
+    =
+    \sum_{k=0}^n (-1)^{k} \frac{1}{k!}.$$
+
+What is the limit of this probability when $n \to \infty$?
+
+:::
+
+## The number of failed processors
+
+A cell phone has 4 GPUs to run ChatGPT. 
+
+The more working GPUs, the faster you can get answers to your homework.
+
+Let $G_i$ be the event that processor $i$ fails.
+
+::: flex
+::: w-50
+[The probability of failures is known:]{.secondary}
+$$\begin{aligned}
+&\P(G_i) = 0.1 \quad \forall i\\
+&\P( G_{i}\cap G_{j}) =0.01 \quad\forall i\neq j\\ 
+&\P( G_{i}\cap G_{j}\cap G_{h}) =0.001 \quad\forall i\neq j\neq h\\ 
+&\P( G_{1}\cap G_{2}\cap G_{3}\cap G_{4}) =0.0001
+\end{aligned}$$
+:::
+
+::: w-50
+[What is the probability that]{.secondary}
+
+a. The phone has at least one failed GPU?
+b. The phone has all GPUs working?
+c. The phone has exactly one failed GPU? 
+d. Say, the phone can solve your homework if at most one GPU fails. What is the
+probability that your homework is solved?
+:::
+:::
+
+## a. The phone has at least one failed GPU? (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+Event of interest $A=G_{1}\cup G_{2}\cup G_{3}\cup G_{4}$
+
+$$\begin{aligned}
+\P( A ) &= \P( G_{1}\cup G_{2}\cup G_{3}\cup G_{4})\\
+&= \sum_{i} \P( G_{i}) &\text{(inclusion)} \\
+&\quad - \sum_{i<j}\P( G_{i}\cap G_{j}) & \text{(exclusion)} \\
+&\quad + \sum_{i<j<h} \P ( G_{i}\cap G_{j}\cap G_{h}) & \text{(inclusion)}\\
+&\quad - \P( G_{1}\cap G_{2}\cap G_{3}\cap G_{4}) & \text{(exclusion)}\\
+&= \binom{4}{1}\times 0.1 - \binom{4}{2}\times 0.01 + \binom{4}{3}\times 0.001 +
+\binom{4}{4}\times 0.0001\\
+&= 0.3439
+\end{aligned}$$
+
+:::
+
+## b. The phone has all GPUs working?
+
+::: {.content-hidden when-format="revealjs"}
+
+Event of interest:
+$B_{0} =\left\{ \text{Zero failed components}\right\} = G_{1}^{c}\cap
+G_{2}^{c}\cap G_{3}^{c}\cap G_{4}^{c}$
+
+$$\begin{aligned}
+\P( B_{0}) &= \P(G_{1}^{c}\cap G_{2}^{c}\cap G_{3}^{c}\cap G_{4}^{c})\\
+&= \P((G_{1}\cup G_{2}\cup G_{3}\cup G_{4})^{c}) & \text{De Morgan} \\
+&= 1 - \P( G_{1}\cup G_{2}\cup G_{3}\cup G_{4}) \\
+&=1-0.3439 & \mbox{(from Part (a))}  \\
+&=0.6561
+\end{aligned}$$
+
+:::
+
+## c. The phone has exactly one failed GPU? (solution)
+
+::: {.content-hidden when-format="revealjs"}
+
+Event of interest: 
+$$\begin{aligned}
+B_1 &= G_i \cap G_j^c \cap G_k^c \cap G_h^c \text{ for } i\neq j \neq k \neq h\\
+&= (G_1 \cap G_2^c \cap G_3^c \cap G_4^c) \union (G^c_1 \cap G_2 \cap G_3^c \cap
+G_4^c) \union (G^c_1 \cap G_2^c \cap G_3 \cap G_4^c)\\ 
+&\quad\quad\union (G^c_1 \cap G_2^c \cap G_3^c \cap G_4)\\
+\Rightarrow \P(B_1) &= 4\P(G_1\cap G_2^c \cap G_3^c \cap G_4^c)\quad\quad
+\text{disjoint union, symmetry}\\
+&=4\left(\P(G_2^c\cap G^c_3\cap G^c_4) - \P(G_1^c\cap G_2^c \cap G_3^c \cap G_4^c)\right)\\
+&=4\left(\P((G_2 \cup G_3 \cup G_4)^c) - \P(B_0)\right) \quad\quad 
+\text{De Morgan}\\
+&=4\left((1 - \P(G_2 \cup G_3 \cup G_4)) - \P(B_0)\right)\\
+&=4\left\{\left(1-\left[\binom{3}{1}\times 0.1 - \binom{3}{2}\times 0.01 + \binom{3}{3}
+\times 0.001\right]\right) - \P(B_0)\right\}\\
+&= 4(0.7290 - 0.6561) = 0.2916.
+\end{aligned}$$
+
+:::
+
+
+
+## d. Homework solved. (solution)
+
+
+
+$$\begin{aligned}
+B &=\left\{ \text{Item works}\right\}\\ 
+&=\left\{ \text{Zero failed
+components}\right\} \union \left\{ \text{One failed component}\right\} \\
+&=B_{0}\cup B_{1}\\
+\Rightarrow \P(B) &= \P(B_0) + \P(B_1) \quad\quad \text{(disjoint)} \\
+&= 0.6561 + 0.2916 = 0.9477
+\end{aligned}$$
+
+::: {.callout-note}
+For further practice, try to verify that 
+
+1. the probability of two failed GPUs is 0.0486;  
+2. and the probability of three failed GPUs is 0.0036.
+:::
