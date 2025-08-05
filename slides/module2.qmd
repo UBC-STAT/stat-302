@@ -84,7 +84,7 @@ If a random experiment has **k steps**.
 -   Step 1 has $n_1$ possible outcomes, 
 -   Step 2 has $n_2$ possible outcomes, 
 
-$\quad\quad\quad\vdots\quad\quad\quad$, 
+$\quad\quad\quad\vdots\quad\quad\quad$ 
 
 -   Step k has $n_k$ possible outcomes.
 
@@ -451,12 +451,13 @@ These are also called [binomial coefficients](https://en.wikipedia.org/wiki/Bino
 
 They have many beautiful interpretations.
 
+::: {.content-hidden when-format="pdf"}
 ::: {layout-ncol=2}
 ![Pascal's Triangle](https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif)
 
 ![Yang Hui's Triangle](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Yanghui_triangle.gif/250px-Yanghui_triangle.gif)
 :::
-
+:::
 ## How many is $\binom{n}{m}$?
 
 Note that combinations can be constructed
