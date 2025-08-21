@@ -1,6 +1,6 @@
 ---
 title: Module 1
-author: Matias
+author: Matias Salibian Barrera and Daniel J. McDonald
 format: 
   revealjs: default
   pdf: default
@@ -10,31 +10,33 @@ format:
 {{< include _latexmacros.qmd >}}
 :::
 
-# Intro to class
+# Welcome & "House rules"
 
-# Basics
+# Syllabus - Expectations - Grades
+
+# Basics of probability
 
 ## Experiments
 
-**Definition:** A scientific procedure undertaken to make a discovery,
-test a hypothesis, or demonstrate a known fact.
+### Definition 
+An action undertaken to make a discovery,
+test a hypothesis, or confirm a known fact.
 
-**Example of an experiment:** Release your pen from 4.9 meters
-above the ground.
+### Example 
+Release your pen from 4.9 meters above the ground.
 
-**Outcomes of the experiment:**
+### Predicted outcomes
 
 - The pen will fall to the ground. 
 
-- It takes about 1 second before it touches the ground.
+- It will take about 1 sec to reach the ground.
 
 
+## Actual observations
 
-## Our observation:
+- The pen did touch the ground
 
-- We are certain that the pen will touch the ground; 
-
-- we are less sure if it will take exactly 1 second.
+- Less sure if it took exactly 1 second to do so
 
 
 
@@ -45,13 +47,11 @@ with sufficient certainty beforehand.
 
 
 ::: Example
-
-- Roll a die: which side will face up? 
+- Roll a die: which side will show? 
 
 - Draw a card from a well-shuffled deck: which one you will get? 
 
-- How many students show up for class today?
-
+- How many students will be in the classroom today?
 :::
 
 
