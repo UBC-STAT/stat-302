@@ -1,4 +1,4 @@
-org: Stat 302 - Winter 2025/26
+# org: Stat 302 - Winter 2025/26
 
 date: last-modified
 
@@ -35,7 +35,7 @@ format:
     code-block-height: 800px
     lang: en-CA
     mermaid-format: svg
-    logo: "../style/stat302.png"
+    # logo: "../style/stat302.png"
   pdf:
     toc: false
     number-sections: true
