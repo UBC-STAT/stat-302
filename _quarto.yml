@@ -13,7 +13,7 @@ website:
   description: "Homepage for Stat302 Introduction to Probability at UBC, Spring 2025."
   open-graph: true
   page-footer:
-    center: Copyright 2025, Matías Salibián-Barrera, Trevor Campbell, and Daniel J. McDonald
+    center: Copyright 2025, Matias Salibian-Barrera and Daniel J. McDonald
   sidebar:
     pinned: true
     logo: "style/stat302.png"
