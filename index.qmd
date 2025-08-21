@@ -7,7 +7,7 @@ page-layout: full
 
 
 <!-- _rcode/swirls.R -->
-![](style/swirls.png){.center}
+<!-- ![](style/swirls.png){.center} -->
 
 
 At the end of the course, you will be able to: 
