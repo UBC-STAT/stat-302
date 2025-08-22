@@ -164,14 +164,21 @@
     "href": "slides/module1.html#monotonicity",
     "title": "",
     "section": "Monotonicity",
-    "text": "Monotonicity\n\nProof: \\(A \\subset B \\, \\Rightarrow \\, \\mathbb{P}( A) \\leq \\mathbb{P}( B)\\)\n\nWe note that \\(B =  ( B\\cap A ) \\cup  ( B\\cap A^{c})\\);\nSince \\(A \\subset B\\) is given, we have \\(B \\cap A = A\\). Hence, \\(B =  A \\cup ( B \\cap A^{c})\\)\nIn addition, \\(A\\) and \\(B \\cap A^{c}\\) are disjoint. By Axiom 3 , we get \\(\\mathbb{P}( B )  =  \\mathbb{P}( A ) + \\mathbb{P}( B\\cap A^{c})\\).\nBy Axiom 2, \\(\\mathbb{P}( B\\cap A^{c}) \\ge 0\\). Thus, \\[\\mathbb{P}( B ) = \\mathbb{P}( A ) + P  ( B\\cap A^{c}) \\ge  \\mathbb{P}( A ).\\]"
+    "text": "Monotonicity\n\\(A \\subset B \\, \\Rightarrow \\, \\mathbb{P}( A) \\leq \\mathbb{P}( B)\\)\n\nProof\n\nProve that \\(B =  ( B\\cap A ) \\cup  ( B\\cap A^{c})\\);\nSince we know that \\(A \\subset B\\), then \\(B \\cap A = A\\) (prove it!). Hence the equation above is \\[B = ( B\\cap A ) \\cup  ( B\\cap A^{c}) = A \\cup ( B \\cap A^{c})\\]\nSince \\(A\\) and \\(B \\cap A^{c}\\) are disjoint (why?), Axiom 3 says \\(\\mathbb{P}( B )  =  \\mathbb{P}( A ) + \\mathbb{P}( B\\cap A^{c})\\)\nAxiom 2 ensures that \\(\\mathbb{P}( B\\cap A^{c}) \\ge 0\\). Thus, the last equation satisfies \\[\\mathbb{P}( B ) = \\mathbb{P}( A ) + P  ( B\\cap A^{c}) \\ge  \\mathbb{P}( A )\\]"
   },
   {
-    "objectID": "slides/module1.html#probability-of-a-union",
-    "href": "slides/module1.html#probability-of-a-union",
+    "objectID": "slides/module1.html#probability-of-a-union-of-two-events",
+    "href": "slides/module1.html#probability-of-a-union-of-two-events",
     "title": "",
-    "section": "Probability of a union",
-    "text": "Probability of a union\n\nProof: \\(\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) -\\mathbb{P}( A\\cap B )\\)\n\nFirst recall that \\(A\\cup B = A\\cup  ( B\\cap A^{c} )\\).\nNote that \\(A\\) and \\(B\\cap A^{c}\\) are disjoint events. Hence by Axiom 3: \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B \\cap A^{c} )\\]\nSplitting \\(B\\) into union of two disjoint events: \\(B  =  ( B\\cap A ) \\cup  ( B\\cap A^c )\\) and applying Axiom 3, we get \\[\\mathbb{P}( B) = \\mathbb{P}( B\\cap A ) +\\mathbb{P}( B\\cap A^c )\\]\nThe formula is obtained by combining the above two conclusions."
+    "section": "Probability of a union of two events",
+    "text": "Probability of a union of two events\n\\(\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) -\\mathbb{P}( A\\cap B )\\)\n\nProof\n\nFirst prove that \\(A\\cup B = A\\cup  ( B\\cap A^{c} )\\). Since \\(A\\) and \\(B\\cap A^{c}\\) are disjoint events, Axiom 3 implies that\n\\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B \\cap A^{c} )\\]\n“Slice” \\(B\\) into the part it shares with \\(A\\) and the rest: \\(B  =  ( B\\cap A ) \\cup  ( B\\cap A^c )\\), where the events on the right-hand side are disjoint. Apply Axiom 3 to get \\(\\mathbb{P}( B) = \\mathbb{P}( B\\cap A ) +\\mathbb{P}( B\\cap A^c )\\)\nThe last equation can be re-written as \\(\\mathbb{P}( B\\cap A^c ) = \\mathbb{P}( B)  -  \\mathbb{P}( B\\cap A )\\)\nReplace this expression for \\(\\mathbb{P}( B\\cap A^c )\\) in 2. to get \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B \\cap A^{c} ) =\n\\mathbb{P}( A ) + \\mathbb{P}( B)  -  \\mathbb{P}( B\\cap A )\\]"
+  },
+  {
+    "objectID": "slides/module1.html#probability-of-a-union-of-two-events-1",
+    "href": "slides/module1.html#probability-of-a-union-of-two-events-1",
+    "title": "",
+    "section": "Probability of a union of two events",
+    "text": "Probability of a union of two events\n\nVen diagrams are not proofs. They are sometimes useful, but a diagram is not a proof or a logical argument.\nThis is not a proof:"
   },
   {
     "objectID": "slides/module1.html#proof-of-booles-inequality",
