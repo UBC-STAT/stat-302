@@ -12,9 +12,30 @@ format:
 
 # Welcome & "House rules"
 
+- Weird schedule (Mondays and Fridays)
+- Many opportunities to work and get help
+- Weekly ``routine'':
+  - Class meetings: 3 hours
+  - Pre-class reading: 1 to 2 hours
+  - WebWork & assignments: 2 to 3 hours
+  - Office hour
+  - Total weekly hours: 7 to 9 hours
+- Problem solutions are dangerous!!
+- Online "solutions": you must
+prove whatever you claim
+
+
 # Syllabus - Expectations - Grades
 
 # Basics of probability
+
+- Formal treatment of randomness
+- Key to this are models
+- Defining a probability requires the following:
+  - Random experiment
+  - Sample space
+  - Event
+  - Rules to combine events (set operations)
 
 ## Experiments
 
@@ -118,7 +139,6 @@ property. It's a good idea to practice listing explicitly
 the sample points of events described with words.
 
 ::: Example
-
 - Roll a dice:
   - $A = \text{"roll an even number"} = \{ 2, 4, 6 \}$ \
   - $B = \text{"roll a 3 or less"} = \{1, 2, 3\}$
@@ -127,7 +147,6 @@ the sample points of events described with words.
 - Bus wait time: $C = \text{"wait is less than half an hour"} = [15, 30]$
 
 - Max-wind-speed: $A = \text{"wind is over 80 km/hour"} = (80, \infty )$
-
 :::
 
 
@@ -153,15 +172,11 @@ Suppose $A$, $B$ are events (subsets of $\Omega$).
 
 ## Properties of set operations
 
-
-
 - Commutative: 
 
     - $A \cup B \ = \ B \cup A$
 
     - $A \cap B \ = \ B \cap A$
-
-    
 
 - Associative: 
 
@@ -189,80 +204,85 @@ Suppose $A$, $B$ are events (subsets of $\Omega$).
 
 ::: Theorem
 For any two events (sets) $A$ and $B$, we have
-$$( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}.$$
+$$
+( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}
+$$
 :::
 
 
-To prove two events are equal as above, the general
-approach is to show both $$( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}$$
-and $$A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}.$$
-
-We give part of a proof on the next slide.
+To prove the theorem it is sufficient 
+to show that
+$$
+( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}
+$$
+and that 
+$$
+A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}
+$$
 
 
 
 ## Proof of De Morgan's Laws
 
 ::: Proof
-
 Let us show $( A\cup B ) ^{c}  \subseteq  A^{c}\cap B^{c}$:
 
-- take any $\omega \in  ( A\cup B )^c$, we must have
+1. Take any $\omega \in  ( A\cup B )^c$, then we must have
     $\omega \notin A \cup B$;
 
-- This implies $\omega \notin A$ and $\omega \notin B$ (because if
+2. This implies that $\omega \notin A$ and $\omega \notin B$ (because if
     either $\omega \in A$ or $\omega \in B$ then we'd have
-    $\omega \in A \cup B$).
+    $\omega \in A \cup B$);
 
-- Hence $\omega \in A^c$ and $\omega \in B^c$,
+3. Hence: $\omega \in A^c$ and $\omega \in B^c$;
 
-- This is the same as $\omega \in A^c \cap B^c$.
+4. Which is the same as $\omega \in A^c \cap B^c$;
 
-- That is, $\omega \in  ( A\cup B )^c$ implies
-    $\omega \in A^c \cap B^c$ which is
-    $$( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c}.$$
+5. Thus, we showed that $\omega \in  ( A\cup B )^c$ implies
+    $\omega \in A^c \cap B^c$. In other words, that 
+    $$( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c} \, .$$
+    
 
-Try it yourself to prove $A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}$.
+We leave it to you to prove 
+that $A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}$.
 
 :::
 
 
-## Useful Identities
+## Some Useful Identities
 
 
 
 - $A \ =  ( A\cap B ) \, \cup \,  ( A\cap B^{c} )$ 
 
-    - First:
-        $A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$:
-        Take $\omega \in A$, then either $\omega \in B$ or
-        $\omega \notin B$. In the first case: $\omega \in A \cap B$, in
-        the second case: $\omega \in A \cap B^c$. Thus
-        $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
-
-        
-
-    - Also:
-        $\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A$:
-        Take
-        $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
-        If $\omega \in \left( A\cap B\right)$ then $\omega \in A$. If
-        $\omega \in \left( A\cap B^{c}\right)$ then $\omega \in A$.
-        Thus, we always have $\omega \in A$.
-
-    
+::: Proof
+- First: $A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$:
+  1. Take $\omega \in A$, then either $\omega \in B$ or
+        $\omega \notin B$. 
+  2. In the first case: $\omega \in A \cap B$. In
+        the second case: $\omega \in A \cap B^c$. 
+  3. Thus $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
+- Also: $\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A$:
+  1. Take $\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)$.
+  2. If $\omega \in \left( A\cap B\right)$ then $\omega \in A$, and if 
+  $\omega \in \left( A\cap B^{c}\right)$ then $\omega \in A$.
+  4. Thus, we always have $\omega \in A$.
+:::
+ 
 
 - $A \, \cup\,  B \ = \ A \, \cup \left( B\cap A^{c}\right)$
-
-    - Prove it!
+  - Prove it!
 
 
 
 ## Power set
 
 The power set of $\Omega$ (denoted $2^\Omega$) is the set of all
-possible subsets of $\Omega$. **Example:** Suppose
-$\Omega \ = \ \{ 1,2,3 \}$. Then $$2^{\Omega }  \, 
+possible subsets of $\Omega$. 
+
+For example, if 
+$\Omega \ = \ \{ 1,2,3 \}$ then:
+$$2^{\Omega }  \, 
 =  \Bigl\{ 
 \varnothing ,
 \{ 1\} , \{ 2 \} , \{ 3 \} , \{ 1,2 \} , \{ 1,3 \} , \{ 2,3 \}, \{ 1, 2, 3 \} \Bigr\}$$
@@ -270,95 +290,107 @@ $\Omega \ = \ \{ 1,2,3 \}$. Then $$2^{\Omega }  \,
 - The symbol $\varnothing$ denotes the empty set. 
 
 - If $\Omega$ has $n$ elements, then $2^{\Omega }$ has $2^{n}$
-    elements. In symbols: $$\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }.$$
+    elements. In symbols: $$\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }$$
+    How can we prove this when $\#\Omega = n \in \mathbb{N}$? 
 
 
-
-## Reasoning for the size of power set
+## Counting / listing
 
 List the $n$ elements of $\Omega$ as
-$$\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}$$
+$\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}$.
 
-Any event $A \subseteq \Omega$ is uniquely obtained by including or
-excluding each of $\omega _{1},\omega _{2},\ldots,\omega _{n}$.
+Any event $A \subseteq \Omega$ can be uniquely represented by a 
+sequence of 0's and 1's:
+$$
+x_i = \left\{ \begin{array}{ll} 1 & \text{ if } \omega_i \in A \, , \\
+0 & \text{ if } \omega_i \notin A \, . \end{array} \right. 
+\quad 1 \le i \le n \, .
+$$
+To each event $A$ we associate the string $(x_1, x_2, \ldots, x_n)$:
+$$
+A \ \longrightarrow \ (x_1, x_2, \ldots, x_n)
+$$
+And, each sequence corresponds to
+an event: $(0, 1, 1, \ldots, 0, 1) \ \longrightarrow \ B$.
 
-Hence, we have 2 options for each of the $n$ sample points, leading
-to $2^n$ distinct outcomes.
+There are $2^n$ distinct such $n$-long sequences. 
+Each of
+them corresponds uniquely to one event, and every event 
+corresponds to one such sequence. Hence there are the same
+number of events as there are sequences ($2^n$). 
+
+## Counting / listing
+
+::: Example
+How many license plates can you create using a triplet of
+one letter, one digit, and one letter (e.g. R2A)?
+:::
 
 # Probability 
 
-## Probability of an event, an possible outcome
+## Probability of an event
 
-Even though we cannot predict the outcome of an experiment well enough
-in many cases, we have an idea about the chance of various outcomes:
+- Even though random outcomes cannot be predicted, 
+  in some cases we have an idea about the chance that
+  an outcome occurs. 
 
-- If you toss a coin, the chance of observing a head is formidable.
+  - If you toss a fair coin, the chance of observing a head is 
+    the same as that of observing a tail.
 
-- If you buy a lottery ticket, the chance of winning the grand price
-    is negligible.
+  - If you buy a lottery ticket, the chance of winning is very small.
 
-In probability theory, we quantify the chance for "every subset" of
-the sample space in a self-consistent way.
+- A probability function $\P$ quantifies these chances.
+  
+- Probability functions are computed on events $A \in \mathcal{B}$. 
+  We calculate $\P(A)$. Mathematically / formally, we have:
+  $$
+  \P \, : \, \mathcal{B} \to [0, 1] 
+  $$
+  where $\mathcal{B}$ is a collection of possible events. 
 
-Such a system was first proposed by Kolmogorov.
-
-
+- Probability functions need to do this "coherently"
 
 ## Probability Axioms
 
-Let $\Omega$ be a sample space and ${\cal B}$ be the collection of "all
-subsets" of $\Omega$.
-
-
+Let $\Omega$ be a sample space and ${\cal B}$ be a collection of 
+events (i.e. subsets of $\Omega$). 
 
 ::: Definition
+A probability function is a function $\P$ with domain ${\cal B}$ such that
 
-A probability function is a function $\P$ with domain ${\cal B}$ so that
+1.  **Axiom 1: ** $\P ( \Omega ) = 1$;
 
-1.  **Axiom 1:** $\P ( \Omega ) =1$. 
-
-2.  **Axiom 2:** For all $A \in {\cal B}$, we have $\P ( A ) \geq 0$.
+2.  **Axiom 2: ** $\P ( A ) \geq 0$ for any $A \in {\cal B}$; 
     
-
-3.  **Axiom 3:** If $\{ A_{n}\}_{n \ge 1}$ are a sequence of
+3.  **Axiom 3: ** If $\{ A_{n}\}_{n \ge 1}$ is a sequence of
     **disjoint** events, then
     $$\P\left( \bigcup_{n=1}^{\infty }A_{n}\right) \, 
     = \sum_{n=1}^{\infty }\P ( A_{n})$$
-
 :::
+
+Note: $\{ A_{n}\}_{n \ge 1}$ is a sequence of
+    **disjoint** events when $A_i \cap A_j = \varnothing$ if $i \ne j$
 
 
 ## Probability
 
-- The value of $\P(A)$ is called the probability of event $A$.
+- Kolmogorov showed how one can construct such functions,
+and that a probability function only needs to
+satisfy those three properties to 
+be a "coherent" probability function
 
-    
+- In other words: every desirable property of a
+probability $\P$ can be shown to hold using 
+only Axioms 1, 2, and 3 (and logic). 
 
-- Apparently, $0 \leq \P(A) \leq 1$: trivial but useful. If your
-    calculation gives an event negative probability value, re-do the
-    calculation.
-
-    
-
-- The key phrase **a sequence of** is important: this rule does not go
-    beyond.
-
-    
-
-- Being **disjoint** means for all $i \neq j$,
-    $$A_i \cap A_j = \varnothing.$$
-
-    
-
-- As a mathematical theory, probability definition does not rely on an
-    "uncertainty experiment".
-
+- Alternatively: any function $\P$ that satisfies
+Axioms 1, 2, and 3 is a "proper" probability function. 
 
 
 ## Properties of the probability function
 
-Unless otherwise specified, $A$, $B$ and so on are events, and
-$\Omega$ is the sample space.
+In general, $A$, $B$, $C$, etc. denote 
+arbitrary events. $\Omega$ is the sample space.
 
 
 
@@ -374,32 +406,29 @@ $\Omega$ is the sample space.
 
 
 
-## Proof of formula for complement
-
-
-Recall **Mathematical Theorem:** A general proposition not
-self-evident but proved by a chain of reasoning; a truth established by
-means of accepted truths.
-
-By "proof" regarding probability formulas, we use a chain of
-reasoning to show they are implied by means of the accepted three
-Axioms.
 
 
 
 ## Proof of formula for complement
+
+We need to show that if $\P$ satisfies Axioms 1, 2, and 3, and 
+$A$ is an arbitrary event, then 
+necessarily $\P ( A^{c} ) \ = \ 1-\P ( A )$. 
 
 ::: Proof
-### $\P ( A^{c} ) \ = \ 1-\P ( A )$
-
-- Note that (1) $\Omega = A \cup A^{c}$ and (2) $A$ and $A^c$ are
+### 
+1. $\Omega = A \cup A^{c}$ and $A$ and $A^c$ are
     disjoint.
-
     
+2. Using Axiom 1
+   $$ 1 = \P(\Omega) = \P( A \cup A^{c} )$$
 
-- By Axioms 1 and 3, we have
-    $$1 =  \P ( \Omega )  =  \P (A  ) +\P ( A^c)$$ which implies
-    $\P ( A^{c} ) =1-\P ( A )$.
+3. Axiom 3 says that $\P( A \cup A^{c} ) = \P (A  ) +\P ( A^c)$
+
+4. Putting the last 2 statements together we get $1 =  \P ( \Omega )  =  \P (A  ) +\P ( A^c)$.
+
+    Since $\P(A)$ and $\P(A^c)$ are just numbers, simple arithmetic gives 
+    $$1-\P ( A ) = \P ( A^{c} )$$
 :::
 
 
