@@ -42,8 +42,8 @@ Release your pen from 4.9 meters above the ground.
 
 ## Uncertainty
 
-**Common sense:** The outcome of some experiments cannot be determined
-with sufficient certainty beforehand. 
+The outcome of some experiments cannot be determined
+beforehand. 
 
 
 ::: Example
@@ -57,52 +57,21 @@ with sufficient certainty beforehand.
 
 ## Probability theory
 
-- Even though there seem to be no rules on the outcome of rolling a
-    die, if we repeat the experiment many times, some pattern emerges.
+- Even though die rolls are random, 
+patterns emerge when we repeat the experiment many times.
 
-- Probability theory aims to describe the pattern with a mathematical
-    model.
+- Probability Theory describes such patterns via mathematical
+models.
 
-- In ideal situations, the probability theory can be very successful:
-    Casino always wins.
+- It is a branch of Mathematics, and is
+based on a set of Axioms.
 
+- Axioms: Statements or propositions accepted 
+to hold true
 
-
-## Probability theory
-
-- **Axioms in mathematics:** Statements or propositions regarded as
-    being established, accepted, or self-evidently true.
-
-- **Mathematical Theorem:** A general proposition not self-evident but
-    proved by a chain of reasoning; a truth established by means of
-    accepted truths.
-
-- If the accepted truths are falsified, the Theorem is also falsified.
-
-
-
-## Probability theory
-
-- The probability theory in Stat 302 is a branch of mathematics. It is
-    a system based on a set of Axioms.
-
-- Its conclusions cannot be falsified unless the Axioms are falsified.
-
-- Stat 302 mostly lectures on mathematical aspects of the probability
-    theory.
-
-- We use real world examples to demonstrate the relevance of the
-    theory.
-
-
-
-## Probability 
-
-We now motivate two subjects of probability based on experiment
-whose outcome is uncertain.
-
-# Set theory
-
+- Theorems: Propositions which are 
+established to hold true using sound logical
+reasoning.
 
 ## Sample Space
 
@@ -114,73 +83,52 @@ random experiment.
 We denote it by $\Omega$, and a generic outcome, also called sample
 point, by $\omega$ (i.e. $\omega \in \Omega$).
 
-- There is no rule that we have to use $\Omega$ as the notation for
-    the sample space. 
-
-- Always read the context.
-
-
-
-## Sample Space
-
 ::: Example
+- Roll a die: $\Omega = \{ 1,2,3,4,5, 6 \} \subset \mathbb{N}$.
 
-- Roll a die: $\Omega = \{ 1,2,3,4,5, 6 \}$.
+- Draw a card from a poker deck:
+$\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}$
+    
+- Wind speed at YVR (km/h): $\Omega =[0, \infty) \subset \mathbb{R}$.
 
-- Draw a card:
-    $\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}$.
-
-- \% yield of chemical process: $\Omega =\left[ 0,100\right]$.
-
-- Maximum wind speed in YVR in 2023: $\Omega =[0, \infty)$
-
+- Wait time for R4 at UBC (min): $\Omega =[0, 720) \subset \mathbb{R}$
 :::
-
-**Remark:** We may not need to provide full description of $\Omega$
-in many cases.
-
 
 
 ## Events
 
 ::: Definition
-An event is a subset of sample space $\Omega$.
+An event is a subset of the sample space $\Omega$.
 :::
 
 **Notation:** We commonly use upper case letters ($A$, $B$, $C$,
 ...) for events.
 
-Because events are sets, all notions regarding sets are applicable:
+Events are sets:
 
 - $\omega \in A$ means "$\omega$ is an element of $A$".
 
 - $C \subset D$ means "$C$ is a subset of $D$".
 
-- Remember operations $A \cup B$, $A \cap B$ and so on.
-
-
 
 ## Examples
 
-Events of interests are often formed by outcomes sharing some
-properties.
+Events are often formed by outcomes sharing some
+property. It's a good idea to practice listing explicitly 
+the sample points of events described with words.
 
 ::: Example
 
-- Roll a dice:\
-    $A= \{ 2, 4, 6 \}$ ("roll an even number");\
-    $B= \{1, 2, 3\}$ ("roll a 3 or less").
+- Roll a dice:
+  - $A = \text{"roll an even number"} = \{ 2, 4, 6 \}$ \
+  - $B = \text{"roll a 3 or less"} = \{1, 2, 3\}$
+  - $C = \text{"roll an even number no higher than 3"} = \{ 2 \}$
 
-- Chemical process:
-    $C= [ 9, 14 ] = \{ \text{yield is between 9 and 14\%} \}$
+- Bus wait time: $C = \text{"wait is less than half an hour"} = [15, 30]$
 
-- Max-wind-speed: $A=(80, \infty )= \{ \text{over 80 km/hour}\}$
+- Max-wind-speed: $A = \text{"wind is over 80 km/hour"} = (80, \infty )$
 
 :::
-
-It is a useful skill to precisely list the sample points in a verbally
-described event.
-
 
 
 ## Set Operations
