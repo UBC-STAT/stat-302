@@ -87,77 +87,77 @@
     "href": "slides/module1.html#de-morgans-laws",
     "title": "",
     "section": "De Morgan’s Laws",
-    "text": "De Morgan’s Laws\n\nTheoremFor any two events (sets) \\(A\\) and \\(B\\), we have \\[( A\\cup B ) ^{c} \\, = \\, A^{c}\\cap B^{c}.\\]\n\n\nTo prove two events are equal as above, the general approach is to show both \\[( A\\cup B )^{c}  \\subseteq  A^{c}\\cap B^{c}\\] and \\[A^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}.\\]\nWe give part of a proof on the next slide."
+    "text": "De Morgan’s Laws\n\nTheoremFor any two events (sets) \\(A\\) and \\(B\\), we have \\[\n( A\\cup B ) ^{c} \\, = \\, A^{c}\\cap B^{c}\n\\]\n\n\nTo prove the theorem it is sufficient to show that \\[\n( A\\cup B )^{c}  \\subseteq  A^{c}\\cap B^{c}\n\\] and that \\[\nA^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}\n\\]"
   },
   {
     "objectID": "slides/module1.html#proof-of-de-morgans-laws",
     "href": "slides/module1.html#proof-of-de-morgans-laws",
     "title": "",
     "section": "Proof of De Morgan’s Laws",
-    "text": "Proof of De Morgan’s Laws\n\nProofLet us show \\(( A\\cup B ) ^{c}  \\subseteq  A^{c}\\cap B^{c}\\):\n\ntake any \\(\\omega \\in  ( A\\cup B )^c\\), we must have \\(\\omega \\notin A \\cup B\\);\nThis implies \\(\\omega \\notin A\\) and \\(\\omega \\notin B\\) (because if either \\(\\omega \\in A\\) or \\(\\omega \\in B\\) then we’d have \\(\\omega \\in A \\cup B\\)).\nHence \\(\\omega \\in A^c\\) and \\(\\omega \\in B^c\\),\nThis is the same as \\(\\omega \\in A^c \\cap B^c\\).\nThat is, \\(\\omega \\in  ( A\\cup B )^c\\) implies \\(\\omega \\in A^c \\cap B^c\\) which is \\[( A\\cup B ) ^{c} \\, \\subseteq \\, A^{c}\\cap B^{c}.\\]\n\nTry it yourself to prove \\(A^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}\\)."
+    "text": "Proof of De Morgan’s Laws\n\nProofLet us show \\(( A\\cup B ) ^{c}  \\subseteq  A^{c}\\cap B^{c}\\):\n\nTake any \\(\\omega \\in  ( A\\cup B )^c\\), then we must have \\(\\omega \\notin A \\cup B\\);\nThis implies that \\(\\omega \\notin A\\) and \\(\\omega \\notin B\\) (because if either \\(\\omega \\in A\\) or \\(\\omega \\in B\\) then we’d have \\(\\omega \\in A \\cup B\\));\nHence: \\(\\omega \\in A^c\\) and \\(\\omega \\in B^c\\);\nWhich is the same as \\(\\omega \\in A^c \\cap B^c\\);\nThus, we showed that \\(\\omega \\in  ( A\\cup B )^c\\) implies \\(\\omega \\in A^c \\cap B^c\\). In other words, that \\[( A\\cup B ) ^{c} \\, \\subseteq \\, A^{c}\\cap B^{c} \\, .\\]\n\nWe leave it to you to prove that \\(A^{c}\\cap B^{c}  \\subseteq  ( A\\cup B ) ^{c}\\)."
   },
   {
-    "objectID": "slides/module1.html#useful-identities",
-    "href": "slides/module1.html#useful-identities",
+    "objectID": "slides/module1.html#some-useful-identities",
+    "href": "slides/module1.html#some-useful-identities",
     "title": "",
-    "section": "Useful Identities",
-    "text": "Useful Identities\n\n\\(A \\ =  ( A\\cap B ) \\, \\cup \\,  ( A\\cap B^{c} )\\)\n\nFirst: \\(A \\subseteq \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\): Take \\(\\omega \\in A\\), then either \\(\\omega \\in B\\) or \\(\\omega \\notin B\\). In the first case: \\(\\omega \\in A \\cap B\\), in the second case: \\(\\omega \\in A \\cap B^c\\). Thus \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\).\nAlso: \\(\\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right) \\subseteq A\\): Take \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\). If \\(\\omega \\in \\left( A\\cap B\\right)\\) then \\(\\omega \\in A\\). If \\(\\omega \\in \\left( A\\cap B^{c}\\right)\\) then \\(\\omega \\in A\\). Thus, we always have \\(\\omega \\in A\\).\n\n\\(A \\, \\cup\\,  B \\ = \\ A \\, \\cup \\left( B\\cap A^{c}\\right)\\)\n\nProve it!"
+    "section": "Some Useful Identities",
+    "text": "Some Useful Identities\n\n\\(A \\ =  ( A\\cap B ) \\, \\cup \\,  ( A\\cap B^{c} )\\)\n\n\nProof\n\nFirst: \\(A \\subseteq \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\):\n\nTake \\(\\omega \\in A\\), then either \\(\\omega \\in B\\) or \\(\\omega \\notin B\\).\nIn the first case: \\(\\omega \\in A \\cap B\\). In the second case: \\(\\omega \\in A \\cap B^c\\).\nThus \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\).\n\nAlso: \\(\\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right) \\subseteq A\\):\n\nTake \\(\\omega \\in \\left( A\\cap B\\right) \\, \\cup \\, \\left( A\\cap B^{c}\\right)\\).\nIf \\(\\omega \\in \\left( A\\cap B\\right)\\) then \\(\\omega \\in A\\), and if \\(\\omega \\in \\left( A\\cap B^{c}\\right)\\) then \\(\\omega \\in A\\).\nThus, we always have \\(\\omega \\in A\\).\n\n\n\n\n\n\\(A \\, \\cup\\,  B \\ = \\ A \\, \\cup \\left( B\\cap A^{c}\\right)\\)\n\nProve it!"
   },
   {
     "objectID": "slides/module1.html#power-set",
     "href": "slides/module1.html#power-set",
     "title": "",
     "section": "Power set",
-    "text": "Power set\nThe power set of \\(\\Omega\\) (denoted \\(2^\\Omega\\)) is the set of all possible subsets of \\(\\Omega\\). Example: Suppose \\(\\Omega \\ = \\ \\{ 1,2,3 \\}\\). Then \\[2^{\\Omega }  \\,\n=  \\Bigl\\{\n\\varnothing ,\n\\{ 1\\} , \\{ 2 \\} , \\{ 3 \\} , \\{ 1,2 \\} , \\{ 1,3 \\} , \\{ 2,3 \\}, \\{ 1, 2, 3 \\} \\Bigr\\}\\]\n\nThe symbol \\(\\varnothing\\) denotes the empty set.\nIf \\(\\Omega\\) has \\(n\\) elements, then \\(2^{\\Omega }\\) has \\(2^{n}\\) elements. In symbols: \\[\\#  ( 2^{\\Omega } ) \\ = \\ 2^{\\#\\Omega }.\\]"
+    "text": "Power set\nThe power set of \\(\\Omega\\) (denoted \\(2^\\Omega\\)) is the set of all possible subsets of \\(\\Omega\\).\nFor example, if \\(\\Omega \\ = \\ \\{ 1,2,3 \\}\\) then: \\[2^{\\Omega }  \\,\n=  \\Bigl\\{\n\\varnothing ,\n\\{ 1\\} , \\{ 2 \\} , \\{ 3 \\} , \\{ 1,2 \\} , \\{ 1,3 \\} , \\{ 2,3 \\}, \\{ 1, 2, 3 \\} \\Bigr\\}\\]\n\nThe symbol \\(\\varnothing\\) denotes the empty set.\nIf \\(\\Omega\\) has \\(n\\) elements, then \\(2^{\\Omega }\\) has \\(2^{n}\\) elements. In symbols: \\[\\#  ( 2^{\\Omega } ) \\ = \\ 2^{\\#\\Omega }\\] How can we prove this when \\(\\#\\Omega = n \\in \\mathbb{N}\\)?"
   },
   {
-    "objectID": "slides/module1.html#reasoning-for-the-size-of-power-set",
-    "href": "slides/module1.html#reasoning-for-the-size-of-power-set",
+    "objectID": "slides/module1.html#counting-listing",
+    "href": "slides/module1.html#counting-listing",
     "title": "",
-    "section": "Reasoning for the size of power set",
-    "text": "Reasoning for the size of power set\nList the \\(n\\) elements of \\(\\Omega\\) as \\[\\Omega =\\left\\{ \\omega _{1},\\omega _{2},...,\\omega _{n}\\right\\}\\]\nAny event \\(A \\subseteq \\Omega\\) is uniquely obtained by including or excluding each of \\(\\omega _{1},\\omega _{2},\\ldots,\\omega _{n}\\).\nHence, we have 2 options for each of the \\(n\\) sample points, leading to \\(2^n\\) distinct outcomes."
+    "section": "Counting / listing",
+    "text": "Counting / listing\nList the \\(n\\) elements of \\(\\Omega\\) as \\(\\Omega =\\left\\{ \\omega _{1},\\omega _{2},...,\\omega _{n}\\right\\}\\).\nAny event \\(A \\subseteq \\Omega\\) can be uniquely represented by a sequence of 0’s and 1’s: \\[\nx_i = \\left\\{ \\begin{array}{ll} 1 & \\text{ if } \\omega_i \\in A \\, , \\\\\n0 & \\text{ if } \\omega_i \\notin A \\, . \\end{array} \\right.\n\\quad 1 \\le i \\le n \\, .\n\\] To each event \\(A\\) we associate the string \\((x_1, x_2, \\ldots, x_n)\\): \\[\nA \\ \\longrightarrow \\ (x_1, x_2, \\ldots, x_n)\n\\] And, each sequence corresponds to an event: \\((0, 1, 1, \\ldots, 0, 1) \\ \\longrightarrow \\ B\\).\nThere are \\(2^n\\) distinct such \\(n\\)-long sequences. Each of them corresponds uniquely to one event, and every event corresponds to one such sequence. Hence there are the same number of events as there are sequences (\\(2^n\\))."
   },
   {
-    "objectID": "slides/module1.html#probability-of-an-event-an-possible-outcome",
-    "href": "slides/module1.html#probability-of-an-event-an-possible-outcome",
+    "objectID": "slides/module1.html#counting-listing-1",
+    "href": "slides/module1.html#counting-listing-1",
     "title": "",
-    "section": "Probability of an event, an possible outcome",
-    "text": "Probability of an event, an possible outcome\nEven though we cannot predict the outcome of an experiment well enough in many cases, we have an idea about the chance of various outcomes:\n\nIf you toss a coin, the chance of observing a head is formidable.\nIf you buy a lottery ticket, the chance of winning the grand price is negligible.\n\nIn probability theory, we quantify the chance for “every subset” of the sample space in a self-consistent way.\nSuch a system was first proposed by Kolmogorov."
+    "section": "Counting / listing",
+    "text": "Counting / listing\n\nExampleHow many license plates can you create using a triplet of one letter, one digit, and one letter (e.g. R2A)?"
+  },
+  {
+    "objectID": "slides/module1.html#probability-of-an-event",
+    "href": "slides/module1.html#probability-of-an-event",
+    "title": "",
+    "section": "Probability of an event",
+    "text": "Probability of an event\n\nEven though random outcomes cannot be predicted, in some cases we have an idea about the chance that an outcome occurs.\n\nIf you toss a fair coin, the chance of observing a head is the same as that of observing a tail.\nIf you buy a lottery ticket, the chance of winning is very small.\n\nA probability function \\(\\mathbb{P}\\) quantifies these chances.\nProbability functions are computed on events \\(A \\in \\mathcal{B}\\). We calculate \\(\\mathbb{P}(A)\\). Mathematically / formally, we have: \\[\n\\mathbb{P}\\, : \\, \\mathcal{B} \\to [0, 1]\n\\] where \\(\\mathcal{B}\\) is a collection of possible events.\nProbability functions need to do this “coherently”"
   },
   {
     "objectID": "slides/module1.html#probability-axioms",
     "href": "slides/module1.html#probability-axioms",
     "title": "",
     "section": "Probability Axioms",
-    "text": "Probability Axioms\nLet \\(\\Omega\\) be a sample space and \\({\\cal B}\\) be the collection of “all subsets” of \\(\\Omega\\).\n\nDefinition\nA probability function is a function \\(\\mathbb{P}\\) with domain \\({\\cal B}\\) so that\n\nAxiom 1: \\(\\mathbb{P}( \\Omega ) =1\\).\nAxiom 2: For all \\(A \\in {\\cal B}\\), we have \\(\\mathbb{P}( A ) \\geq 0\\).\nAxiom 3: If \\(\\{ A_{n}\\}_{n \\ge 1}\\) are a sequence of disjoint events, then \\[\\mathbb{P}\\left( \\bigcup_{n=1}^{\\infty }A_{n}\\right) \\,\n= \\sum_{n=1}^{\\infty }\\mathbb{P}( A_{n})\\]"
+    "text": "Probability Axioms\nLet \\(\\Omega\\) be a sample space and \\({\\cal B}\\) be a collection of events (i.e. subsets of \\(\\Omega\\)).\n\nDefinition\nA probability function is a function \\(\\mathbb{P}\\) with domain \\({\\cal B}\\) such that\n\nAxiom 1:  \\(\\mathbb{P}( \\Omega ) = 1\\);\nAxiom 2:  \\(\\mathbb{P}( A ) \\geq 0\\) for any \\(A \\in {\\cal B}\\);\nAxiom 3:  If \\(\\{ A_{n}\\}_{n \\ge 1}\\) is a sequence of disjoint events, then \\[\\mathbb{P}\\left( \\bigcup_{n=1}^{\\infty }A_{n}\\right) \\,\n= \\sum_{n=1}^{\\infty }\\mathbb{P}( A_{n})\\]\n\n\n\nNote: \\(\\{ A_{n}\\}_{n \\ge 1}\\) is a sequence of disjoint events when \\(A_i \\cap A_j = \\varnothing\\) if \\(i \\ne j\\)"
   },
   {
     "objectID": "slides/module1.html#probability-1",
     "href": "slides/module1.html#probability-1",
     "title": "",
     "section": "Probability",
-    "text": "Probability\n\nThe value of \\(\\mathbb{P}(A)\\) is called the probability of event \\(A\\).\nApparently, \\(0 \\leq \\mathbb{P}(A) \\leq 1\\): trivial but useful. If your calculation gives an event negative probability value, re-do the calculation.\nThe key phrase a sequence of is important: this rule does not go beyond.\nBeing disjoint means for all \\(i \\neq j\\), \\[A_i \\cap A_j = \\varnothing.\\]\nAs a mathematical theory, probability definition does not rely on an “uncertainty experiment”."
+    "text": "Probability\n\nKolmogorov showed how one can construct such functions, and that a probability function only needs to satisfy those three properties to be a “coherent” probability function\nIn other words: every desirable property of a probability \\(\\mathbb{P}\\) can be shown to hold using only Axioms 1, 2, and 3 (and logic).\nAlternatively: any function \\(\\mathbb{P}\\) that satisfies Axioms 1, 2, and 3 is a “proper” probability function."
   },
   {
     "objectID": "slides/module1.html#properties-of-the-probability-function",
     "href": "slides/module1.html#properties-of-the-probability-function",
     "title": "",
     "section": "Properties of the probability function",
-    "text": "Properties of the probability function\nUnless otherwise specified, \\(A\\), \\(B\\) and so on are events, and \\(\\Omega\\) is the sample space.\n\nProbability of the complement: \\[\\mathbb{P}( A^{c} ) =1-\\mathbb{P}( A )\\]\nMonotonicity: \\[A\\subset B\\Rightarrow \\mathbb{P}( A ) \\leq \\mathbb{P}(B )\\]\nProbability of the union: \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) - \\mathbb{P}( A\\cap B )\\]\nBoole’s inequality: \\[\\mathbb{P}( \\bigcup _{i=1}^{m}A_{i} ) \\leq \\sum_{i=1}^{m}\\mathbb{P}( A_{i} )\\]"
+    "text": "Properties of the probability function\nIn general, \\(A\\), \\(B\\), \\(C\\), etc. denote arbitrary events. \\(\\Omega\\) is the sample space.\n\nProbability of the complement: \\[\\mathbb{P}( A^{c} ) =1-\\mathbb{P}( A )\\]\nMonotonicity: \\[A\\subset B\\Rightarrow \\mathbb{P}( A ) \\leq \\mathbb{P}(B )\\]\nProbability of the union: \\[\\mathbb{P}( A\\cup B ) =\\mathbb{P}( A ) +\\mathbb{P}( B ) - \\mathbb{P}( A\\cap B )\\]\nBoole’s inequality: \\[\\mathbb{P}( \\bigcup _{i=1}^{m}A_{i} ) \\leq \\sum_{i=1}^{m}\\mathbb{P}( A_{i} )\\]"
   },
   {
     "objectID": "slides/module1.html#proof-of-formula-for-complement",
     "href": "slides/module1.html#proof-of-formula-for-complement",
     "title": "",
     "section": "Proof of formula for complement",
-    "text": "Proof of formula for complement\nRecall Mathematical Theorem: A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.\nBy “proof” regarding probability formulas, we use a chain of reasoning to show they are implied by means of the accepted three Axioms."
-  },
-  {
-    "objectID": "slides/module1.html#proof-of-formula-for-complement-1",
-    "href": "slides/module1.html#proof-of-formula-for-complement-1",
-    "title": "",
-    "section": "Proof of formula for complement",
-    "text": "Proof of formula for complement\n\nProof: \\(\\mathbb{P}( A^{c} ) \\ = \\ 1-\\mathbb{P}( A )\\)\n\nNote that (1) \\(\\Omega = A \\cup A^{c}\\) and (2) \\(A\\) and \\(A^c\\) are disjoint.\nBy Axioms 1 and 3, we have \\[1 =  \\mathbb{P}( \\Omega )  =  \\mathbb{P}(A  ) +\\mathbb{P}( A^c)\\] which implies \\(\\mathbb{P}( A^{c} ) =1-\\mathbb{P}( A )\\)."
+    "text": "Proof of formula for complement\nWe need to show that if \\(\\mathbb{P}\\) satisfies Axioms 1, 2, and 3, and \\(A\\) is an arbitrary event, then necessarily \\(\\mathbb{P}( A^{c} ) \\ = \\ 1-\\mathbb{P}( A )\\).\n\nProof\n\n\\(\\Omega = A \\cup A^{c}\\) and \\(A\\) and \\(A^c\\) are disjoint.\nUsing Axiom 1 \\[ 1 = \\mathbb{P}(\\Omega) = \\mathbb{P}( A \\cup A^{c} )\\]\nAxiom 3 says that \\(\\mathbb{P}( A \\cup A^{c} ) = \\mathbb{P}(A  ) +\\mathbb{P}( A^c)\\)\nPutting the last 2 statements together we get \\(1 =  \\mathbb{P}( \\Omega )  =  \\mathbb{P}(A  ) +\\mathbb{P}( A^c)\\).\nSince \\(\\mathbb{P}(A)\\) and \\(\\mathbb{P}(A^c)\\) are just numbers, simple arithmetic gives \\[1-\\mathbb{P}( A ) = \\mathbb{P}( A^{c} )\\]"
   },
   {
     "objectID": "slides/module1.html#monotonicity",

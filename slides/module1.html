@@ -126,18 +126,6 @@
     }
   </style>
   <style>
-  .Example {
-    --color1: #a393bf;
-    --color2: #9c76e0;
-  }
-  .Theorem {
-    --color1: #e54655;
-    --color2: #a41623;
-  }
-  .Definition {
-    --color1: #25ba70;
-    --color2: #177245;
-  }
   .Conjecture {
     --color1: #e54655;
     --color2: #a41623;
@@ -146,7 +134,19 @@
     --color1: #c0c0c0;
     --color2: #808080;
   }
+  .Example {
+    --color1: #a393bf;
+    --color2: #9c76e0;
+  }
+  .Definition {
+    --color1: #25ba70;
+    --color2: #177245;
+  }
   .Corollary {
+    --color1: #e54655;
+    --color2: #a41623;
+  }
+  .Theorem {
     --color1: #e54655;
     --color2: #a41623;
   }
@@ -157,7 +157,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="random-swirls.svg" class="quarto-title-block center">
+<section id="title-slide" class="quarto-title-block center">
   <div style="text-align:center; font-family:Gilda Display; font-size:1.3em; padding: 1em 0.5em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);">
       <p class="org"></p>
       <br>
@@ -177,7 +177,20 @@
 </section>
 <section id="welcome-house-rules" class="title-slide slide level1 center" data-number="1">
 <h1><span class="header-section-number">1</span> Welcome &amp; “House rules”</h1>
-
+<ul>
+<li>Weird schedule (Mondays and Fridays)</li>
+<li>Many opportunities to work and get help</li>
+<li>Weekly ``routine’’:
+<ul>
+<li>Class meetings: 3 hours</li>
+<li>Pre-class reading: 1 to 2 hours</li>
+<li>WebWork &amp; assignments: 2 to 3 hours</li>
+<li>Office hour</li>
+<li>Total weekly hours: 7 to 9 hours</li>
+</ul></li>
+<li>Problem solutions are dangerous!!</li>
+<li>Online “solutions”: you must prove whatever you claim</li>
+</ul>
 </section>
 
 <section id="syllabus---expectations---grades" class="title-slide slide level1 center" data-number="2">
@@ -188,7 +201,17 @@
 <section>
 <section id="basics-of-probability" class="title-slide slide level1 center" data-number="3">
 <h1><span class="header-section-number">3</span> Basics of probability</h1>
-
+<ul>
+<li>Formal treatment of randomness</li>
+<li>Key to this are models</li>
+<li>Defining a probability requires the following:
+<ul>
+<li>Random experiment</li>
+<li>Sample space</li>
+<li>Event</li>
+<li>Rules to combine events (set operations)</li>
+</ul></li>
+</ul>
 </section>
 <section id="experiments" class="slide level2">
 <h2>Experiments</h2>
@@ -320,36 +343,57 @@
 <section id="de-morgans-laws" class="slide level2">
 <h2>De Morgan’s Laws</h2>
 <div id="Theorem*-3.6" class="Theorem">
-<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem</strong></summary><div>For any two events (sets) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have <span class="math display">\[( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}.\]</span><p></p>
+<p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem</strong></summary><div>For any two events (sets) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have <span class="math display">\[
+( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}
+\]</span><p></p>
 </div></details>
 </div>
-<p>To prove two events are equal as above, the general approach is to show both <span class="math display">\[( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}\]</span> and <span class="math display">\[A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}.\]</span></p>
-<p>We give part of a proof on the next slide.</p>
+<p>To prove the theorem it is sufficient to show that <span class="math display">\[
+( A\cup B )^{c}  \subseteq  A^{c}\cap B^{c}
+\]</span> and that <span class="math display">\[
+A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}
+\]</span></p>
 </section>
 <section id="proof-of-de-morgans-laws" class="slide level2">
 <h2>Proof of De Morgan’s Laws</h2>
 <div id="Proof*-3.7" class="Proof">
 <p></p><details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>Let us show <span class="math inline">\(( A\cup B ) ^{c}  \subseteq  A^{c}\cap B^{c}\)</span>:<p></p>
-<ul>
-<li><p>take any <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span>, we must have <span class="math inline">\(\omega \notin A \cup B\)</span>;</p></li>
-<li><p>This implies <span class="math inline">\(\omega \notin A\)</span> and <span class="math inline">\(\omega \notin B\)</span> (because if either <span class="math inline">\(\omega \in A\)</span> or <span class="math inline">\(\omega \in B\)</span> then we’d have <span class="math inline">\(\omega \in A \cup B\)</span>).</p></li>
-<li><p>Hence <span class="math inline">\(\omega \in A^c\)</span> and <span class="math inline">\(\omega \in B^c\)</span>,</p></li>
-<li><p>This is the same as <span class="math inline">\(\omega \in A^c \cap B^c\)</span>.</p></li>
-<li><p>That is, <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span> implies <span class="math inline">\(\omega \in A^c \cap B^c\)</span> which is <span class="math display">\[( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c}.\]</span></p></li>
-</ul>
-<p>Try it yourself to prove <span class="math inline">\(A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}\)</span>.</p>
+<ol type="1">
+<li><p>Take any <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span>, then we must have <span class="math inline">\(\omega \notin A \cup B\)</span>;</p></li>
+<li><p>This implies that <span class="math inline">\(\omega \notin A\)</span> and <span class="math inline">\(\omega \notin B\)</span> (because if either <span class="math inline">\(\omega \in A\)</span> or <span class="math inline">\(\omega \in B\)</span> then we’d have <span class="math inline">\(\omega \in A \cup B\)</span>);</p></li>
+<li><p>Hence: <span class="math inline">\(\omega \in A^c\)</span> and <span class="math inline">\(\omega \in B^c\)</span>;</p></li>
+<li><p>Which is the same as <span class="math inline">\(\omega \in A^c \cap B^c\)</span>;</p></li>
+<li><p>Thus, we showed that <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span> implies <span class="math inline">\(\omega \in A^c \cap B^c\)</span>. In other words, that <span class="math display">\[( A\cup B ) ^{c} \, \subseteq \, A^{c}\cap B^{c} \, .\]</span></p></li>
+</ol>
+<p>We leave it to you to prove that <span class="math inline">\(A^{c}\cap B^{c}  \subseteq  ( A\cup B ) ^{c}\)</span>.</p>
 </div></details>
 </div>
 </section>
-<section id="useful-identities" class="slide level2">
-<h2>Useful Identities</h2>
+<section id="some-useful-identities" class="slide level2">
+<h2>Some Useful Identities</h2>
 <ul>
-<li><p><span class="math inline">\(A \ =  ( A\cap B ) \, \cup \,  ( A\cap B^{c} )\)</span></p>
+<li><span class="math inline">\(A \ =  ( A\cap B ) \, \cup \,  ( A\cap B^{c} )\)</span></li>
+</ul>
+<div id="Proof*-3.8" class="Proof">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
 <ul>
-<li><p>First: <span class="math inline">\(A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>: Take <span class="math inline">\(\omega \in A\)</span>, then either <span class="math inline">\(\omega \in B\)</span> or <span class="math inline">\(\omega \notin B\)</span>. In the first case: <span class="math inline">\(\omega \in A \cap B\)</span>, in the second case: <span class="math inline">\(\omega \in A \cap B^c\)</span>. Thus <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>.</p></li>
-<li><p>Also: <span class="math inline">\(\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A\)</span>: Take <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>. If <span class="math inline">\(\omega \in \left( A\cap B\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>. If <span class="math inline">\(\omega \in \left( A\cap B^{c}\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>. Thus, we always have <span class="math inline">\(\omega \in A\)</span>.</p></li>
-</ul></li>
-<li><p><span class="math inline">\(A \, \cup\,  B \ = \ A \, \cup \left( B\cap A^{c}\right)\)</span></p>
+<li>First: <span class="math inline">\(A \subseteq \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>:
+<ol type="1">
+<li>Take <span class="math inline">\(\omega \in A\)</span>, then either <span class="math inline">\(\omega \in B\)</span> or <span class="math inline">\(\omega \notin B\)</span>.</li>
+<li>In the first case: <span class="math inline">\(\omega \in A \cap B\)</span>. In the second case: <span class="math inline">\(\omega \in A \cap B^c\)</span>.</li>
+<li>Thus <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>.</li>
+</ol></li>
+<li>Also: <span class="math inline">\(\left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right) \subseteq A\)</span>:
+<ol type="1">
+<li>Take <span class="math inline">\(\omega \in \left( A\cap B\right) \, \cup \, \left( A\cap B^{c}\right)\)</span>.</li>
+<li>If <span class="math inline">\(\omega \in \left( A\cap B\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>, and if <span class="math inline">\(\omega \in \left( A\cap B^{c}\right)\)</span> then <span class="math inline">\(\omega \in A\)</span>.</li>
+<li>Thus, we always have <span class="math inline">\(\omega \in A\)</span>.</li>
+</ol></li>
+</ul>
+</div></details>
+</div>
+<ul>
+<li><span class="math inline">\(A \, \cup\,  B \ = \ A \, \cup \left( B\cap A^{c}\right)\)</span>
 <ul>
 <li>Prove it!</li>
 </ul></li>
@@ -357,64 +401,82 @@
 </section>
 <section id="power-set" class="slide level2">
 <h2>Power set</h2>
-<p>The power set of <span class="math inline">\(\Omega\)</span> (denoted <span class="math inline">\(2^\Omega\)</span>) is the set of all possible subsets of <span class="math inline">\(\Omega\)</span>. <strong>Example:</strong> Suppose <span class="math inline">\(\Omega \ = \ \{ 1,2,3 \}\)</span>. Then <span class="math display">\[2^{\Omega }  \,
+<p>The power set of <span class="math inline">\(\Omega\)</span> (denoted <span class="math inline">\(2^\Omega\)</span>) is the set of all possible subsets of <span class="math inline">\(\Omega\)</span>.</p>
+<p>For example, if <span class="math inline">\(\Omega \ = \ \{ 1,2,3 \}\)</span> then: <span class="math display">\[2^{\Omega }  \,
 =  \Bigl\{
 \varnothing ,
 \{ 1\} , \{ 2 \} , \{ 3 \} , \{ 1,2 \} , \{ 1,3 \} , \{ 2,3 \}, \{ 1, 2, 3 \} \Bigr\}\]</span></p>
 <ul>
 <li><p>The symbol <span class="math inline">\(\varnothing\)</span> denotes the empty set.</p></li>
-<li><p>If <span class="math inline">\(\Omega\)</span> has <span class="math inline">\(n\)</span> elements, then <span class="math inline">\(2^{\Omega }\)</span> has <span class="math inline">\(2^{n}\)</span> elements. In symbols: <span class="math display">\[\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }.\]</span></p></li>
+<li><p>If <span class="math inline">\(\Omega\)</span> has <span class="math inline">\(n\)</span> elements, then <span class="math inline">\(2^{\Omega }\)</span> has <span class="math inline">\(2^{n}\)</span> elements. In symbols: <span class="math display">\[\#  ( 2^{\Omega } ) \ = \ 2^{\#\Omega }\]</span> How can we prove this when <span class="math inline">\(\#\Omega = n \in \mathbb{N}\)</span>?</p></li>
 </ul>
 </section>
-<section id="reasoning-for-the-size-of-power-set" class="slide level2">
-<h2>Reasoning for the size of power set</h2>
-<p>List the <span class="math inline">\(n\)</span> elements of <span class="math inline">\(\Omega\)</span> as <span class="math display">\[\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}\]</span></p>
-<p>Any event <span class="math inline">\(A \subseteq \Omega\)</span> is uniquely obtained by including or excluding each of <span class="math inline">\(\omega _{1},\omega _{2},\ldots,\omega _{n}\)</span>.</p>
-<p>Hence, we have 2 options for each of the <span class="math inline">\(n\)</span> sample points, leading to <span class="math inline">\(2^n\)</span> distinct outcomes.</p>
+<section id="counting-listing" class="slide level2">
+<h2>Counting / listing</h2>
+<p>List the <span class="math inline">\(n\)</span> elements of <span class="math inline">\(\Omega\)</span> as <span class="math inline">\(\Omega =\left\{ \omega _{1},\omega _{2},...,\omega _{n}\right\}\)</span>.</p>
+<p>Any event <span class="math inline">\(A \subseteq \Omega\)</span> can be uniquely represented by a sequence of 0’s and 1’s: <span class="math display">\[
+x_i = \left\{ \begin{array}{ll} 1 &amp; \text{ if } \omega_i \in A \, , \\
+0 &amp; \text{ if } \omega_i \notin A \, . \end{array} \right.
+\quad 1 \le i \le n \, .
+\]</span> To each event <span class="math inline">\(A\)</span> we associate the string <span class="math inline">\((x_1, x_2, \ldots, x_n)\)</span>: <span class="math display">\[
+A \ \longrightarrow \ (x_1, x_2, \ldots, x_n)
+\]</span> And, each sequence corresponds to an event: <span class="math inline">\((0, 1, 1, \ldots, 0, 1) \ \longrightarrow \ B\)</span>.</p>
+<p>There are <span class="math inline">\(2^n\)</span> distinct such <span class="math inline">\(n\)</span>-long sequences. Each of them corresponds uniquely to one event, and every event corresponds to one such sequence. Hence there are the same number of events as there are sequences (<span class="math inline">\(2^n\)</span>).</p>
+</section>
+<section id="counting-listing-1" class="slide level2">
+<h2>Counting / listing</h2>
+<div id="Example*-3.9" class="Example">
+<p></p><details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>How many license plates can you create using a triplet of one letter, one digit, and one letter (e.g.&nbsp;R2A)?<p></p>
+</div></details>
+</div>
 </section></section>
 <section>
 <section id="probability" class="title-slide slide level1 center" data-number="4">
 <h1><span class="header-section-number">4</span> Probability</h1>
 
 </section>
-<section id="probability-of-an-event-an-possible-outcome" class="slide level2">
-<h2>Probability of an event, an possible outcome</h2>
-<p>Even though we cannot predict the outcome of an experiment well enough in many cases, we have an idea about the chance of various outcomes:</p>
+<section id="probability-of-an-event" class="slide level2">
+<h2>Probability of an event</h2>
 <ul>
-<li><p>If you toss a coin, the chance of observing a head is formidable.</p></li>
-<li><p>If you buy a lottery ticket, the chance of winning the grand price is negligible.</p></li>
+<li><p>Even though random outcomes cannot be predicted, in some cases we have an idea about the chance that an outcome occurs.</p>
+<ul>
+<li><p>If you toss a fair coin, the chance of observing a head is the same as that of observing a tail.</p></li>
+<li><p>If you buy a lottery ticket, the chance of winning is very small.</p></li>
+</ul></li>
+<li><p>A probability function <span class="math inline">\(\mathbb{P}\)</span> quantifies these chances.</p></li>
+<li><p>Probability functions are computed on events <span class="math inline">\(A \in \mathcal{B}\)</span>. We calculate <span class="math inline">\(\mathbb{P}(A)\)</span>. Mathematically / formally, we have: <span class="math display">\[
+\mathbb{P}\, : \, \mathcal{B} \to [0, 1]
+\]</span> where <span class="math inline">\(\mathcal{B}\)</span> is a collection of possible events.</p></li>
+<li><p>Probability functions need to do this “coherently”</p></li>
 </ul>
-<p>In probability theory, we quantify the chance for “every subset” of the sample space in a self-consistent way.</p>
-<p>Such a system was first proposed by Kolmogorov.</p>
 </section>
 <section id="probability-axioms" class="slide level2">
 <h2>Probability Axioms</h2>
-<p>Let <span class="math inline">\(\Omega\)</span> be a sample space and <span class="math inline">\({\cal B}\)</span> be the collection of “all subsets” of <span class="math inline">\(\Omega\)</span>.</p>
+<p>Let <span class="math inline">\(\Omega\)</span> be a sample space and <span class="math inline">\({\cal B}\)</span> be a collection of events (i.e.&nbsp;subsets of <span class="math inline">\(\Omega\)</span>).</p>
 <div id="Definition*-4.1" class="Definition">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>
-<p>A probability function is a function <span class="math inline">\(\mathbb{P}\)</span> with domain <span class="math inline">\({\cal B}\)</span> so that</p>
+<p>A probability function is a function <span class="math inline">\(\mathbb{P}\)</span> with domain <span class="math inline">\({\cal B}\)</span> such that</p>
 <ol type="1">
-<li><p><strong>Axiom 1:</strong> <span class="math inline">\(\mathbb{P}( \Omega ) =1\)</span>.</p></li>
-<li><p><strong>Axiom 2:</strong> For all <span class="math inline">\(A \in {\cal B}\)</span>, we have <span class="math inline">\(\mathbb{P}( A ) \geq 0\)</span>.</p></li>
-<li><p><strong>Axiom 3:</strong> If <span class="math inline">\(\{ A_{n}\}_{n \ge 1}\)</span> are a sequence of <strong>disjoint</strong> events, then <span class="math display">\[\mathbb{P}\left( \bigcup_{n=1}^{\infty }A_{n}\right) \,
+<li><p><strong>Axiom 1: </strong> <span class="math inline">\(\mathbb{P}( \Omega ) = 1\)</span>;</p></li>
+<li><p><strong>Axiom 2: </strong> <span class="math inline">\(\mathbb{P}( A ) \geq 0\)</span> for any <span class="math inline">\(A \in {\cal B}\)</span>;</p></li>
+<li><p><strong>Axiom 3: </strong> If <span class="math inline">\(\{ A_{n}\}_{n \ge 1}\)</span> is a sequence of <strong>disjoint</strong> events, then <span class="math display">\[\mathbb{P}\left( \bigcup_{n=1}^{\infty }A_{n}\right) \,
 = \sum_{n=1}^{\infty }\mathbb{P}( A_{n})\]</span></p></li>
 </ol>
 </div></details>
 </div>
+<p>Note: <span class="math inline">\(\{ A_{n}\}_{n \ge 1}\)</span> is a sequence of <strong>disjoint</strong> events when <span class="math inline">\(A_i \cap A_j = \varnothing\)</span> if <span class="math inline">\(i \ne j\)</span></p>
 </section>
 <section id="probability-1" class="slide level2">
 <h2>Probability</h2>
 <ul>
-<li><p>The value of <span class="math inline">\(\mathbb{P}(A)\)</span> is called the probability of event <span class="math inline">\(A\)</span>.</p></li>
-<li><p>Apparently, <span class="math inline">\(0 \leq \mathbb{P}(A) \leq 1\)</span>: trivial but useful. If your calculation gives an event negative probability value, re-do the calculation.</p></li>
-<li><p>The key phrase <strong>a sequence of</strong> is important: this rule does not go beyond.</p></li>
-<li><p>Being <strong>disjoint</strong> means for all <span class="math inline">\(i \neq j\)</span>, <span class="math display">\[A_i \cap A_j = \varnothing.\]</span></p></li>
-<li><p>As a mathematical theory, probability definition does not rely on an “uncertainty experiment”.</p></li>
+<li><p>Kolmogorov showed how one can construct such functions, and that a probability function only needs to satisfy those three properties to be a “coherent” probability function</p></li>
+<li><p>In other words: every desirable property of a probability <span class="math inline">\(\mathbb{P}\)</span> can be shown to hold using only Axioms 1, 2, and 3 (and logic).</p></li>
+<li><p>Alternatively: any function <span class="math inline">\(\mathbb{P}\)</span> that satisfies Axioms 1, 2, and 3 is a “proper” probability function.</p></li>
 </ul>
 </section>
 <section id="properties-of-the-probability-function" class="slide level2">
 <h2>Properties of the probability function</h2>
-<p>Unless otherwise specified, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and so on are events, and <span class="math inline">\(\Omega\)</span> is the sample space.</p>
+<p>In general, <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, etc. denote arbitrary events. <span class="math inline">\(\Omega\)</span> is the sample space.</p>
 <ul>
 <li><p>Probability of the complement: <span class="math display">\[\mathbb{P}( A^{c} ) =1-\mathbb{P}( A )\]</span></p></li>
 <li><p>Monotonicity: <span class="math display">\[A\subset B\Rightarrow \mathbb{P}( A ) \leq \mathbb{P}(B )\]</span></p></li>
@@ -424,17 +486,16 @@
 </section>
 <section id="proof-of-formula-for-complement" class="slide level2">
 <h2>Proof of formula for complement</h2>
-<p>Recall <strong>Mathematical Theorem:</strong> A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.</p>
-<p>By “proof” regarding probability formulas, we use a chain of reasoning to show they are implied by means of the accepted three Axioms.</p>
-</section>
-<section id="proof-of-formula-for-complement-1" class="slide level2">
-<h2>Proof of formula for complement</h2>
-<div id="mathbbp-ac-1-mathbbp-a" class="Proof" title="\mathbb{P}( A^{c} ) \ = \ 1-\mathbb{P}( A )">
-<details class="Proof fbx-default closebutton"><summary><strong>Proof: </strong><span class="math inline">\(\mathbb{P}( A^{c} ) \ = \ 1-\mathbb{P}( A )\)</span></summary><div>
-<ul>
-<li><p>Note that (1) <span class="math inline">\(\Omega = A \cup A^{c}\)</span> and (2) <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> are disjoint.</p></li>
-<li><p>By Axioms 1 and 3, we have <span class="math display">\[1 =  \mathbb{P}( \Omega )  =  \mathbb{P}(A  ) +\mathbb{P}( A^c)\]</span> which implies <span class="math inline">\(\mathbb{P}( A^{c} ) =1-\mathbb{P}( A )\)</span>.</p></li>
-</ul>
+<p>We need to show that if <span class="math inline">\(\mathbb{P}\)</span> satisfies Axioms 1, 2, and 3, and <span class="math inline">\(A\)</span> is an arbitrary event, then necessarily <span class="math inline">\(\mathbb{P}( A^{c} ) \ = \ 1-\mathbb{P}( A )\)</span>.</p>
+<div id="section" class="Proof" title="">
+<details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
+<ol type="1">
+<li><p><span class="math inline">\(\Omega = A \cup A^{c}\)</span> and <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> are disjoint.</p></li>
+<li><p>Using Axiom 1 <span class="math display">\[ 1 = \mathbb{P}(\Omega) = \mathbb{P}( A \cup A^{c} )\]</span></p></li>
+<li><p>Axiom 3 says that <span class="math inline">\(\mathbb{P}( A \cup A^{c} ) = \mathbb{P}(A  ) +\mathbb{P}( A^c)\)</span></p></li>
+<li><p>Putting the last 2 statements together we get <span class="math inline">\(1 =  \mathbb{P}( \Omega )  =  \mathbb{P}(A  ) +\mathbb{P}( A^c)\)</span>.</p>
+<p>Since <span class="math inline">\(\mathbb{P}(A)\)</span> and <span class="math inline">\(\mathbb{P}(A^c)\)</span> are just numbers, simple arithmetic gives <span class="math display">\[1-\mathbb{P}( A ) = \mathbb{P}( A^{c} )\]</span></p></li>
+</ol>
 </div></details>
 </div>
 </section>
