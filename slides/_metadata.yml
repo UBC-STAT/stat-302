@@ -11,8 +11,8 @@ format:
   revealjs:
     template-partials:
       - title-slide.html
-    title-slide-attributes:
-      data-background-image: random-swirls.svg
+#    title-slide-attributes:
+      # data-background-image: random-swirls.svg
     theme: [default, slide-theme.scss]
     chalkboard: true
     width: 1600
