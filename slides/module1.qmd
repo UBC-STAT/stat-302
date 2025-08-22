@@ -14,7 +14,7 @@ format:
 
 - Weird schedule (Mondays and Fridays)
 - Many opportunities to work and get help
-- Weekly ``routine'':
+- Weekly "routine":
   - Class meetings: 3 hours
   - Pre-class reading: 1 to 2 hours
   - WebWork & assignments: 2 to 3 hours
@@ -435,44 +435,52 @@ necessarily $\P ( A^{c} ) \ = \ 1-\P ( A )$.
 
 ## Monotonicity
 
-::: Proof
 ### $A \subset B \, \Rightarrow \, \P ( A) \leq \P ( B)$
 
-
-
-- We note that $B =  ( B\cap A ) \cup  ( B\cap A^{c})$; 
-
-- Since $A \subset B$ is given, we have $B \cap A = A$. Hence,
-    $B =  A \cup ( B \cap A^{c})$ 
-
-- In addition, $A$ and $B \cap A^{c}$ are disjoint. By Axiom 3 , we
-    get $\P ( B )  =  \P ( A ) + \P ( B\cap A^{c})$.
-
-    
-
-- By Axiom 2, $\P ( B\cap A^{c}) \ge 0$. Thus,
-    $$\P ( B ) = \P ( A ) + P  ( B\cap A^{c}) \ge  \P ( A ).$$ 
-    
-:::
-
-
-
-## Probability of a union
-
 ::: Proof
-### $\P ( A\cup B ) =\P ( A ) +\P( B ) -\P ( A\cap B )$
+1. Prove that $B =  ( B\cap A ) \cup  ( B\cap A^{c})$; 
 
-- First recall that $A\cup B = A\cup  ( B\cap A^{c} )$.
+2. Since we know that $A \subset B$, then $B \cap A = A$ (prove it!). Hence
+   the equation above is
+   $$B = ( B\cap A ) \cup  ( B\cap A^{c}) = A \cup ( B \cap A^{c})$$ 
 
-- Note that $A$ and $B\cap A^{c}$ are disjoint events. Hence by Axiom
-    3: $$\P ( A\cup B ) =\P ( A ) +\P ( B \cap A^{c} )$$
+3. Since $A$ and $B \cap A^{c}$ are disjoint (why?), Axiom 3
+   says $\P ( B )  =  \P ( A ) + \P ( B\cap A^{c})$
 
-- Splitting $B$ into union of two disjoint events:
-    $B  =  ( B\cap A ) \cup  ( B\cap A^c )$ and applying Axiom 3, we get
-    $$\P ( B) = \P ( B\cap A ) +\P ( B\cap A^c )$$
-
-- The formula is obtained by combining the above two conclusions.
+4. Axiom 2 ensures that $\P ( B\cap A^{c}) \ge 0$. Thus,
+   the last equation satisfies
+   $$\P ( B ) = \P ( A ) + P  ( B\cap A^{c}) \ge  \P ( A )$$ 
 :::
+
+## Probability of a union of two events
+
+### $\P ( A\cup B ) =\P ( A ) +\P( B ) -\P ( A\cap B )$
+::: Proof
+1. First prove that $A\cup B = A\cup  ( B\cap A^{c} )$. Since $A$ and 
+   $B\cap A^{c}$ are disjoint events, Axiom 3 implies that  
+   $$\P ( A\cup B ) =\P ( A ) +\P ( B \cap A^{c} )$$
+3. "Slice" $B$ into the part it shares with $A$ and 
+   the rest: $B  =  ( B\cap A ) \cup  ( B\cap A^c )$, where the 
+   events on the right-hand side are disjoint. Apply 
+   Axiom 3 to get 
+   $\P ( B) = \P ( B\cap A ) +\P ( B\cap A^c )$
+
+4. The last equation can be re-written as
+   $\P ( B\cap A^c ) = \P ( B)  -  \P ( B\cap A )$
+   
+5. Replace this expression for $\P( B\cap A^c )$
+   in 2. to get
+   $$\P ( A\cup B ) =\P ( A ) +\P ( B \cap A^{c} ) = 
+   \P ( A ) + \P ( B)  -  \P ( B\cap A )$$
+:::
+
+## Probability of a union of two events
+
+- Ven diagrams are not proofs. They are sometimes 
+useful, but a diagram is not a proof or a logical
+argument. 
+
+- This is not a proof:
 
 
 ## Proof of Boole's inequality
