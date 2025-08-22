@@ -38,63 +38,35 @@
     "href": "slides/module1.html#uncertainty",
     "title": "",
     "section": "Uncertainty",
-    "text": "Uncertainty\nCommon sense: The outcome of some experiments cannot be determined with sufficient certainty beforehand.\n\nExample\n\nRoll a die: which side will show?\nDraw a card from a well-shuffled deck: which one you will get?\nHow many students will be in the classroom today?"
+    "text": "Uncertainty\nThe outcome of some experiments cannot be determined beforehand.\n\nExample\n\nRoll a die: which side will show?\nDraw a card from a well-shuffled deck: which one you will get?\nHow many students will be in the classroom today?"
   },
   {
     "objectID": "slides/module1.html#probability-theory",
     "href": "slides/module1.html#probability-theory",
     "title": "",
     "section": "Probability theory",
-    "text": "Probability theory\n\nEven though there seem to be no rules on the outcome of rolling a die, if we repeat the experiment many times, some pattern emerges.\nProbability theory aims to describe the pattern with a mathematical model.\nIn ideal situations, the probability theory can be very successful: Casino always wins."
-  },
-  {
-    "objectID": "slides/module1.html#probability-theory-1",
-    "href": "slides/module1.html#probability-theory-1",
-    "title": "",
-    "section": "Probability theory",
-    "text": "Probability theory\n\nAxioms in mathematics: Statements or propositions regarded as being established, accepted, or self-evidently true.\nMathematical Theorem: A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.\nIf the accepted truths are falsified, the Theorem is also falsified."
-  },
-  {
-    "objectID": "slides/module1.html#probability-theory-2",
-    "href": "slides/module1.html#probability-theory-2",
-    "title": "",
-    "section": "Probability theory",
-    "text": "Probability theory\n\nThe probability theory in Stat 302 is a branch of mathematics. It is a system based on a set of Axioms.\nIts conclusions cannot be falsified unless the Axioms are falsified.\nStat 302 mostly lectures on mathematical aspects of the probability theory.\nWe use real world examples to demonstrate the relevance of the theory."
-  },
-  {
-    "objectID": "slides/module1.html#probability",
-    "href": "slides/module1.html#probability",
-    "title": "",
-    "section": "Probability",
-    "text": "Probability\nWe now motivate two subjects of probability based on experiment whose outcome is uncertain."
+    "text": "Probability theory\n\nEven though die rolls are random, patterns emerge when we repeat the experiment many times.\nProbability Theory describes such patterns via mathematical models.\nIt is a branch of Mathematics, and is based on a set of Axioms.\nAxioms: Statements or propositions accepted to hold true\nTheorems: Propositions which are established to hold true using sound logical reasoning."
   },
   {
     "objectID": "slides/module1.html#sample-space",
     "href": "slides/module1.html#sample-space",
     "title": "",
     "section": "Sample Space",
-    "text": "Sample Space\n\nDefinitionSample space is the set of all possible outcomes of a random experiment.\n\n\nWe denote it by \\(\\Omega\\), and a generic outcome, also called sample point, by \\(\\omega\\) (i.e. \\(\\omega \\in \\Omega\\)).\n\nThere is no rule that we have to use \\(\\Omega\\) as the notation for the sample space.\nAlways read the context."
-  },
-  {
-    "objectID": "slides/module1.html#sample-space-1",
-    "href": "slides/module1.html#sample-space-1",
-    "title": "",
-    "section": "Sample Space",
-    "text": "Sample Space\n\nExample\n\nRoll a die: \\(\\Omega = \\{ 1,2,3,4,5, 6 \\}\\).\nDraw a card: \\(\\Omega = \\{ 2\\spadesuit, 2\\diamondsuit, \\ldots, A\\clubsuit ,A \\heartsuit  \\}\\).\n% yield of chemical process: \\(\\Omega =\\left[ 0,100\\right]\\).\nMaximum wind speed in YVR in 2023: \\(\\Omega =[0, \\infty)\\)\n\n\n\nRemark: We may not need to provide full description of \\(\\Omega\\) in many cases."
+    "text": "Sample Space\n\nDefinitionSample space is the set of all possible outcomes of a random experiment.\n\n\nWe denote it by \\(\\Omega\\), and a generic outcome, also called sample point, by \\(\\omega\\) (i.e. \\(\\omega \\in \\Omega\\)).\n\nExample\n\nRoll a die: \\(\\Omega = \\{ 1,2,3,4,5, 6 \\} \\subset \\mathbb{N}\\).\nDraw a card from a poker deck: \\(\\Omega = \\{ 2\\spadesuit, 2\\diamondsuit, \\ldots, A\\clubsuit ,A \\heartsuit  \\}\\)\nWind speed at YVR (km/h): \\(\\Omega =[0, \\infty) \\subset \\mathbb{R}\\).\nWait time for R4 at UBC (min): \\(\\Omega =[0, 720) \\subset \\mathbb{R}\\)"
   },
   {
     "objectID": "slides/module1.html#events",
     "href": "slides/module1.html#events",
     "title": "",
     "section": "Events",
-    "text": "Events\n\nDefinitionAn event is a subset of sample space \\(\\Omega\\).\n\n\nNotation: We commonly use upper case letters (\\(A\\), \\(B\\), \\(C\\), …) for events.\nBecause events are sets, all notions regarding sets are applicable:\n\n\\(\\omega \\in A\\) means “\\(\\omega\\) is an element of \\(A\\)”.\n\\(C \\subset D\\) means “\\(C\\) is a subset of \\(D\\)”.\nRemember operations \\(A \\cup B\\), \\(A \\cap B\\) and so on."
+    "text": "Events\n\nDefinitionAn event is a subset of the sample space \\(\\Omega\\).\n\n\nNotation: We commonly use upper case letters (\\(A\\), \\(B\\), \\(C\\), …) for events.\nEvents are sets:\n\n\\(\\omega \\in A\\) means “\\(\\omega\\) is an element of \\(A\\)”.\n\\(C \\subset D\\) means “\\(C\\) is a subset of \\(D\\)”."
   },
   {
     "objectID": "slides/module1.html#examples",
     "href": "slides/module1.html#examples",
     "title": "",
     "section": "Examples",
-    "text": "Examples\nEvents of interests are often formed by outcomes sharing some properties.\n\nExample\n\nRoll a dice:\n\\(A= \\{ 2, 4, 6 \\}\\) (“roll an even number”);\n\\(B= \\{1, 2, 3\\}\\) (“roll a 3 or less”).\nChemical process: \\(C= [ 9, 14 ] = \\{ \\text{yield is between 9 and 14\\%} \\}\\)\nMax-wind-speed: \\(A=(80, \\infty )= \\{ \\text{over 80 km/hour}\\}\\)\n\n\n\nIt is a useful skill to precisely list the sample points in a verbally described event."
+    "text": "Examples\nEvents are often formed by outcomes sharing some property. It’s a good idea to practice listing explicitly the sample points of events described with words.\n\nExample\n\nRoll a dice:\n\n\\(A = \\text{\"roll an even number\"} = \\{ 2, 4, 6 \\}\\)\n\n\\(B = \\text{\"roll a 3 or less\"} = \\{1, 2, 3\\}\\)\n\\(C = \\text{\"roll an even number no higher than 3\"} = \\{ 2 \\}\\)\n\nBus wait time: \\(C = \\text{\"wait is less than half an hour\"} = [15, 30]\\)\nMax-wind-speed: \\(A = \\text{\"wind is over 80 km/hour\"} = (80, \\infty )\\)"
   },
   {
     "objectID": "slides/module1.html#set-operations",
@@ -160,8 +132,8 @@
     "text": "Probability Axioms\nLet \\(\\Omega\\) be a sample space and \\({\\cal B}\\) be the collection of “all subsets” of \\(\\Omega\\).\n\nDefinition\nA probability function is a function \\(\\mathbb{P}\\) with domain \\({\\cal B}\\) so that\n\nAxiom 1: \\(\\mathbb{P}( \\Omega ) =1\\).\nAxiom 2: For all \\(A \\in {\\cal B}\\), we have \\(\\mathbb{P}( A ) \\geq 0\\).\nAxiom 3: If \\(\\{ A_{n}\\}_{n \\ge 1}\\) are a sequence of disjoint events, then \\[\\mathbb{P}\\left( \\bigcup_{n=1}^{\\infty }A_{n}\\right) \\,\n= \\sum_{n=1}^{\\infty }\\mathbb{P}( A_{n})\\]"
   },
   {
-    "objectID": "slides/module1.html#probability-2",
-    "href": "slides/module1.html#probability-2",
+    "objectID": "slides/module1.html#probability-1",
+    "href": "slides/module1.html#probability-1",
     "title": "",
     "section": "Probability",
     "text": "Probability\n\nThe value of \\(\\mathbb{P}(A)\\) is called the probability of event \\(A\\).\nApparently, \\(0 \\leq \\mathbb{P}(A) \\leq 1\\): trivial but useful. If your calculation gives an event negative probability value, re-do the calculation.\nThe key phrase a sequence of is important: this rule does not go beyond.\nBeing disjoint means for all \\(i \\neq j\\), \\[A_i \\cap A_j = \\varnothing.\\]\nAs a mathematical theory, probability definition does not rely on an “uncertainty experiment”."

@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Matias Salibian Barrera and Daniel J. McDonald">
-  <meta name="dcterms.date" content="2025-08-21">
+  <meta name="dcterms.date" content="2025-08-22">
   <title>Module 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -126,13 +126,13 @@
     }
   </style>
   <style>
-  .Corollary {
+  .Example {
+    --color1: #a393bf;
+    --color2: #9c76e0;
+  }
+  .Theorem {
     --color1: #e54655;
     --color2: #a41623;
-  }
-  .Proof {
-    --color1: #c0c0c0;
-    --color2: #808080;
   }
   .Definition {
     --color1: #25ba70;
@@ -142,11 +142,11 @@
     --color1: #e54655;
     --color2: #a41623;
   }
-  .Example {
-    --color1: #a393bf;
-    --color2: #9c76e0;
+  .Proof {
+    --color1: #c0c0c0;
+    --color2: #808080;
   }
-  .Theorem {
+  .Corollary {
     --color1: #e54655;
     --color2: #a41623;
   }
@@ -172,7 +172,7 @@
       </div>
       </div>
       </div>
-            <p class="date">Last modified — 21 Aug 2025</p>
+            <p class="date">Last modified — 22 Aug 2025</p>
         </div>
 </section>
 <section id="welcome-house-rules" class="title-slide slide level1 center" data-number="1">
@@ -211,7 +211,7 @@
 </section>
 <section id="uncertainty" class="slide level2">
 <h2>Uncertainty</h2>
-<p><strong>Common sense:</strong> The outcome of some experiments cannot be determined with sufficient certainty beforehand.</p>
+<p>The outcome of some experiments cannot be determined beforehand.</p>
 <div id="Example*-3.1" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
 <ul>
@@ -225,92 +225,62 @@
 <section id="probability-theory" class="slide level2">
 <h2>Probability theory</h2>
 <ul>
-<li><p>Even though there seem to be no rules on the outcome of rolling a die, if we repeat the experiment many times, some pattern emerges.</p></li>
-<li><p>Probability theory aims to describe the pattern with a mathematical model.</p></li>
-<li><p>In ideal situations, the probability theory can be very successful: Casino always wins.</p></li>
+<li><p>Even though die rolls are random, patterns emerge when we repeat the experiment many times.</p></li>
+<li><p>Probability Theory describes such patterns via mathematical models.</p></li>
+<li><p>It is a branch of Mathematics, and is based on a set of Axioms.</p></li>
+<li><p>Axioms: Statements or propositions accepted to hold true</p></li>
+<li><p>Theorems: Propositions which are established to hold true using sound logical reasoning.</p></li>
 </ul>
-</section>
-<section id="probability-theory-1" class="slide level2">
-<h2>Probability theory</h2>
-<ul>
-<li><p><strong>Axioms in mathematics:</strong> Statements or propositions regarded as being established, accepted, or self-evidently true.</p></li>
-<li><p><strong>Mathematical Theorem:</strong> A general proposition not self-evident but proved by a chain of reasoning; a truth established by means of accepted truths.</p></li>
-<li><p>If the accepted truths are falsified, the Theorem is also falsified.</p></li>
-</ul>
-</section>
-<section id="probability-theory-2" class="slide level2">
-<h2>Probability theory</h2>
-<ul>
-<li><p>The probability theory in Stat 302 is a branch of mathematics. It is a system based on a set of Axioms.</p></li>
-<li><p>Its conclusions cannot be falsified unless the Axioms are falsified.</p></li>
-<li><p>Stat 302 mostly lectures on mathematical aspects of the probability theory.</p></li>
-<li><p>We use real world examples to demonstrate the relevance of the theory.</p></li>
-</ul>
-</section>
-<section id="probability" class="slide level2">
-<h2>Probability</h2>
-<p>We now motivate two subjects of probability based on experiment whose outcome is uncertain.</p>
-</section></section>
-<section>
-<section id="set-theory" class="title-slide slide level1 center" data-number="4">
-<h1><span class="header-section-number">4</span> Set theory</h1>
-
 </section>
 <section id="sample-space" class="slide level2">
 <h2>Sample Space</h2>
-<div id="Definition*-4.1" class="Definition">
+<div id="Definition*-3.2" class="Definition">
 <p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>Sample space is the set of all possible outcomes of a random experiment.<p></p>
 </div></details>
 </div>
 <p>We denote it by <span class="math inline">\(\Omega\)</span>, and a generic outcome, also called sample point, by <span class="math inline">\(\omega\)</span> (i.e.&nbsp;<span class="math inline">\(\omega \in \Omega\)</span>).</p>
-<ul>
-<li><p>There is no rule that we have to use <span class="math inline">\(\Omega\)</span> as the notation for the sample space.</p></li>
-<li><p>Always read the context.</p></li>
-</ul>
-</section>
-<section id="sample-space-1" class="slide level2">
-<h2>Sample Space</h2>
-<div id="Example*-4.2" class="Example">
+<div id="Example*-3.3" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
 <ul>
-<li><p>Roll a die: <span class="math inline">\(\Omega = \{ 1,2,3,4,5, 6 \}\)</span>.</p></li>
-<li><p>Draw a card: <span class="math inline">\(\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}\)</span>.</p></li>
-<li><p>% yield of chemical process: <span class="math inline">\(\Omega =\left[ 0,100\right]\)</span>.</p></li>
-<li><p>Maximum wind speed in YVR in 2023: <span class="math inline">\(\Omega =[0, \infty)\)</span></p></li>
+<li><p>Roll a die: <span class="math inline">\(\Omega = \{ 1,2,3,4,5, 6 \} \subset \mathbb{N}\)</span>.</p></li>
+<li><p>Draw a card from a poker deck: <span class="math inline">\(\Omega = \{ 2\spadesuit, 2\diamondsuit, \ldots, A\clubsuit ,A \heartsuit  \}\)</span></p></li>
+<li><p>Wind speed at YVR (km/h): <span class="math inline">\(\Omega =[0, \infty) \subset \mathbb{R}\)</span>.</p></li>
+<li><p>Wait time for R4 at UBC (min): <span class="math inline">\(\Omega =[0, 720) \subset \mathbb{R}\)</span></p></li>
 </ul>
 </div></details>
 </div>
-<p><strong>Remark:</strong> We may not need to provide full description of <span class="math inline">\(\Omega\)</span> in many cases.</p>
 </section>
 <section id="events" class="slide level2">
 <h2>Events</h2>
-<div id="Definition*-4.3" class="Definition">
-<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>An event is a subset of sample space <span class="math inline">\(\Omega\)</span>.<p></p>
+<div id="Definition*-3.4" class="Definition">
+<p></p><details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>An event is a subset of the sample space <span class="math inline">\(\Omega\)</span>.<p></p>
 </div></details>
 </div>
 <p><strong>Notation:</strong> We commonly use upper case letters (<span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, <span class="math inline">\(C\)</span>, …) for events.</p>
-<p>Because events are sets, all notions regarding sets are applicable:</p>
+<p>Events are sets:</p>
 <ul>
 <li><p><span class="math inline">\(\omega \in A\)</span> means “<span class="math inline">\(\omega\)</span> is an element of <span class="math inline">\(A\)</span>”.</p></li>
 <li><p><span class="math inline">\(C \subset D\)</span> means “<span class="math inline">\(C\)</span> is a subset of <span class="math inline">\(D\)</span>”.</p></li>
-<li><p>Remember operations <span class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A \cap B\)</span> and so on.</p></li>
 </ul>
 </section>
 <section id="examples" class="slide level2">
 <h2>Examples</h2>
-<p>Events of interests are often formed by outcomes sharing some properties.</p>
-<div id="Example*-4.4" class="Example">
+<p>Events are often formed by outcomes sharing some property. It’s a good idea to practice listing explicitly the sample points of events described with words.</p>
+<div id="Example*-3.5" class="Example">
 <details class="Example fbx-simplebox fbx-default" open=""><summary><strong>Example</strong></summary><div>
 <ul>
-<li><p>Roll a dice:<br>
-<span class="math inline">\(A= \{ 2, 4, 6 \}\)</span> (“roll an even number”);<br>
-<span class="math inline">\(B= \{1, 2, 3\}\)</span> (“roll a 3 or less”).</p></li>
-<li><p>Chemical process: <span class="math inline">\(C= [ 9, 14 ] = \{ \text{yield is between 9 and 14\%} \}\)</span></p></li>
-<li><p>Max-wind-speed: <span class="math inline">\(A=(80, \infty )= \{ \text{over 80 km/hour}\}\)</span></p></li>
+<li><p>Roll a dice:</p>
+<ul>
+<li><span class="math inline">\(A = \text{"roll an even number"} = \{ 2, 4, 6 \}\)</span><br>
+</li>
+<li><span class="math inline">\(B = \text{"roll a 3 or less"} = \{1, 2, 3\}\)</span></li>
+<li><span class="math inline">\(C = \text{"roll an even number no higher than 3"} = \{ 2 \}\)</span></li>
+</ul></li>
+<li><p>Bus wait time: <span class="math inline">\(C = \text{"wait is less than half an hour"} = [15, 30]\)</span></p></li>
+<li><p>Max-wind-speed: <span class="math inline">\(A = \text{"wind is over 80 km/hour"} = (80, \infty )\)</span></p></li>
 </ul>
 </div></details>
 </div>
-<p>It is a useful skill to precisely list the sample points in a verbally described event.</p>
 </section>
 <section id="set-operations" class="slide level2">
 <h2>Set Operations</h2>
@@ -349,7 +319,7 @@
 </section>
 <section id="de-morgans-laws" class="slide level2">
 <h2>De Morgan’s Laws</h2>
-<div id="Theorem*-4.5" class="Theorem">
+<div id="Theorem*-3.6" class="Theorem">
 <p></p><details class="Theorem fbx-simplebox fbx-default" open=""><summary><strong>Theorem</strong></summary><div>For any two events (sets) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have <span class="math display">\[( A\cup B ) ^{c} \, = \, A^{c}\cap B^{c}.\]</span><p></p>
 </div></details>
 </div>
@@ -358,7 +328,7 @@
 </section>
 <section id="proof-of-de-morgans-laws" class="slide level2">
 <h2>Proof of De Morgan’s Laws</h2>
-<div id="Proof*-4.6" class="Proof">
+<div id="Proof*-3.7" class="Proof">
 <p></p><details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>Let us show <span class="math inline">\(( A\cup B ) ^{c}  \subseteq  A^{c}\cap B^{c}\)</span>:<p></p>
 <ul>
 <li><p>take any <span class="math inline">\(\omega \in  ( A\cup B )^c\)</span>, we must have <span class="math inline">\(\omega \notin A \cup B\)</span>;</p></li>
@@ -403,8 +373,8 @@
 <p>Hence, we have 2 options for each of the <span class="math inline">\(n\)</span> sample points, leading to <span class="math inline">\(2^n\)</span> distinct outcomes.</p>
 </section></section>
 <section>
-<section id="probability-1" class="title-slide slide level1 center" data-number="5">
-<h1><span class="header-section-number">5</span> Probability</h1>
+<section id="probability" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> Probability</h1>
 
 </section>
 <section id="probability-of-an-event-an-possible-outcome" class="slide level2">
@@ -420,7 +390,7 @@
 <section id="probability-axioms" class="slide level2">
 <h2>Probability Axioms</h2>
 <p>Let <span class="math inline">\(\Omega\)</span> be a sample space and <span class="math inline">\({\cal B}\)</span> be the collection of “all subsets” of <span class="math inline">\(\Omega\)</span>.</p>
-<div id="Definition*-5.1" class="Definition">
+<div id="Definition*-4.1" class="Definition">
 <details class="Definition fbx-simplebox fbx-default" open=""><summary><strong>Definition</strong></summary><div>
 <p>A probability function is a function <span class="math inline">\(\mathbb{P}\)</span> with domain <span class="math inline">\({\cal B}\)</span> so that</p>
 <ol type="1">
@@ -432,7 +402,7 @@
 </div></details>
 </div>
 </section>
-<section id="probability-2" class="slide level2">
+<section id="probability-1" class="slide level2">
 <h2>Probability</h2>
 <ul>
 <li><p>The value of <span class="math inline">\(\mathbb{P}(A)\)</span> is called the probability of event <span class="math inline">\(A\)</span>.</p></li>
@@ -497,7 +467,7 @@
 <section id="proof-of-booles-inequality" class="slide level2">
 <h2>Proof of Boole’s inequality</h2>
 <p><span class="math display">\[\mathbb{P}\left( \bigcup _{i=1}^{n}A_{i}\right)  \leq \sum_{i=1}^{n}\mathbb{P}\left( A_{i}\right)\]</span></p>
-<div id="Proof*-5.5" class="Proof">
+<div id="Proof*-4.5" class="Proof">
 <details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
 <ul>
 <li><p>We will prove it by induction.</p></li>
@@ -513,7 +483,7 @@
 </section>
 <section id="booles-inequality-continued" class="slide level2">
 <h2>Boole’s inequality (continued)</h2>
-<div id="Proof*-5.6" class="Proof">
+<div id="Proof*-4.6" class="Proof">
 <details class="Proof fbx-default closebutton"><summary><strong>Proof</strong></summary><div>
 <ul>
 <li>Assume now that it holds for <span class="math inline">\(n\)</span>. We then have <span class="math display">\[
@@ -601,8 +571,8 @@
 <p>We next suggest a way to set up (a) sample space, (b) collection of events, and (c) probability function <span class="math inline">\(\mathbb{P}(\cdot)\)</span> for a special type of experiments.</p>
 </section></section>
 <section>
-<section id="building-probabilitie-functions" class="title-slide slide level1 center" data-number="6">
-<h1><span class="header-section-number">6</span> Building probabilitie functions</h1>
+<section id="building-probabilitie-functions" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> Building probabilitie functions</h1>
 
 </section>
 <section id="equally-likely-outcomes" class="slide level2">
